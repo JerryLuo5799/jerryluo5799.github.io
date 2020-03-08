@@ -1,8 +1,8 @@
 # Site settings
 title: Jerry的博客
-subtitle: []
-keywords: Jerry
-description: 
+subtitle: ["专注于.NET, .Net Core, Azure云的开发与推广"]
+keywords: Jerry, .Net, .NetCore, Azure
+description: 专注于.NET, .Net Core, Azure云的开发与推广
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.jerryluo.com/" # 你的域名
 page_no_title: "JerryLuo's blog" # 文章无标题时默认显示内容
