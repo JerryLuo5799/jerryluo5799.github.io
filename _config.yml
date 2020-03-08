@@ -1,14 +1,14 @@
 # Site settings
-title: oukohou
-subtitle: [ 璇珠杂俎]
+title: JerryLuo
+subtitle: []
 keywords: oukohou
-description: 我梦扬州，便想到扬州梦我。幸会。微信公众号：oukohou.
+description: 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.oukohou.wang/" # 你的域名
-page_no_title: "oukohou's blog" # 文章无标题时默认显示内容
+url: "http://www.jerryluo.com/" # 你的域名
+page_no_title: "JerryLuo's blog" # 文章无标题时默认显示内容
 beian: # "备案号"
-author: oukohou
-email: oukohou@outlook.com
+author: Jerry
+email: feng5799@outlook.com
 
 # Build settings
 permalink: /:year/:month/:day/:title/
@@ -70,7 +70,7 @@ links: # 友情链接
 
 # Google Analytics
 ga_track_id: 'UA-130856615-1'            # Format: UA-xxxxxx-xx
-ga_domain: www.oukohou.wang              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: auto              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 # Code hub settings
