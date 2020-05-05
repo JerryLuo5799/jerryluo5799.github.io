@@ -45,7 +45,7 @@ tags: [Application Insights, 监控平台, 日志系统]
 1. 安装Application Insights SDK包
    
 ```csharp
-   dotnet add package Microsoft.ApplicationInsights.AspNetCore
+dotnet add package Microsoft.ApplicationInsights.AspNetCore
 ```
 2. 在Startup类中启用Application Insights
 
@@ -80,16 +80,14 @@ var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=wi
 </script>
 ```
 ### 07 SDK支持情况
+大部分语言和框架都可以直接找到对应的SDK, 方便快捷的启用Application Insights
 1. 官方支持 .NET, .NET Core，Java，Node.js，JavaScript几种语言;
 2. 对于其他语言和框架, 如Python，PHP, React等, 社区提供了对应的SDK包
-
-大部分语言和框架都可以直接找到对应的SDK, 方便快捷的启用Application Insights
 
 ### 08 Azure Global VS Azure中国
 **Note: 由于Azure Global和Azure中国的节点并不互通, 所以如果Application Insights的实例是创建在Azure中国上的, 需要额外配置终结点**
 
 1. .NET Core
-
 ```json
 "ApplicationInsights": {
   "InstrumentationKey": "[上述创建应用的Instrumentation Key]",
@@ -98,7 +96,6 @@ var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=wi
   }
 }
 ```
-
 2. JavaScript
 ```JavaScript
 <script type="text/javascript">
