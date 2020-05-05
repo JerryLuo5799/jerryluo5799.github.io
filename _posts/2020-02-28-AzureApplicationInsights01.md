@@ -42,12 +42,12 @@ tags: [Application Insights, 监控平台, 日志系统]
 ![Application Insights Overview](/assets/imgs/ApplicationInsightsOverview.png)
 
 ### 05 .NET Core中启用Application Insights
-1. 安装Application Insights SDK包
+#### 安装Application Insights SDK包
    
 ```csharp
 dotnet add package Microsoft.ApplicationInsights.AspNetCore
 ```
-2. 在Startup类中启用Application Insights
+#### 在Startup类中启用Application Insights
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -60,7 +60,7 @@ public void ConfigureServices(IServiceCollection services)
 }   
 
 ```
-3. 在appsettings.json文件中, 添加配置
+#### 在appsettings.json文件中, 添加配置
    
 ```Json
 {
