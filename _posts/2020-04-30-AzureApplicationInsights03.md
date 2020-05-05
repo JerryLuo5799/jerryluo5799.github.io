@@ -57,10 +57,10 @@ public void ConfigureServices(IServiceCollection services)
 ``` 
 
 ### 3. 调试问题
-当遇到异常的时候, 导航到异常信息页, 点击右上角的Open debug snapshot按钮, 进入SnapShot Debugger页面:
+当遇到异常的时候, 导航到异常信息页, 点击右上角的**Open debug snapshot**按钮, 进入SnapShot Debugger页面:
 ![SnapShotDebugger](/assets/imgs/SnapshotDebugger01.png)
 在SnapShot Debugger页面, 你可以看到异常的堆栈信息, 也可以同时看到对应变量的值
 ![SnapShotDebugger](/assets/imgs/SnapshotDebugger02.png)
-如果SnapShot Debugger的信息还不够, 可以点击右上角的Download, 下载快照, 加载到Visual Studio中, 运行调试会话，可以快速确定导致异常的代码行。
+如果SnapShot Debugger的信息还不够, 可以点击右上角的**Download**, 下载快照, 加载到Visual Studio中, 运行调试会话，可以快速确定导致异常的代码行。
 ![SnapShotDebugger](/assets/imgs/SnapshotDebugger03.png)
 
