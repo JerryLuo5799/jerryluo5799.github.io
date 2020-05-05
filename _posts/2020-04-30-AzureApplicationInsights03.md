@@ -7,7 +7,7 @@ tags: [Application Insights, 监控平台, 日志系统, Snapshot Debugger]
 ---
 
 ### 前言
-很多时候, 即使系统记录了异常日志, 但是信息的不全, 技术人员还是难以定位到具体问题, 而Snapshot Debugger不然记录了异常发生时的堆栈信息, 同时也记录了当时所有对象和临时变量的信息, 技术人员可以根据这些快速的定位和排查问题。
+很多时候, 即使系统记录了异常日志, 但是由于信息的不全, 技术人员还是难以定位到具体问题, 而Snapshot Debugger不但记录了异常发生时的堆栈信息, 同时也记录了当时临时变量的信息, 技术人员可以根据这些快速的定位和排查问题。
 
 ### 1. 什么是Snapshot Debugger
 简而言之, 它是发生异常时, Application Insights收集的一个快照, 快照包含了生异常时源代码和变量的状态。
@@ -16,12 +16,12 @@ tags: [Application Insights, 监控平台, 日志系统, Snapshot Debugger]
 
 ### 2. 如何启用
 
-#### 2.1 安装Microsoft.ApplicationInsights.SnapshotCollector SDK包
+#### 2.1 安装SDK包
    
 ```csharp
 dotnet add package Microsoft.ApplicationInsights.SnapshotCollector
 ```
-#### 2.2 在Startup类中启用Application Insights
+#### 2.2 在Startup类中启用
 
 ```csharp
 
@@ -36,7 +36,7 @@ public void ConfigureServices(IServiceCollection services)
 }   
 
 ```
-#### 2.3 在appsettings.json文件中, 添加配置
+#### 2.3 在appsettings.json中添加配置
 **Note:以下配置中的所有设置都是可选的。 以下示例显示与默认配置等效的配置**
 ```Json
 {
