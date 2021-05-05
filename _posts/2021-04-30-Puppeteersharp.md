@@ -1,25 +1,25 @@
 ---
 layout: post
-title:  "Azure基础知识"
+title:  "使用PuppeteerSharp实现后台页面截图"
 date:   2021-04-30 21:42:55 +0800--
 categories: [.NET Core]
 tags: [.NET Core, PuppeteerSharp]  
 ---
 
 ### 1. 前言
-最新在项目中遇到了一个在后台自动给页面截图的需求, 由于项目是基于.NET Core的, 最后使用PuppeteerSharp实现了该功能
+最新在项目中遇到了一个在后台自动给页面截图的需求, 由于项目是基于.NET Core的, 最后使用**PuppeteerSharp**实现了该功能。
 
 ### 2. 什么是PuppeteerSharp
 
 #### 2.1 Puppeteer
 Puppeteer是一个Node库，它提供了高级API来通过DevTools协议控制Chrome或Chromium 。Puppeteer默认情况下无头运行，但可以配置为运行完整（无头）的Chrome或Chromium。
 
-**Github**: https://github.com/puppeteer/puppeteer
+**Github**: [https://github.com/puppeteer/puppeteer](https://github.com/puppeteer/puppeteer)
 
 #### 2.2 PuppeteerSharp
 Puppeteer Sharp是Puppeteer的.NET 移植, 是一个NetStandard 2.0库，最低支持的平台版本是.NET Framework 4.6.1和.NET Core 2.0。
 
-**Github**: https://github.com/hardkoded/puppeteer-sharp
+**Github**: [https://github.com/hardkoded/puppeteer-sharp](https://github.com/hardkoded/puppeteer-sharp)
 
 #### 2.3 实现的功能
 您可以在浏览器中手动执行的大多数操作都可以使用**Puppeteer**或**PuppeteerSharp**完成！
@@ -130,7 +130,7 @@ PuppeteerSharp可以Headless的方式打开服务器上已经安装的Chrome, �
 
 最后，尽量即时的调用browser.CloseAsync()， 否则在服务器上会发现Chrome进程会越来越多。
 
-### 4. 异常
+### 4. 遇到的异常
 博主基于BackgroundService实现了后台服务， 托管在IIS中， 最后发布到服务器端的时候， 出现了异常： System.IO.FileNotFoundException: Failed to launch browser! path to executable does not exist
 
 最后的解决方案是，使用WorkerService实现了Window服务，运行起来就OK了。
