@@ -79,5 +79,5 @@ public void OnChromeDevProtocolMessage(object sender, MessageEventArgseventArgs)
 
 ```
 
-**更多Chrome开发者工具协议可参考: https://chromedevtools.github.io/devtools-protocol/tot/Network/**
+**更多Chrome开发者工具协议可参考: [点击此处](https://chromedevtools.github.io/devtools-protocol/tot/Network/)**
 
