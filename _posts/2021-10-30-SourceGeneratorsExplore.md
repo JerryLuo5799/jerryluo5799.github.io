@@ -9,7 +9,7 @@ tags: [.NET Core, Source Generators, 源代码生成]
 ### 1. 前言
 博主在FireUG社区分享了该主题, 具体视频如下:
 
-<iframe src="//player.bilibili.com/player.html?aid=336378572&bvid=BV1XR4y177L2&cid=435609944&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=336378572&bvid=BV1XR4y177L2&cid=435609944&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  class="bilibili"> </iframe>
 
 链接地址: [https://www.bilibili.com/video/BV1XR4y177L2?p=2](https://www.bilibili.com/video/BV1XR4y177L2?p=2)
 
