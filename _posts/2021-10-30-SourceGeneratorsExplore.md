@@ -13,12 +13,12 @@ tags: [.NET Core, Source Generators, 源代码生成]
 
 链接地址: [https://www.bilibili.com/video/BV1XR4y177L2?p=2](https://www.bilibili.com/video/BV1XR4y177L2?p=2)
 
-### 2. Source Generators
+### 2. 什么是Source Generators
 - Source Generator是在编译期间运行的一段代码，它可以在编译期间生成代码, 并与与其余代码一起编译
 - 伴随着C# 9发布
 - .NET Standard 2.0 组件  
 
-### 3. Source Generators原理
+### 3. 原理图
 ![原理图](/assets/imgs/SourceGenrators01.png)
 
 ### 3. 常见问题
