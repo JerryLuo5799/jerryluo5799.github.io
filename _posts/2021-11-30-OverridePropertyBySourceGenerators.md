@@ -197,16 +197,16 @@ namespace SourceGeneratorSamples
 
             source.Append($@"
                 public {fieldType} {propertyName} 
-                {{
+                {(请删除){
                     get 
-                    {{
+                    {(请删除){
                         return this.{fieldName};
-                    }}
+                    }(请删除)}
 
                     set
-                    {{
+                    {(请删除){
                         this.{fieldName} = 脱敏方法(value);
-                    }}
+                    }(请删除)}
                 }}
             ");
 
