@@ -185,7 +185,6 @@ namespace SourceGeneratorSamples
             string fieldName = fieldSymbol.Name;
             ITypeSymbol fieldType = fieldSymbol.Type;
 
-            // get the AutoNotify attribute from the field, and any associated data
             AttributeData attributeData = fieldSymbol.GetAttributes().Single(ad => ad.AttributeClass.Equals(attributeSymbol, SymbolEqualityComparer.Default));
             TypedConstant overridenNameOpt = attributeData.NamedArguments.SingleOrDefault(kvp => kvp.Key == "PropertyName").Value;
 
@@ -231,14 +230,14 @@ namespace SourceGeneratorSamples
         }
 
         /// <summary>
-        /// Created on demand before each generation pass
+        /// 
         /// </summary>
         class SyntaxReceiver : ISyntaxReceiver
         {
             public List<FieldDeclarationSyntax> CandidateFields { get; } = new List<FieldDeclarationSyntax>();
 
             /// <summary>
-            /// Called for every syntax node in the compilation, we can inspect the nodes and save any information useful for generation
+            ///
             /// </summary>
             public void OnVisitSyntaxNode(SyntaxNode syntaxNode)
             {
