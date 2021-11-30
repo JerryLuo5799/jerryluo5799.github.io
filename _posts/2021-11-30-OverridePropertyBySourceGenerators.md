@@ -2,7 +2,7 @@
 layout: post
 title:  "使用Source Generators修改属性的Get和Set的值"
 date:   2021-11-30 21:42:55 +0800--
-categories: [.NET 5]
+categories: [.NET Core]
 tags: [.NET Core, Source Generators, 属性,Get,Set]  
 ---
 
