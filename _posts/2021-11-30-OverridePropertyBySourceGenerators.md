@@ -151,7 +151,7 @@ namespace SourceGeneratorSamples
         {
             if (!classSymbol.ContainingSymbol.Equals(classSymbol.ContainingNamespace, SymbolEqualityComparer.Default))
             {
-                return null; //TODO: issue a diagnostic that it must be top level
+                return null;
             }
 
             string namespaceName = classSymbol.ContainingNamespace.ToDisplayString();
@@ -159,9 +159,9 @@ namespace SourceGeneratorSamples
             //开始生成部分类
             StringBuilder source = new StringBuilder($@"
                 namespace {namespaceName}
-                {{
+                {(请删除){
                     public partial class {classSymbol.Name}
-                    {{
+                    {(请删除){
                 ");
 
             //生成部分类的每一个字段
