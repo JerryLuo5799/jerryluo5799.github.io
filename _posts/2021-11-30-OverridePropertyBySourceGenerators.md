@@ -69,7 +69,7 @@ public partial class ExampleModel
     private string _fullName;
 }
 ```
-**注意1: 实体类加上了partial修饰符,这是一个部分类**
+**注意1: 实体类加上了partial修饰符,这是一个部分类**  
 **注意2: 实体类中包含的是一个私有属性**
 
 #### 2. Source Generators类：
