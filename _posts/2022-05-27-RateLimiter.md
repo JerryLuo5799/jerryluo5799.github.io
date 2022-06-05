@@ -76,6 +76,7 @@ tags: [.NET Core, Rate Limit, 限流]
 - 安装.NET 7.0 SDK（v7.0.100-preview.4）
 - 通过nuget包安装Microsoft.AspNetCore.RateLimiting
 - 在Startup.cs文件中实现
+  
 ``` CSharp
 app.UseRateLimiter(new RateLimiterOptions
 {
@@ -86,8 +87,8 @@ app.UseRateLimiter(new RateLimiterOptions
     }),
     DefaultRejectionStatusCode=429
 });
-
 ```
+
 执行结果为:
 ![执行结果](/assets/imgs/limit07.png)
 
