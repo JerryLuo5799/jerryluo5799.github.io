@@ -10,9 +10,9 @@ tags: [漏洞扫描, .NET Core, dotnet Cli, npm, yarn]
 在开发的过程中, 我们总是会引用各类第三方的库, 项目交付后，进入维护模式时, 通常没有开发人员会跟进升级这些包，如果在项目中引用的库发现了严重的漏洞，会给项目带来很大的风险。
 
 那么如何对这些引用的包进行漏洞扫描呢？现在的包管理器其实都提供了对应检测漏洞的方法，以下的命令可以帮助到你。
-- dotnet cli: dotnet list package --vulnerable
-- npm: npm audit
-- yarn: yarn audit
+- **dotnet cli**: dotnet list package --vulnerable
+- **npm**: npm audit
+- **yarn**: yarn audit
 
 ### 2. dotnet Cli
 打开命令窗口，进入.Net Core的项目目录, 输入命令:
