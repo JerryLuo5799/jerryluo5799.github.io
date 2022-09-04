@@ -25,7 +25,7 @@ trigger:
 - master
 
 pool:
-  name: 'Gongshu'
+  name: 'DeployToIIS'
 
 variables:
   solution: '**/*.sln'
@@ -40,8 +40,8 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)\OneCallCore.BI.Api\bin\Debug\netcoreapp3.1'
-    ArtifactName: 'OneCallCoreBIApiPublish'
+    PathtoPublish: '$(Build.SourcesDirectory)\[项目名称]\bin\Debug\[.NET版本]'
+    ArtifactName: '[自定义名称]'
     publishLocation: 'Container'
 ```
 
