@@ -45,9 +45,9 @@ steps:
     publishLocation: 'Container'
 ```
 
-### 3.CD
+### 3. CD
 
-CD的目的是发布文件到服务器，所以一般需要已下步骤：
+CD的目的是发布文件到服务器，所以一般需要执行：
 1. 将文件上传到服务器的某个目录
 2. 停止IIS下.NET Core应用对应的程序池
 3. 覆盖.NET Core应用文件
