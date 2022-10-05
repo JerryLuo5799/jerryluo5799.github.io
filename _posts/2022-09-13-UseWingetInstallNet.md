@@ -14,16 +14,19 @@ tags: [.NET, .NET Core, winget]
 - dotnet-runtime-3_1
 - dotnet-desktop-3_1
 - aspnetcore-3_1
+  
 #### 2.2. .NET 5
 - dotnet-sdk-5
 - dotnet-runtime-5
 - dotnet-desktop-5
 - aspnetcore-5
+  
 #### 2.3. .NET 6
 - dotnet-sdk-6
 - dotnet-runtime-6
 - dotnet-desktop-6
 - aspnetcore-6
+  
 #### 2.4. .NET 7 (Preview)
 - dotnet-sdk-preview
 - dotnet-runtime-preview
