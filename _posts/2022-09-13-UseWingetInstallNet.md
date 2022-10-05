@@ -8,15 +8,27 @@ tags: [.NET, .NET Core, winget]
 
 ### 1. 前言
 目前在Windows上可以直接使用 **winget** 命令来安装.NET的SDK和运行时了。
-
 ### 2. 可安装版本列表
-| .NET版本 | package-id |
-|---|---|
-| 3.1 | 2 |
-| 5.0 | 3 |
-| 6.0 | 4 |
-| 7.0 (Preview) | 1 |
-
+#### 2.1. .NET Core 3.1
+- dotnet-sdk-3_1
+- dotnet-runtime-3_1
+- dotnet-desktop-3_1
+- aspnetcore-3_1
+#### 2.2. .NET 5
+- dotnet-sdk-5
+- dotnet-runtime-5
+- dotnet-desktop-5
+- aspnetcore-5
+#### 2.3. .NET 6
+- dotnet-sdk-6
+- dotnet-runtime-6
+- dotnet-desktop-6
+- aspnetcore-6
+#### 2.4. .NET 7 (Preview)
+- dotnet-sdk-preview
+- dotnet-runtime-preview
+- dotnet-desktop-preview
+- aspnetcore-preview
 ### 3. 如何使用
 
 #### 3.1 搜索.NET可用版本
