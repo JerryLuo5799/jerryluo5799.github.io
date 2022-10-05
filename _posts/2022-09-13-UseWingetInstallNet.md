@@ -10,12 +10,22 @@ tags: [.NET, .NET Core, winget]
 目前在Windows上可以直接使用 **winget** 命令来安装.NET的SDK和运行时了。
 
 ### 2. 可安装版本列表
-| .NET 版本	 | package-id | 
-| --- |---| 
-| 3.1 | dotnet-sdk-3_1, dotnet-runtime-3_1, dotnet-desktop-3_1, aspnetcore-3_1 | 
-| 5.0 | dotnet-sdk-5, dotnet-runtime-5, dotnet-desktop-5, aspnetcore-5 | 
-| 6.0 | dotnet-sdk-6, dotnet-runtime-6, dotnet-desktop-6, aspnetcore-6 | 
-| 7.0 (Preview)	 | dotnet-sdk-preview, dotnet-runtime-preview, dotnet-desktop-preview, aspnetcore-preview | 
+| .NET 版本	 | package-id |
+| --- |---|
+| 3.1 | dotnet-sdk-3_1, dotnet-runtime-3_1, dotnet-desktop-3_1, aspnetcore-3_1 |
+| 5.0 | dotnet-sdk-5, dotnet-runtime-5, dotnet-desktop-5, aspnetcore-5 |
+| 6.0 | dotnet-sdk-6, dotnet-runtime-6, dotnet-desktop-6, aspnetcore-6 |
+| 7.0 (Preview)	 | dotnet-sdk-preview, dotnet-runtime-preview, dotnet-desktop-preview, aspnetcore-preview |
+
+| Date | Version | Release with source |
+|---|---|---|
+| 7/26/2018 | 7.7.2.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v7.7.2.0 |
+| 1/11/2019 | 7.9.0.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v7.9.0.0 |
+| 6/23/2019 | 8.0.0.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v8.0.0.0 |
+| 12/17/2019 | 8.1.0.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v8.1.0.0 |
+| 05/26/2021 | 8.6.0.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v8.6.0.0 |
+| 03/17/2022 | 8.9.0.0 | https://github.com/PowerShell/openssh-portable/releases/tag/v8.9.0.0 |
+| 03/22/2022 | 8.9.1.0 | https://github.com/PowerShell/openssh-portable/releases/tag/V8.9.1.0 |
 
 ### 3. 如何使用
 
