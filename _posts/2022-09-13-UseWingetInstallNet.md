@@ -11,7 +11,7 @@ tags: [.NET, .NET Core, winget]
 
 ### 2. 可安装版本列表
 | .NET 版本	 | package-id |
-| --- |---|
+|---|---|
 | 3.1 | dotnet-sdk-3_1, dotnet-runtime-3_1, dotnet-desktop-3_1, aspnetcore-3_1 |
 | 5.0 | dotnet-sdk-5, dotnet-runtime-5, dotnet-desktop-5, aspnetcore-5 |
 | 6.0 | dotnet-sdk-6, dotnet-runtime-6, dotnet-desktop-6, aspnetcore-6 |
