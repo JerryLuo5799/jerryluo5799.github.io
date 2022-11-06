@@ -14,7 +14,7 @@ tags: [Azure DevOps探索, DevOps]
 
 ### 2. 瀑布模型
 
-### 2.1 瀑布模型
+#### 2.1 瀑布模型
 
 ![瀑布模型](/assets/imgs/waterfall01.png)
 
@@ -22,7 +22,7 @@ tags: [Azure DevOps探索, DevOps]
 - 按照顺序依次进行
 - 以文档为驱动
 
-### 2.2 瀑布V模型
+#### 2.2 瀑布V模型
 
 ![瀑布V模型](/assets/imgs/waterfall02.png)
 
@@ -30,13 +30,13 @@ tags: [Azure DevOps探索, DevOps]
 - 集成测试：验证已测试过的部分是否可以很好地结合在一起
 - 系统测试：检验系统功能、性能是否达到系统的要求。
 
-### 2.3 瀑布VV模型
+#### 2.3 瀑布VV模型
 
 ![瀑布V模型](/assets/imgs/waterfall03.png)
 
 - 测试与开发并行
 
-### 2.4 瀑布模型的缺点
+#### 2.4 瀑布模型的缺点
 
 - 单一流程，不可逆
   - 后续流程会不断放大需求分析阶段的偏差
@@ -71,12 +71,12 @@ tags: [Azure DevOps探索, DevOps]
 
 ### 4. DevOps
 
-### 4.1 什么是DevOps
+#### 4.1 什么是DevOps
 
 ![什么是DevOps](/assets/imgs/DevOps02.png)
 DevOps其实就是Development和Operations两个单词的组合。DevOps是一组过程、方法与系统的统称，用于促进开发应用程序或软件工程、技术运营和质量保障QA部门之间的沟通、协作与整合。
 
-### 4.2 DevOps核心目标和实现方式
+#### 4.2 DevOps核心目标和实现方式
 
 DevOps核心目标是: **可持续的又快又好的交付价值**
 
@@ -90,11 +90,11 @@ DevOps的实现方式是:
 - 流程标准化
 - 工作自动化
 
-### 4.3 Scrum + DevOps 工作流程
+#### 4.3 Scrum + DevOps 工作流程
 
 ![Scrum + DevOps](/assets/imgs/DevOps03.png)
 
-### 4.4 DevOps工具集
+#### 4.4 DevOps工具集
 
 ![Scrum + DevOps](/assets/imgs/DevOps04.png)
 
