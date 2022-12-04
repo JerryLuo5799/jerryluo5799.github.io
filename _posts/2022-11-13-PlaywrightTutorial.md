@@ -8,7 +8,7 @@ tags: [Playwright, Web Testing]
 
 ### 1. 什么是Playwright
 
-Playwright是微软开源的Web应用自动化测试框架, 它可以使用非常简单的API去操作Chromium, Firefox, WebKit内核的浏览器。为了让不同语言的开发者都可以使用Playwright，微软提供了不同版本的Playwright
+Playwright是微软开源的Web应用自动化测试框架, 它可以使用非常简单的API去操作Chromium, Firefox, WebKit内核的浏览器。为了让不同语言的开发者都可以使用Playwright，微软提供了不同版本的Playwright:
 
 - Playwright（NodeJS）- <https://github.com/microsoft/playwright>
 - Playwright for .NET - <https://github.com/microsoft/playwright-dotnet>
@@ -34,7 +34,7 @@ npm init playwright
 ```
 
 #### 2.3 代码
-   
+
 ```JavaScript
 const { chromium } = require('playwright');
 
