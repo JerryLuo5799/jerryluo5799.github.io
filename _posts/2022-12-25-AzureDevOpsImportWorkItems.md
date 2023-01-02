@@ -37,8 +37,6 @@ private void ImportWorkItems()
         var title = columns[1];
         var description = columns[2];
 
-
-
         using (var client = new HttpClient())
         {
             client.BaseAddress = new Uri(azureDevOpsOrganizationUrl);
@@ -49,7 +47,7 @@ private void ImportWorkItems()
 
             //connect to the REST endpoint
             string uri = String.Format("_apis/wit/workitems/${0}?bypassRules=true&api-version=6.0", type);
-    //building JSON request body
+            //building JSON request body
             var jsonstr = "[{\"op\": \"add\", \"path\": \"/fields/System.Title\",\"value\": \"" + title + "\" }";
             jsonstr += ",{\"op\": \"add\", \"path\": \"/fields/System.Description\",\"value\": \"" + description + "\" }";
             jsonstr += "]"; 
