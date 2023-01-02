@@ -73,4 +73,4 @@ private void ImportWorkItems()
 ### 3. 参考资料
 [Work Items – Create – REST API (Azure DevOps Work Item Tracking) | Microsoft Docs](https://learn.microsoft.com/en-us/rest/api/azure/devops/wit/work-items/create?view=azure-devops-rest-6.0&tabs=HTTP)
 
-[Get started with the REST APIs for Azure DevOps – Azure DevOps | Microsoft Docs](https://learn.microsoft.com/en-us/azure/devops/integrate/how-to/call-rest-api?view=azure-devops)
+[Get started with the REST APIs](https://learn.microsoft.com/en-us/azure/devops/integrate/how-to/call-rest-api?view=azure-devops)
