@@ -8,7 +8,7 @@ tags: [Azure DevOps, Azure DevOps APIs, WorkItems]
 
 ### 1. 前言
 
-Azure DevOps可以通过Excel文件导入工作项, 同时有可以通过[Azure DevOps API](https://docs.microsoft.com/en-us/rest/api/azure/devops)动态的导入。
+Azure DevOps可以通过Excel文件导入工作项, 同时也可以通过[Azure DevOps API](https://docs.microsoft.com/en-us/rest/api/azure/devops)动态的导入。
 
 ### 2. 如何实现
 
