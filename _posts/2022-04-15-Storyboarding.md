@@ -2,8 +2,8 @@
 layout: post
 title:  "使用Storyboarding在PPT中快速的制作程序原型"
 date:   2022-04-15 21:42:55 +0800--
-categories: [.NET]
-tags: [Tools, Storyboarding, PPT]  
+categories: [Tools]
+tags: [Storyboarding, PPT]  
 ---
 
 ### 1. 前言
