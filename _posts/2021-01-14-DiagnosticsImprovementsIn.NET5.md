@@ -2,7 +2,7 @@
 layout: post
 title:  ".NET 5 中的诊断工具(Diagnostics)改进"
 date:   2021-01-14 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, .NET 5, Diagnostics]  
 ---
 

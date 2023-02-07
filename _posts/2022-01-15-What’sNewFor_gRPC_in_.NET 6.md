@@ -2,7 +2,7 @@
 layout: post
 title:  ".NET 6 中 gRPC 的新增功能"
 date:   2022-01-15 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, .NET 6, gRPC]  
 ---
 

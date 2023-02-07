@@ -2,7 +2,7 @@
 layout: post
 title:  "使用Source Link提高调试效率"
 date:   2020-12-03 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, Source Link, 调试]  
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Source Generators VS Lombok (Java)"
 date:   2021-12-19 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, Source Generators, Lombok]  
 ---
 

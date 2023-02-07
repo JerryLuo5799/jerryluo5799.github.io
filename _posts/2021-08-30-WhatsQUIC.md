@@ -2,7 +2,7 @@
 layout: post
 title:  "什么是QUIC"
 date:   2021-08-30 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, Http/3, QUIC]  
 ---
 

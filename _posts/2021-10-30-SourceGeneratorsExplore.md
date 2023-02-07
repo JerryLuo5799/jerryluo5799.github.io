@@ -2,7 +2,7 @@
 layout: post
 title:  "Source Generators 探索"
 date:   2021-10-30 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, Source Generators, 源代码生成]  
 ---
 

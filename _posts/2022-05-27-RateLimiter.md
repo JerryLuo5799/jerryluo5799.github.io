@@ -2,7 +2,7 @@
 layout: post
 title:  "ASP.NET Core 的新特性 - 限流中间件"
 date:   2022-05-27 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, Rate Limit, 限流]  
 ---
 

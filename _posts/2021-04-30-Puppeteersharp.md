@@ -2,7 +2,7 @@
 layout: post
 title:  "使用PuppeteerSharp实现后台页面截图"
 date:   2021-04-30 21:42:55 +0800--
-categories: [.NET Core]
+categories: [.NET]
 tags: [.NET Core, PuppeteerSharp]  
 ---
 
