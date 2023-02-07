@@ -63,15 +63,15 @@ layout: base
     <script src="/assets/js/av-min.js"></script>
     <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
-    <!--<p><br/>既已览卷至此，何不品评一二：</p>
-    <div id="valine_comment" class="fb_comments_container"></div> -->
+    <!--<p><br/>既已览卷至此，何不品评一二：</p> -->
+    <div id="valine_comment" class="fb_comments_container" style="display:none;"></div>
     <script>
         var notify = '{{site.valine.notify}}' === true;
         var verify = '{{site.valine.verify}}.>' === true;
         var visitor = '{{site.valine.visitor}}.>' === true;
 
         new Valine({
-            av: AV,
+            //av: AV,
             el: '#valine_comment',
             notify: notify,
             verify: verify,
