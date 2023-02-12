@@ -22,7 +22,7 @@ tags: [Azure DevOps探索系列]
 
 ![HomePage](/assets/imgs/ADT01-02.png)
 
-点击进入项目**Hello FireUG**后, 通过左边菜单 **Boards | Backlogs** 可以看到以下界面:
+点击进入项目**Hello FireUG**后, 通过左边菜单 **Boards || Backlogs** 可以看到以下界面:
 
 ![Backlogs](/assets/imgs/ADT01-01.png)
 
@@ -63,7 +63,7 @@ PBI一般代表的是需要团队成员完成的需求，主要内容会包含�
 
 ### 4. 白板视图
 
-我们可以点击**列选项 (Column Options)**旁边的**白板视图选项 (View as Board)**，切换工作项以白板模式显示， 实际上是切换到了 **Boards | Board** 菜单，在该视图下， 我们可以方便的通过拖动的方式，更改工作项的状态。
+我们可以点击**列选项 (Column Options)**旁边的**白板视图选项 (View as Board)**，切换工作项以白板模式显示， 实际上是切换到了 **Boards || Board** 菜单，在该视图下， 我们可以方便的通过拖动的方式，更改工作项的状态。
 
 ![PBI-List](/assets/imgs/ADT01-05.png)
 
