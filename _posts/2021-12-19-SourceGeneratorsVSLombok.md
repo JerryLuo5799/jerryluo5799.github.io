@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Source Generators VS Lombok (Java)"
+title:  "Source Generators VS Lombok (Java) - .NET Conf 2021"
 date:   2021-12-19 21:42:55 +0800--
 categories: [.NET Conf]
 tags: [.NET Core, Source Generators, Lombok]  
 ---
 
 ### 1. 前言
+
 博主在.NET Conf China 2021分享了Source Generators探索, 具体视频如下:
 
 <iframe src="//player.bilibili.com/player.html?aid=934879516&bvid=BV1pM4y1c78H&cid=464387394&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  class="bilibili"> </iframe>
@@ -16,9 +17,11 @@ tags: [.NET Core, Source Generators, Lombok]
 期间, 有问起Source Generators是否类似于Java的Lombok, 所以简单的对比了一下。
 
 ### 2. 什么是Lombok
+
 Lombok项目是一个Java库，它会自动插入您的编辑器和构建工具中，从而为您的Java增光添彩。永远不要再写另一个getter或equals方法，带有一个注释的您的类有一个功能全面的生成器，自动化您的日志记录变量等等。理解一下，使用Lombok，通过注解类，让你不再需要编写getter、equals等方法，减少样板代码的编写。
 
 ### 3. Lombok的实现原理
+
 - 运行时解析
   
 运行时能够解析的注解，必须将@Retention设置为RUNTIME，这样就可以通过反射拿到该注解。java.lang,reflect反射包中提供了一个接口AnnotatedElement，该接口定义了获取注解信息的几个方法，Class、Constructor、Field、Method、Package等都实现了该接口，对反射熟悉的朋友应该都会很熟悉这种解析方式。
