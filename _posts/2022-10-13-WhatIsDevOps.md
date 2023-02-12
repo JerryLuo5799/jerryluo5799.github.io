@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "什么是DevOps"
+title:  "Azure DevOps探索系列前言: 什么是DevOps"
 date:   2022-10-13 21:42:55 +0800--
 categories: [Azure DevOps]
-tags: [Azure DevOps探索, DevOps]  
+tags: [Azure DevOps探索系列]  
 ---
 
 ### 1. 背景
