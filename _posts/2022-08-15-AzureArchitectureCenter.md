@@ -14,7 +14,7 @@ tags: [Azure Architecture Center, Azure架构中心]
 
 Azure Architecture Center探索: [https://www.youtube.com/watch?v=AhAz3BcXy0A](https://www.youtube.com/watch?v=AhAz3BcXy0A)
 
-## 参考架构设计
+### 2. 参考架构设计
 
 ![参考架构设计](https://ssw.com.au/rules/static/525e17764c2805c16b144adb8e7ed265/2bef9/referencearchitectures.png)
 
@@ -25,7 +25,7 @@ Azure Architecture Center探索: [https://www.youtube.com/watch?v=AhAz3BcXy0A](h
 
 每个架构设计都附带全面的文档，提供生成和部署解决方案所需的所有信息。
 
-## 最佳实践
+### 3. 最佳实践
 
 ![最佳实践](https://ssw.com.au/rules/static/2c9b3ee2b45e53b9418855048950e9de/2bef9/bestpractices.png)
 
