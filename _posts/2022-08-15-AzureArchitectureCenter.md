@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Azure Architecture Center (Azure架构中心)介绍"
+title:  "Azure Architecture Center(Azure架构中心)介绍"
 date:   2022-08-15 21:42:55 +0800--
 categories: [Azure]
 tags: [Azure Architecture Center, Azure架构中心]  
