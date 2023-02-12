@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Azure DevOps探索系列之二: 一个好的PBI的标题需要包含哪些元素"
+title:  "Azure DevOps探索系列之二: 一个好的PBI标题需要包含哪些元素"
 date:   2022-12-10 21:42:55 +0800--
 categories: [Azure DevOps]
 tags: [Azure DevOps探索系列]  
