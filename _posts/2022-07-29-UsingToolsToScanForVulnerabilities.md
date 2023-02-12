@@ -2,7 +2,7 @@
 layout: post
 title:  "使用工具扫描第三方引用库的漏洞"
 date:   2022-07-29 21:42:55 +0800--
-categories: [Other]
+categories: [Tools]
 tags: [漏洞扫描, .NET Core, dotnet Cli, npm, yarn]  
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "使用winget安装.NET环境"
 date:   2022-09-13 21:42:55 +0800--
-categories: [Other]
+categories: [Tools]
 tags: [.NET, .NET Core, winget]  
 ---
 
