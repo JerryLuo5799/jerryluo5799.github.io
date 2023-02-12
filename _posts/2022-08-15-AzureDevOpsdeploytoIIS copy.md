@@ -12,7 +12,7 @@ tags: [Azure Architecture Center, Azure架构中心]
 
 它是Azure架构的一站式商店，它包含了大量关于最佳实践的信息，也包含了各种架构设计的小细节，可以帮助你更好的实现你的架构设计。
 
-`youtube: https://www.youtube.com/watch?v=AhAz3BcXy0A`
+Azure Architecture Center探索: [https://www.youtube.com/watch?v=AhAz3BcXy0A](https://www.youtube.com/watch?v=AhAz3BcXy0A)
 
 ## 参考架构设计
 
