@@ -10,7 +10,9 @@ tags: [Azure DevOps探索系列]
 
 在之前的博客中, 我们提到了DevOps的产生和敏捷的兴起有直接的关系, 同时, 我们也简单介绍了一个Scrum + DevOps的工作模型, 今天我们结合Azure DevOps的Backlogs,来聊一聊工作模型的第一步, 需求管理 。
 
-` ** 在Azure DevOps中, 需求管理的实质是: 对Backlogs中的工作项以及工作项排序的管理** `
+```text
+在Azure DevOps中, 需求管理的实质是: 对Backlogs中的工作项以及工作项排序的管理
+```
 
 ![Scrum + DevOps](/assets/imgs/DevOps03.png)
 
