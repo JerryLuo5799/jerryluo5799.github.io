@@ -8,7 +8,7 @@ tags: [Cost Analysis, Azure成本分析]
 
 ### 1. 前言
 
-Azure 成本分析提供任何 Azure 支出来源的详细细分。它通过以下方式告诉您成本：
+Azure 成本分析提供任何 Azure 支出来源的详细细分。它通过以下维度来分析成本：
 
 - 范围区域，例如订阅
 - 资源组，例如 Northwind.Website
