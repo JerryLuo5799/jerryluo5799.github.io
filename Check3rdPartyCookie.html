@@ -2,11 +2,9 @@
 <body>
   <script>
       (function () {
-          if (!window.parent) return;
-          var msg = /s=1/.test(document.cookie)
-              ? "3pcSupported"
-              : "3pcUnsupported";
-          window.parent.postMessage(msg, "*");
+        if (!window.parent) return;
+        var msg = navigator.cookieEnabled ? "3pcSupported" : "3pcUnsupported";
+        window.parent.postMessage(msg, "*");
       })();
   </script>
 </body>
