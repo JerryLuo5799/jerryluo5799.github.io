@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用Azure Application Insights监测你的应用 (三) - Snapshot Debugger"
-date:   2020-04-29 21:42:55 +0800--
+date:   2022-07-15 21:42:55 +0800--
 categories: [Azure]
 tags: [Application Insights, 监控平台, 日志系统, Snapshot Debugger]  
 ---

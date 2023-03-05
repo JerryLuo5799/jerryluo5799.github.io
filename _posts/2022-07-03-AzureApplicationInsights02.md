@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用Azure Application Insights监测你的应用 (二) - 主要功能服务介绍"
-date:   2020-03-30 21:42:55 +0800--
+date:   2022-07-03 21:42:55 +0800--
 categories: [Azure]
 tags: [Application Insights, 监控平台, 日志系统]  
 ---
