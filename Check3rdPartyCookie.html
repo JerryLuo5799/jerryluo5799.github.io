@@ -1,0 +1,10 @@
+<title>Check if browse supports 3rd party cookie</title>
+<body>
+  <script>
+      (function () {
+        if (!window.parent) return;
+        var msg = navigator.cookieEnabled ? "3pcSupported" : "3pcUnsupported";
+        window.parent.postMessage(msg, "*");
+      })();
+  </script>
+</body>
