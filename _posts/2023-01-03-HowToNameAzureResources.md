@@ -3,7 +3,7 @@ layout: post
 title:  "Azure资源命名规范"
 date:   2023-01-03 21:42:55 +0800--
 categories: [Azure]
-tags: [资源命名规范]  
+tags: [Rules, 资源命名规范]  
 ---
 
 ### 1. 前言

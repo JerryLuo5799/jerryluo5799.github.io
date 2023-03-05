@@ -3,7 +3,7 @@ layout: post
 title:  "如何选择Azure服务"
 date:   2022-10-28 21:42:55 +0800--
 categories: [Azure]
-tags: [Azure Service]  
+tags: [Azure Service, Rules]  
 ---
 
 ### 1. 前言
