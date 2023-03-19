@@ -20,7 +20,7 @@ Visual Studio 2022 17.5+
 
 1. 在菜单 **Tools | Options | Environment | Preview Features** 启用 Dev Tunnels
 ![Enable Dev Tunnels](https://www.ssw.com.au/rules/static/1fa6e7be9985bbd5e2858bbf7e17b94b/2bef9/screen1.png)
-2. 在菜单  **View | Other Windows | Dev Tunnels** 打开 Dev Tunnels 窗口
+2. 在菜单  **View \| Other Windows \| Dev Tunnels** 打开 Dev Tunnels 窗口
 3. 创建一个新的Dev Tunnel
 ![Create Dev Tunnel](https://www.ssw.com.au/rules/static/93579fb5cf32b1faf2331e47407ff09e/2bef9/screen2.png)
 4. 运行项目
@@ -28,7 +28,6 @@ Visual Studio 2022 17.5+
 ![Get URL](https://www.ssw.com.au/rules/static/3495c5bad508a68c4d75b00e2497c021/d4c13/screen4.png)
 6. 通过公网URL地址访问本机应用
 ![Web](https://www.ssw.com.au/rules/static/2cbd4ce9eb9039bc1bb70465c55421b6/2bef9/screen3.png)
-
 ![Mobile](https://www.ssw.com.au/rules/static/4684d912be95d2de09660e7f550b566f/2bef9/screen5.png)
 
 
