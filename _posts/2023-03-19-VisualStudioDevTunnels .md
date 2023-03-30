@@ -18,6 +18,8 @@ Visual Studio 2022 17.5+
 
 ### 3. 如何使用
 
+演示视频地址: [https://www.bilibili.com/video/BV1gv4y1V7Lz/](https://www.bilibili.com/video/BV1gv4y1V7Lz/)
+
 1. 在菜单 **Tools | Options | Environment | Preview Features** 启用 Dev Tunnels
 ![Enable Dev Tunnels](https://www.ssw.com.au/rules/static/1fa6e7be9985bbd5e2858bbf7e17b94b/2bef9/screen1.png)
 2. 在菜单  **View \| Other Windows \| Dev Tunnels** 打开 Dev Tunnels 窗口
