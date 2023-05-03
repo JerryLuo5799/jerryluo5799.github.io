@@ -6,6 +6,11 @@ categories: [Azure DevOps]
 tags: [Azure DevOps探索系列]  
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=817694408&bvid=BV1oG4y1x7kN&cid=893387629&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+
+链接地址: [https://www.bilibili.com/video/BV1oG4y1x7kN/](https://www.bilibili.com/video/BV1oG4y1x7kN/)
+
+
 ### 1. 背景
 
 我们知道，一个软件项目从零开始到最终交付，大体包括了规划、编码、构建、测试、部署和维护这几个阶段。

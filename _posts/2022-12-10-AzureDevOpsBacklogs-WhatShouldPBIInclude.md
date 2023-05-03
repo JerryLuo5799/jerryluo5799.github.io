@@ -6,6 +6,11 @@ categories: [Azure DevOps]
 tags: [Azure DevOps探索系列]  
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=311396064&bvid=BV1yP411o7kV&cid=1066573911&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+
+链接地址: [https://www.bilibili.com/video/BV1yP411o7kV/](https://www.bilibili.com/video/BV1yP411o7kV/)
+
+
 ### 1. 前言
 
 在[Azure DevOps探索系列之一: 使用Backlogs规划和管理需求](/2022/11/10/AzureDevOpsBacklogs/)中, 我们简单了解Backlogs列表的使用, 在实际工作过程中, Backlogs是项目运行流畅的基石。团队成员在这里可以跟踪功能、错误、任务等。所以， 当团队成员查看Backlogs的时候，标题是否一目了解是非常重要的，他们需要可以通过PBI的标题就能够对PBI有一个很好的理解。

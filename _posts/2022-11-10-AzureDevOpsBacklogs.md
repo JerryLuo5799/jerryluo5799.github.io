@@ -6,6 +6,11 @@ categories: [Azure DevOps]
 tags: [Azure DevOps探索系列]  
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=483203981&bvid=BV1WT411a7yn&cid=1044690199&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+
+链接地址: [https://www.bilibili.com/video/BV1WT411a7yn/](https://www.bilibili.com/video/BV1WT411a7yn/)
+
+
 ### 1. 前言
 
 在之前的博客中, 我们提到了DevOps的产生和敏捷的兴起有直接的关系, 同时, 我们也简单介绍了一个Scrum + DevOps的工作模型, 今天我们结合Azure DevOps的Backlogs,来聊一聊工作模型的第一步, 需求管理 。

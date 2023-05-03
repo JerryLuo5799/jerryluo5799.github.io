@@ -6,6 +6,10 @@ categories: [Azure DevOps]
 tags: [Azure DevOps探索系列]  
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=311396064&bvid=BV1yP411o7kV&cid=1066573911&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+
+链接地址: [https://www.bilibili.com/video/BV1yP411o7kV/](https://www.bilibili.com/video/BV1yP411o7kV/)
+
 ### 1. 前言
 
 在[Azure DevOps探索系列之一: 一个好的PBI标题需要包含哪些元素](/2022/12/10/AzureDevOpsBacklogs-WhatShouldPBIInclude/)中, 我们介绍了如何编写一个好的PBI标题, 那么一个好的PBI需要包含哪些内容呢?
