@@ -8,12 +8,12 @@ tags: [Azure DevOps, Azure DevOps APIs, WorkItems]
 
 ### 1. 前言
 
-Azure DevOps可以通过Excel文件导入工作项, 同时也可以通过[Azure DevOps API](https://docs.microsoft.com/en-us/rest/api/azure/devops)动态的导入。
+Azure DevOps可以通过Excel文件导入工作项, 同时也可以通过[Azure DevOps API](https://docs.microsoft.com/en-us/rest/api/azure/devops?wt.mc_id=MVP_324329)动态的导入。
 
 ### 2. 如何实现
 
 首先， 准备好一个文件， 里面录入工作项数据。
-![工作项数据](https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2022/05/word-image-4.png)
+![工作项数据](https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2022/05/word-image-4.png?wt.mc_id=MVP_324329)
 
 示例代码:
 
@@ -67,10 +67,10 @@ private void ImportWorkItems()
 ```
 
 代码执行结果为:
-![执行结果](https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2022/05/graphical-user-interface-text-application-email-5.png)
+![执行结果](https://devblogs.microsoft.com/premier-developer/wp-content/uploads/sites/31/2022/05/graphical-user-interface-text-application-email-5.png?wt.mc_id=MVP_324329)
 
 ### 3. 参考资料
 
-[Work Items – Create – REST API](https://learn.microsoft.com/en-us/rest/api/azure/devops/wit/work-items/create?view=azure-devops-rest-6.0&tabs=HTTP)
+[Work Items – Create – REST API](https://learn.microsoft.com/en-us/rest/api/azure/devops/wit/work-items/create?view=azure-devops-rest-6.0&tabs=HTTP?wt.mc_id=MVP_324329)
 
-[Get started with the REST APIs](https://learn.microsoft.com/en-us/azure/devops/integrate/how-to/call-rest-api?view=azure-devops)
+[Get started with the REST APIs](https://learn.microsoft.com/en-us/azure/devops/integrate/how-to/call-rest-api?view=azure-devops?wt.mc_id=MVP_324329)

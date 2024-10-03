@@ -54,5 +54,5 @@ Azure有标签功能，允许您将不同的标签名称和值应用到资源和
 - 所有者标记:您可以指定谁拥有该资源
 - 环境标记:您可以指定资源所在的环境
 
-你可以使用[微软推荐的命名和标记指南](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging)。
+你可以使用[微软推荐的命名和标记指南](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging?wt.mc_id=MVP_324329)。
 

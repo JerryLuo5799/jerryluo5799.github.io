@@ -8,7 +8,7 @@ tags: [Azure Service, Rules]
 
 ### 1. 前言
 
-当我们决定选用Azure云服务的时候, 最大的困难是如何从[Azure的100多个服务](https://azure.microsoft.com/en-us/products/)中, 选择正确的服务。
+当我们决定选用Azure云服务的时候, 最大的困难是如何从[Azure的100多个服务](https://azure.microsoft.com/en-us/products/?wt.mc_id=MVP_324329)中, 选择正确的服务。
 
 下述的几个问题, 可以很好的帮助你缩小业务对应服务的选择范围。
 

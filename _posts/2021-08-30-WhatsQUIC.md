@@ -70,4 +70,4 @@ QUIC 1.0 是全新的，目前还不到 4 个月。大多数设备支持 QUIC �
 这是否意味着要忽略QUIC？不应该。微软、苹果、谷歌、亚马逊、Facebook、Cloudflare 和其他大型科技公司已经在使用 QUIC，因为它比 TCP 有优势。科技界已经为 QUIC 开关做好了准备，所以你也应该考虑一下。
 
 ### 5. MsQuic
-微软的 QUIC 实现称为[MsQuic](https://github.com/microsoft/msquic)。它是一个开源跨平台项目。从版本 1.5.0 开始完全支持 Windows 和 Linux，MacOS 目前处于 alpha 阶段。MsQuic 支持为 Windows Server 2022 宣布的UDP卸载功能，该功能也将在 Windows 11 中可用。UDP 功能确实需要兼容的网络适配器。MsQuic 的表现也相当令人印象深刻。
+微软的 QUIC 实现称为[MsQuic](https://github.com/microsoft/msquic?wt.mc_id=MVP_324329)。它是一个开源跨平台项目。从版本 1.5.0 开始完全支持 Windows 和 Linux，MacOS 目前处于 alpha 阶段。MsQuic 支持为 Windows Server 2022 宣布的UDP卸载功能，该功能也将在 Windows 11 中可用。UDP 功能确实需要兼容的网络适配器。MsQuic 的表现也相当令人印象深刻。

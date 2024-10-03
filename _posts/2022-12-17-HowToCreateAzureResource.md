@@ -32,7 +32,7 @@ Azure支持通过多种方式创建资源, 一般来说, 我们应该尽量减�
 
 Farmer是一个.net的一个领域特定语言(DSL: domain-specific-language)，用于快速生成Azure资源管理器(ARM)模板。Farmer是商业支持的，开源的，免费使用的。
 
-- [Farmer - 使可重复的 Azure 部署变得简单！](https://compositionalit.github.io/farmer/)
+- [Farmer - 使可重复的 Azure 部署变得简单！](https://compositionalit.github.io/farmer/?wt.mc_id=MVP_324329)
 - 从 F# 生成 ARM 模板
 
 #### 4.2 Bicep (推荐)
@@ -42,16 +42,16 @@ Bicep 是微软官方发布的一种领域特定语言（DSL），用于以声�
 
 Bicep 代码被转译为标准 ARM 模板 JSON 文件，从而有效地将 ARM 模板视为中间语言 （IL）。
 ```
-- [Bicep - 用于描述和部署 Azure 资源的声明性语言](https://github.com/Azure/bicep)
+- [Bicep - 用于描述和部署 Azure 资源的声明性语言](https://github.com/Azure/bicep?wt.mc_id=MVP_324329)
 - 免费，完全受微软支持
-- 具有["az"命令](https://learn.microsoft.com/en-us/cli/azure/bicep?view=azure-cli-latest)集成
-- VS Code的[扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)，用于编写ARM Bicep文件 ⭐️
+- 具有["az"命令](https://learn.microsoft.com/en-us/cli/azure/bicep?view=azure-cli-latest?wt.mc_id=MVP_324329)集成
+- VS Code的[扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep?wt.mc_id=MVP_324329)，用于编写ARM Bicep文件 ⭐️
 - 幕后 - 编译成 ARM JSON 模板进行部署
 - 语法比 ARM JSON 简单得多
 - 自动处理资源依赖关系
-- 用于发布版本化和可重用体系结构的[专用模块注册表](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/private-module-registry?tabs=azure-powershell)
+- 用于发布版本化和可重用体系结构的[专用模块注册表](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/private-module-registry?tabs=azure-powershell?wt.mc_id=MVP_324329)
   
-[Bicep 案例](https://github.com/william-liebenberg/BicepFlex)
+[Bicep 案例](https://github.com/william-liebenberg/BicepFlex?wt.mc_id=MVP_324329)
 ![Bicep 案例](https://ssw.com.au/rules/static/46eeacc4d394177db4a3758a9b5b6d22/681f1/Bicep.png)
 
 #### 4.3 其他收费服务 
@@ -62,7 +62,7 @@ Bicep 代码被转译为标准 ARM 模板 JSON 文件，从而有效地将 ARM �
 - 付费版本为大型团队提供更多好处，提供管理大型的基础结构解决方案的能力
 - Terraform 使用 HashiCorp Configuration Language HCL
   - 像 YAML 一样，但功能更强大
-  - [Terraform Quick Start Demo](https://learn.hashicorp.com/tutorials/terraform/cdktf-install?in=terraform/cdktf)
+  - [Terraform Quick Start Demo](https://learn.hashicorp.com/tutorials/terraform/cdktf-install?in=terraform/cdktf?wt.mc_id=MVP_324329)
 - Pulumi 使用真实代码（C#、TypeScript、Go 和 Python）作为基础设施，而不是 JSON/YAML
 
 Pulumi的Demo, 其中用C#定义Azure资源, 并从控制台运行"pulumi up"将资源部署到Azure

@@ -39,7 +39,7 @@ tags: [.NET, .NET Core, winget]
 ```
 winget search Microsoft.DotNet
 ```
-![.NET Search Result Screenshot](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/09/Search-Dotnet-New.png)
+![.NET Search Result Screenshot](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/09/Search-Dotnet-New.png?wt.mc_id=MVP_324329)
 
 #### 3.2 安装.NET
 命令行:
@@ -51,7 +51,7 @@ winget install [package-id]
 ```
 winget install Microsoft.DotNet.SDK.6
 ```
-![.NET Install Screenshot](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/09/Install-Dotnet-New.png)
+![.NET Install Screenshot](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/09/Install-Dotnet-New.png?wt.mc_id=MVP_324329)
 
 如需要安装指定体系结构（x86、x64 和 Arm64），可以使用以下命令：
 ```
@@ -64,4 +64,4 @@ winget uninstall Microsoft.DotNet.SDK.6
 ```
 
 ### 4. 更多
-更多关于如何安装和使用winget, 请查阅 [如何安装和使用 winget 工具。](https://docs.microsoft.com/windows/package-manager/winget/)
+更多关于如何安装和使用winget, 请查阅 [如何安装和使用 winget 工具。](https://docs.microsoft.com/windows/package-manager/winget/?wt.mc_id=MVP_324329)

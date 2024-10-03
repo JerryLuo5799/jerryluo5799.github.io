@@ -8,7 +8,7 @@ tags: [Azure Architecture Center, Azure架构中心]
 
 ### 1. 前言
 
-在做项目架构设计阶段, 通常我们会希望有一些行业案例作为参考, 而 [Azure Architecture Center(Azure架构中心)](https://docs.microsoft.com/en-us/azure/architecture/) 是一个非常不错的选择。
+在做项目架构设计阶段, 通常我们会希望有一些行业案例作为参考, 而 [Azure Architecture Center(Azure架构中心)](https://docs.microsoft.com/en-us/azure/architecture/?wt.mc_id=MVP_324329) 是一个非常不错的选择。
 
 它是Azure架构的一站式商店，它包含了大量关于最佳实践的信息，也包含了各种架构设计的小细节，可以帮助你更好的实现你的架构设计。
 

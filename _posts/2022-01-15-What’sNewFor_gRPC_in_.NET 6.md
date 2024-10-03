@@ -39,7 +39,7 @@ var response = await client.SayHelloAsync(new HelloRequest { Name = "world" });
 ```
 ![原理图](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2021/12/loadbalancing.gif)
 
-更多信息, 可以查阅 [gRPC 客户端负载平衡](https://docs.microsoft.com/zh-cn/aspnet/core/grpc/loadbalancing?view=aspnetcore-6.0)
+更多信息, 可以查阅 [gRPC 客户端负载平衡](https://docs.microsoft.com/zh-cn/aspnet/core/grpc/loadbalancing?view=aspnetcore-6.0&wt.mc_id=MVP_324329)
 
 ### 3. 故障处理
 gRPC 调用可能会被瞬间的故障中断。瞬间故障包括：
@@ -86,7 +86,7 @@ var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOp
     ServiceConfig = new ServiceConfig { MethodConfigs = { defaultMethodConfig } }
 });
 ```
-更多信息可以查阅 [使用 gRPC 重试的瞬态故障处理](https://docs.microsoft.com/aspnet/core/grpc/retries)
+更多信息可以查阅 [使用 gRPC 重试的瞬态故障处理](https://docs.microsoft.com/aspnet/core/grpc/retries?wt.mc_id=MVP_324329)
 
 ### 4. Protobuf 性能提升
 .NET 的 gRPC 使用 Google.Protobuf 包作为消息的默认序列化程序。Protobuf 是一种高效的二进制序列化格式。在 .NET 5 中，微软与 Protobuf 团队合作，为序列化程序添加了对Span<T>, ReadOnlySequence<T> 和 IBufferWriter<T>的支持。
@@ -94,13 +94,13 @@ var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOp
 
 ### 5. 下载速度优化
 用户发现有时gRPC的下载速度很慢。原因是当客户端和服务器之间存在延迟时，HTTP/2 流控制会限制下载。服务器在客户端耗尽之前填充接收缓冲区窗口，导致服务器暂停发送数据。gRPC 消息以启动/停止突发的形式下载。
-这已经在[dotnet/runtime#54755](https://github.com/dotnet/runtime/pull/54755)中修复。HttpClient现在动态缩放接收缓冲区窗口。当建立 HTTP/2 连接时，客户端将向服务器发送 ping 以测量延迟。如果存在高延迟，客户端会自动增加接收缓冲区窗口，从而实现快速、连续的下载。
+这已经在[dotnet/runtime#54755](https://github.com/dotnet/runtime/pull/54755?wt.mc_id=MVP_324329)中修复。HttpClient现在动态缩放接收缓冲区窗口。当建立 HTTP/2 连接时，客户端将向服务器发送 ping 以测量延迟。如果存在高延迟，客户端会自动增加接收缓冲区窗口，从而实现快速、连续的下载。
 
 ### 6. HTTP/3的支持
-.NET 上的 gRPC 现在支持 HTTP/3。gRPC 构建在添加到 ASP.NET Core 和 .NET 6 中的 HTTP/3 支持之上HttpClient。有关更多信息，请参阅[.NET 6 中的 HTTP/3 支持](https://devblogs.microsoft.com/dotnet/http-3-support-in-dotnet-6/)。
+.NET 上的 gRPC 现在支持 HTTP/3。gRPC 构建在添加到 ASP.NET Core 和 .NET 6 中的 HTTP/3 支持之上HttpClient。有关更多信息，请参阅[.NET 6 中的 HTTP/3 支持](https://devblogs.microsoft.com/dotnet/http-3-support-in-dotnet-6/?wt.mc_id=MVP_324329)。
 
 ### 7. 如何使用
-如果希望使用 gRPC 的新功能，可以查阅 [ASP.NET Core 中创建 gRPC 客户端和服务器教程](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-6.0&tabs=visual-studio)。
+如果希望使用 gRPC 的新功能，可以查阅 [ASP.NET Core 中创建 gRPC 客户端和服务器教程](https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-6.0&tabs=visual-studio&wt.mc_id=MVP_324329)。
 
 
 

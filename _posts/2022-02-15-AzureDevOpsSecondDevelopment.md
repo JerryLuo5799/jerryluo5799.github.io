@@ -12,16 +12,16 @@ tags: [Azure DevOps, Microsoft.TeamFoundationServer.Client, 二次开发]
 ### 2. 方案
 
 经过调研, 发现有两个方案:
-1. 直接调用Azure DevOps Server的[Rest Api](https://docs.microsoft.com/en-us/rest/api/azure/devops/account/?view=azure-devops-rest-6.1) 
-2. 使用官方的包[Microsoft.TeamFoundationServer.Client](https://www.nuget.org/packages/Microsoft.TeamFoundationServer.Client), 详情请查阅[文档](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/dotnet-client-libraries?view=azure-devops)
+1. 直接调用Azure DevOps Server的[Rest Api](https://docs.microsoft.com/en-us/rest/api/azure/devops/account/?view=azure-devops-rest-6.1&wt.mc_id=MVP_324329) 
+2. 使用官方的包[Microsoft.TeamFoundationServer.Client](https://www.nuget.org/packages/Microsoft.TeamFoundationServer.Client), 详情请查阅[文档](https://docs.microsoft.com/en-us/azure/devops/integrate/concepts/dotnet-client-libraries?view=azure-devops&wt.mc_id=MVP_324329)
 
 最后我们选择了方案二, 因为相对来说比较简单。
 
 ### 3.如何使用
 
-不管是使用Rest Api或者引用包的方式来实现, 第一步都是要进行身份认证,之后才能调用接口进行操作。微软官方提供了各种身份认证的方式，可以查阅[文档](https://docs.microsoft.com/zh-cn/azure/devops/integrate/get-started/authentication/authentication-guidance?view=azure-devops)
+不管是使用Rest Api或者引用包的方式来实现, 第一步都是要进行身份认证,之后才能调用接口进行操作。微软官方提供了各种身份认证的方式，可以查阅[文档](https://docs.microsoft.com/zh-cn/azure/devops/integrate/get-started/authentication/authentication-guidance?view=azure-devops&wt.mc_id=MVP_324329)
 
-我们在实际使用中, 采用了PATs (personal access tokens)的方式，简而言之，就是每个用户都可以在登录Azure DevOps后，手工创建一些Token并给Token授权，然后在程序中就可以使用这些Token，调用接口做对应的事情。 [什么是PATs，如何创建？](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
+我们在实际使用中, 采用了PATs (personal access tokens)的方式，简而言之，就是每个用户都可以在登录Azure DevOps后，手工创建一些Token并给Token授权，然后在程序中就可以使用这些Token，调用接口做对应的事情。 [什么是PATs，如何创建？](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows&wt.mc_id=MVP_324329)
 
 创建完PAT之后, 我们就可以用Microsoft.TeamFoundationServer.Client和Azure DecOps进行交互了。
 

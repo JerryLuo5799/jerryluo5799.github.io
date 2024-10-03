@@ -14,12 +14,12 @@ tags: [.NET Core, PuppeteerSharp]
 #### 2.1 Puppeteer
 Puppeteer是一个Node库，它提供了高级API来通过DevTools协议控制Chrome或Chromium 。Puppeteer默认情况下无头运行，但可以配置为运行完整（无头）的Chrome或Chromium。
 
-**Github**: [https://github.com/puppeteer/puppeteer](https://github.com/puppeteer/puppeteer)
+**Github**: [https://github.com/puppeteer/puppeteer](https://github.com/puppeteer/puppeteer?wt.mc_id=MVP_324329)
 
 #### 2.2 PuppeteerSharp
 Puppeteer Sharp是Puppeteer的.NET 移植, 是一个NetStandard 2.0库，最低支持的平台版本是.NET Framework 4.6.1和.NET Core 2.0。
 
-**Github**: [https://github.com/hardkoded/puppeteer-sharp](https://github.com/hardkoded/puppeteer-sharp)
+**Github**: [https://github.com/hardkoded/puppeteer-sharp](https://github.com/hardkoded/puppeteer-sharp?wt.mc_id=MVP_324329)
 
 #### 2.3 实现的功能
 您可以在浏览器中手动执行的大多数操作都可以使用**Puppeteer**或**PuppeteerSharp**完成！

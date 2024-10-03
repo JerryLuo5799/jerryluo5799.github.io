@@ -50,4 +50,4 @@ Azure 存储始终会存储数据的多个副本，以防范各种计划内和�
 
 - 数据至关重要，需要访问主要区域和次要区域
 
-更多信息可以参照: [Azure 存储冗余](https://learn.microsoft.com/zh-cn/azure/storage/common/storage-redundancy)
+更多信息可以参照: [Azure 存储冗余](https://learn.microsoft.com/zh-cn/azure/storage/common/storage-redundancy?wt.mc_id=MVP_324329)
