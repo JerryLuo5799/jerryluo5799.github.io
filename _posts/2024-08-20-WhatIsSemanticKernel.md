@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "什么是Semantic Kernel"
+title:  "Semantic Kernel入门系列之一: 什么是Semantic Kernel"
 date:   2024-08-20 21:42:55 +0800--
 categories: [.NET]
 tags: [Semantic Kernel, SK]  
