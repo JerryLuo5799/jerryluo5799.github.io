@@ -31,11 +31,13 @@ Semantic Kernel（SK）是一款轻量级的SDK，由微软开源，并在其Cop
 以下是一个使用SK实现智能问答的简单示例：
 
 **安装NuGet包:**
+
 ```
 dotnet add package Microsoft.SemanticKernel
 ```
 
 **引用命名空间:**
+
 ``` C#
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
@@ -46,6 +48,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 - 定义聊天记录存储对象
 - 定义聊天提示模板
 - 调用智能问答API
+  
 ``` C#
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(Config.DEPLOYMENT_NAME, Config.ENDPOINT, Config.API_KEY);
@@ -84,7 +87,6 @@ do
     // Add the message from the agent to the chat history
     history.AddMessage(result.Role, result.Content ?? string.Empty);
 } while (userInput is not null);
-
 ```
 
 **运行结果:**
