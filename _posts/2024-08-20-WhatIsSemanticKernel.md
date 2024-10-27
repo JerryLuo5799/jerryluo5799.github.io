@@ -6,6 +6,10 @@ categories: [.NET]
 tags: [Semantic Kernel, SK]  
 ---
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113366936851935&bvid=BV1XxySY5Ek5&cid=26454265629&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+
+链接地址: [https://www.bilibili.com/video/BV1XxySY5Ek5/](https://www.bilibili.com/video/BV1XxySY5Ek5/)
+
 ### 1. 前言
 
 作为一名技术开发者，你是否也曾想过将AI技术集成到自己的项目中，却苦于缺乏相关知识和技术门槛？一款来自微软的开源神器——Semantic Kernel（SK），它能帮助你轻松地实现AI功能，让你的应用焕发新的活力！
@@ -44,6 +48,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 ```
 
 **接着只需要:**
+
 - 创建Azure OpenAI连接器
 - 定义聊天记录存储对象
 - 定义聊天提示模板
