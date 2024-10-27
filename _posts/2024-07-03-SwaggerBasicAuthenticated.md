@@ -22,37 +22,42 @@ Swagger是一个广泛使用的API文档和交互工具。在开发过程中，�
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
 {
     // 其他配置...
-    app.Use(async (context, next) =>
+
+    //非开发环境才需要认证后才能看到Swagger文档
+    if (!env.IsDevelopment())
     {
-        // 检查是否是访问Swagger的请求
-        if (context.Request.Path.StartsWithSegments("/swagger"))
+        app.Use(async (context, next) =>
         {
-            // 获取Authorization头部
-            var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
-            if (authHeader != null && authHeader.StartsWith("Basic "))
+            // 检查是否是访问Swagger的请求
+            if (context.Request.Path.StartsWithSegments("/swagger"))
             {
-                // 解析用户名和密码
-                var encodedUsernamePassword = authHeader.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries)[1]?.Trim();
-                var decodedUsernamePassword = Encoding.UTF8.GetString(Convert.FromBase64String(encodedUsernamePassword));
-                var username = decodedUsernamePassword.Split(':', 2)[0];
-                var password = decodedUsernamePassword.Split(':', 2)[1];
-                
-                //验证用户名和密码
-                bool isValid = ValidateCredentials(username, password);
-                if (isValid)
+                // 获取Authorization头部
+                var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
+                if (authHeader != null && authHeader.StartsWith("Basic "))
                 {
-                    // 认证成功，继续处理请求
-                    await next();
-                    return;
+                    // 解析用户名和密码
+                    var encodedUsernamePassword = authHeader.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries)[1]?.Trim();
+                    var decodedUsernamePassword = Encoding.UTF8.GetString(Convert.FromBase64String(encodedUsernamePassword));
+                    var username = decodedUsernamePassword.Split(':', 2)[0];
+                    var password = decodedUsernamePassword.Split(':', 2)[1];
+                    
+                    //验证用户名和密码
+                    bool isValid = ValidateCredentials(username, password);
+                    if (isValid)
+                    {
+                        // 认证成功，继续处理请求
+                        await next();
+                        return;
+                    }
                 }
+                // 认证失败，返回401未授权状态码
+                context.Response.StatusCode = 401;
+                context.Response.Headers.Add("WWW-Authenticate", "Basic realm=\"Swagger\"");
+                return;
             }
-            // 认证失败，返回401未授权状态码
-            context.Response.StatusCode = 401;
-            context.Response.Headers.Add("WWW-Authenticate", "Basic realm=\"Swagger\"");
-            return;
-        }
-        await next();
-    });
+            await next();
+        });
+    }
     // 其他配置...
 }
 ```
