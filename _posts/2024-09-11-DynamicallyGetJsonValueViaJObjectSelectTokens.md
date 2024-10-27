@@ -8,7 +8,7 @@ tags: [JObject, JSONPath]
 
 ### 1. 前言
 
-在处理复杂的 JSON 数据时，经常需要从不同层级中提取特定的字段值。对于初级技术人员来说，理解并掌握如何使用 `JObject.SelectTokens` 方法结合 JSONPath 表达式进行这种动态提取是一项非常有用的技能。本文将指导你如何使用这些工具来获取所有 `popupData` 对象下的 `frontendId` 字段的值。
+在处理复杂的 JSON 数据时，经常需要从不同层级中提取特定的字段值。对于技术人员来说，理解并掌握如何使用 `JObject.SelectTokens` 方法结合 JSONPath 表达式进行这种动态提取是一项非常有用的技能。本文将指导你如何使用这些工具来获取所有 `popupData` 对象下的 `frontendId` 字段的值。
 
 ### 2. 什么是 JSONPath？
 
