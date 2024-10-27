@@ -61,6 +61,15 @@ public class Program
             Publisher = "Scribner",
             AdditionalInfo = new { Pages = 180, Genre = "Fiction" } // JSON对象
         };
+
+        // 动态生成一个新的匿名对象
+        var newObject = CreateAnonymousObject(book);
+
+        // 输出新对象的属性
+        foreach (var property in newObject.GetType().GetProperties())
+        {
+            Console.WriteLine($"{property.Name}: {property.GetValue(newObject)}");
+        }
     }
 }
 ```
