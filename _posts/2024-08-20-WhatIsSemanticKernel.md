@@ -42,7 +42,7 @@ dotnet add package Microsoft.SemanticKernel
 
 **引用命名空间:**
 
-``` C#
+```csharp
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 ```
@@ -54,7 +54,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 - 定义聊天提示模板
 - 调用智能问答API
   
-``` C#
+```csharp
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(Config.DEPLOYMENT_NAME, Config.ENDPOINT, Config.API_KEY);
 

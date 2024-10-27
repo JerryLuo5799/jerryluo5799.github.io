@@ -33,13 +33,13 @@ Jint 是一个用于 .NET 的 JavaScript 解释器。它允许你在 .NET 应用
 
 安装Jint库：
 
-``` C#
+```csharp
 Install-Package Jint
 ```
 
 创建一个C#方法，该方法使用Jint执行JavaScript代码，并将C#变量作为参数传递给JavaScript函数：
 
-```C#
+```csharp
 using Jint;
 
 public class JavaScriptInterop
@@ -93,13 +93,13 @@ public class JavaScriptInterop
 
 首先需要安装Edge.js：
 
-```C#
+```csharp
 Install-Package Edge.js
 ```
 
 然后，你可以这样使用它：
 
-```C#
+```csharp
 using EdgeJs;
 
 public async Task RunJavaScript()
@@ -138,13 +138,13 @@ ClearScript是另一个库，它允许.NET应用程序与JavaScript引擎（如V
 
 首先需要安装ClearScript：
 
-```C#
+```csharp
 Install-Package Microsoft.ClearScript
 ```
 
 然后，你可以这样使用它：
 
-``` C#
+```csharp
 using Microsoft.ClearScript.V8;
 
 public void RunJavaScript()
