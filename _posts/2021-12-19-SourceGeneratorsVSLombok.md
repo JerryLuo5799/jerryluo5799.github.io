@@ -2,8 +2,8 @@
 layout: post
 title:  "Source Generators VS Lombok (Java) - .NET Conf 2021"
 date:   2021-12-19 21:42:55 +0800--
-categories: [.NET Conf]
-tags: [.NET Core, Source Generators, Lombok]  
+categories: [Activities]
+tags: [.NET Conf, .NET Core, Source Generators, Lombok]  
 ---
 
 ### 1. 前言

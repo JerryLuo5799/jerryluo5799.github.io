@@ -2,8 +2,8 @@
 layout: post
 title:  "Playwright探索 - .NET Conf 2022"
 date:   2022-12-06 21:42:55 +0800--
-categories: [.NET Conf]
-tags: [Playwright, Web Testing]  
+categories: [Activities]
+tags: [.NET Conf, Playwright, Web Testing]  
 ---
 
 <iframe src="//player.bilibili.com/player.html?aid=305994776&bvid=BV1YP411K7uu&cid=915369452&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
