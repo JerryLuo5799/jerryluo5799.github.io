@@ -280,7 +280,7 @@ const LogStream = ({ channelId, onClose }: LogStreamProps) => {
 export default LogStream;
 ```
 
-### 3.6 前端调用（React + TypeScript）
+### 3.6 前端调用（React）
 
 ```tsx
 // ExportPage.tsx
