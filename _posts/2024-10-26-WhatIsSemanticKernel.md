@@ -23,11 +23,79 @@ tags: [Semantic Kernel]
 3. **定义提示词**：通过提示词为AI设定一个交互模板。
 4. **调用AI服务**：通过SK提供的接口直接调用大模型进行问答。
 
+**安装NuGet包:**
+
+```
+dotnet add package Microsoft.SemanticKernel
+```
+
+**引用命名空间:**
+
+```csharp
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.ChatCompletion;
+```
+
+**接着只需要:**
+
+- 创建Azure OpenAI连接器
+- 定义聊天记录存储对象
+- 定义聊天提示模板
+- 调用智能问答API
+  
+```csharp
+// Create a kernel with Azure OpenAI chat completion
+var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(Config.DEPLOYMENT_NAME, Config.ENDPOINT, Config.API_KEY);
+
+// Build the kernel
+Kernel kernel = builder.Build();
+var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
+
+// Create a history store the conversation
+var history = new ChatHistory("""
+    You are an AI assistant that helps people find information,  you will provide all the detailed information.
+    You like to speak Chinese, you don't output results in Markdown format.
+    """);
+
+// Initiate a back-and-forth chat
+string? userInput;
+do
+{
+    // Collect user input
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.Write("User > ");
+    userInput = Console.ReadLine();
+
+    // Add user input
+    history.AddUserMessage(userInput);
+
+    // Get the response from the AI
+    var result = await chatCompletionService.GetChatMessageContentAsync(history, null, kernel);
+
+    // Print the results
+    Console.ForegroundColor = ConsoleColor.White;
+
+    Console.WriteLine("Azure OpenAI > " + result);
+    Console.ForegroundColor = ConsoleColor.Red;
+
+    // Add the message from the agent to the chat history
+    history.AddMessage(result.Role, result.Content ?? string.Empty);
+} while (userInput is not null);
+```
+
+**运行结果:**
+
+![alt text](/assets/imgs/SK01-QA.png)
+
 ### 3. 什么是Semantic Kernel？
+
+![What's Semantic Kernel](/assets/imgs/SK01-WhatIsSK.png)
 
 Semantic Kernel，翻译为语义内核，是一款由微软开源的轻量级SDK。它专为简化AI服务的集成而设计，支持多种编程语言如C#、Java、Python等。微软自家也在多款Copilot产品中使用了SK，证明了其稳定性和实用性。
 
 ### 4. 为什么使用Semantic Kernel？
+
+![Why Semantic Kernel](/assets/imgs/SK01-WhySK.png)
 
 #### 4.1 简化AI服务对接
 
@@ -39,7 +107,7 @@ SK还支持与十多种向量数据库的连接，这些数据库用于存储和
 
 #### 4.3 模块化的插件架构
 
-SK的插件架构是其核心优势之一。开发者可以创建智能插件（Skills）来增强模型的能力。这些插件由提示函数（Prompt Functions）和本机函数（Native Functions）组成。SK作为中间件，将提示函数的请求转换为对本机函数的调用，并处理结果。例如，要实现一句话创建日程的功能，只需编写一个解析日期、会议主题、参与人等元素的提示函数，并实现一个日程创建的本机函数即可。
+SK的插件架构是其核心优势之一。开发者可以创建智能插件（Skills）来增强模型的能力。这些插件由提示函数（Prompt Functions）和原生函数（Native Functions）组成。SK作为中间件，将提示函数的请求转换为对本机函数的调用，并处理结果。例如，要实现一句话创建日程的功能，只需编写一个解析日期、会议主题、参与人等元素的提示函数，并实现一个日程创建的本机函数即可。
 
 #### 4.4 易于集成与扩展
 
