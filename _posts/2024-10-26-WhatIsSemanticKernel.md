@@ -6,7 +6,7 @@ categories: [.NET]
 tags: [Semantic Kernel]  
 ---
 
-<iframe src="//player.bilibili.com/player.html?aid=910118065&bvid=BV1XxySY5Ek5&cid=1098892129&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"> </iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113366936851935&bvid=BV1XxySY5Ek5&cid=26454265629&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"></iframe>
 
 链接地址: [https://www.bilibili.com/video/BV1XxySY5Ek5/](https://www.bilibili.com/video/BV1XxySY5Ek5/)
 
