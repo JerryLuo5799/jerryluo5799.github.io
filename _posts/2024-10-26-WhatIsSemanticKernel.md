@@ -36,13 +36,8 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 ```
 
-**接着只需要:**
+**实现AI服务调用:**
 
-- 创建Azure OpenAI连接器
-- 定义聊天记录存储对象
-- 定义聊天提示模板
-- 调用智能问答API
-  
 ```csharp
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(Config.DEPLOYMENT_NAME, Config.ENDPOINT, Config.API_KEY);
