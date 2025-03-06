@@ -50,3 +50,5 @@ SK的插件架构是其核心优势之一。开发者可以创建智能插件（
 Semantic Kernel为初级开发者提供了一个简单而强大的工具，用于在他们的项目中集成AI功能。通过简化AI服务的对接、提供多样的存储选项、以及模块化的插件架构，SK使得构建智能应用变得更加容易和高效。如果你正在寻找一种方法来提升你的项目的智能化水平，那么Semantic Kernel无疑是一个值得尝试的选择。
 
 更多资料可以参考: [https://learn.microsoft.com/en-us/semantic-kernel/overview/](https://learn.microsoft.com/en-us/semantic-kernel/overview/?wt.mc_id=MVP_324329)
+
+Demo地址: [https://github.com/JerryLuo5799/SemanticKernelDemo](https://github.com/JerryLuo5799/SemanticKernelDemo?wt.mc_id=MVP_324329)
