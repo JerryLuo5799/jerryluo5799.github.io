@@ -73,8 +73,6 @@ var kernel = Kernel.CreateBuilder().Build();
 - **自动化流程**：无需手动编写调用顺序，SK 自动迭代解决问题。  
 - **灵活性**：支持多步骤、多插件的复杂逻辑组合。  
 
----  
-
 ### 5. 函数调用（Function Calling）：自动化的执行引擎  
 
 函数调用是 SK 实现插件与大模型协作的关键机制，其流程如下：  
@@ -87,8 +85,6 @@ var kernel = Kernel.CreateBuilder().Build();
 
 **示例**：  
 当用户问“杭州的天气”时，SK 自动调用 `GetCityCode("杭州")` 和 `GetWeather(12345)`，最终返回结果。  
-
----  
 
 ### 6. 实战演示：开发一个天气插件
 
