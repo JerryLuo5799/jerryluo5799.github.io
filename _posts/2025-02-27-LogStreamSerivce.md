@@ -3,7 +3,7 @@ layout: post
 title:  "WebAPI借助Server-Sent Events (SSE)实现日志流式输出"
 date:   2025-02-27 21:42:55 +0800--
 categories: [.NET]
-tags: [流式日志输出, JSONPath]  
+tags: [流式日志输出]  
 ---
 
 ### 1. 前言
