@@ -71,7 +71,7 @@ SK提供了开箱即用的预定义插件，安装`Microsoft.SemanticKernel.Plug
 - **原生插件**：适合扩展模型能力以执行复杂任务。  
 - **OpenAPI插件**：快速集成现有API。  
 - **预定义插件**：开箱即用，提升开发效率。  
-- 
+
 更多资料可以参考: [https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp](https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp?wt.mc_id=MVP_324329)
 
 Demo地址: [https://github.com/JerryLuo5799/SemanticKernelDemo](https://github.com/JerryLuo5799/SemanticKernelDemo?wt.mc_id=MVP_324329)
