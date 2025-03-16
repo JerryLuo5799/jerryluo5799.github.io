@@ -395,4 +395,4 @@ public class Person
 
 C# 13带来的这些新特性，不仅提升了代码的灵活性和可读性，还在性能和开发体验上有了显著的提升。对于初级开发人员来说，掌握这些新特性将有助于更快地掌握C#语言的精髓，并写出更高效、更优雅的代码。在实际项目中，我们可以根据具体需求选择性地使用这些新特性，以提高代码的质量和可维护性。希望本文的介绍和示例能够帮助大家更好地理解和应用C# 13的新特性。
 
-更多信息: • [C#13 文档](https://learn.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-13?wt.mc_id=MVP_324329)
+更多信息: [C#13 文档](https://learn.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-13?wt.mc_id=MVP_324329)
