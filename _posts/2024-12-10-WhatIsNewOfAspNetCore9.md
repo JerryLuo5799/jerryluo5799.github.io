@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  ".NET9详解系列之四: ASP.NET Core 9.0的新特性 "
-date:   2024-11-29 21:42:55 +0800--
+date:   2024-12-10 21:42:55 +0800--
 categories: [.NET]
 tags: [.NET9]  
 ---
