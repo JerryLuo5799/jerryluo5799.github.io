@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ".NET9详解系列之三: C#13的新特性 "
+title:  ".NET9详解系列之三: EF Core 9的新特性 "
 date:   2024-11-29 21:42:55 +0800--
 categories: [.NET]
 tags: [.NET9]  
