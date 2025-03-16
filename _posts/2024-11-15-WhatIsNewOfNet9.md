@@ -286,7 +286,6 @@ dotnet build /p:EnableRoslynAnalyzers=true
 # 查看IDE中的优化建议
 ```
 
-## 学习资源
+## 更多信息资源
 
-• [.NET 9 文档](https://aka.ms/dotnet9-docs?wt.mc_id=MVP_324329)  
-• [GitHub 示例代码库](https://github.com/dotnet/samples/tree/main/core/dotnet9?wt.mc_id=MVP_324329)  
+• [.NET 9 文档](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview?wt.mc_id=MVP_324329)
