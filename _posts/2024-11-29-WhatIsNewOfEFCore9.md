@@ -196,4 +196,4 @@ EF Core 9现在支持MSBuild集成，可以在构建项目时自动更新编译�
 
 EF Core 9的新特性为开发人员提供了更强大、更高效的工具来处理数据访问层的开发。无论是对JSON数据的支持，还是LINQ查询的优化，亦或是迁移过程的改进，这些特性都将帮助你构建更高质量、更易于维护的应用程序。希望本文的介绍和示例能够帮助你更好地理解和应用EF Core 9的新特性。
 
-更多信息: [C#13 文档](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-9.0/whatsnew?wt.mc_id=MVP_324329)
+更多信息: [EF Core 9文档](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-9.0/whatsnew?wt.mc_id=MVP_324329)
