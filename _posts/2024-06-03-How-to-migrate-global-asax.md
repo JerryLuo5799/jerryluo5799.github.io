@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ".NET Framework升级.NET8之六: 如何处理global.asax文件"
+title:  ".NET Framework升级.NET8之七: 如何处理global.asax文件"
 date:   2024-06-03 21:42:55 +0800--
 categories: [.NET]
 tags: [NET Framework升级.NET8]  

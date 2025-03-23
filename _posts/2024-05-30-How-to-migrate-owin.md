@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ".NET Framework升级.NET8之五: 如何处理OWIN"
+title:  ".NET Framework升级.NET8之六: 如何处理OWIN"
 date:   2024-05-30 21:42:55 +0800--
 categories: [.NET]
 tags: [NET Framework升级.NET8]  

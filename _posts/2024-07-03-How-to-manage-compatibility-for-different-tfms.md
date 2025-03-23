@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ".NET Framework升级.NET8之八: 如何管理不同目标框架"
+title:  ".NET Framework升级.NET8之九: 如何管理不同目标框架"
 date:   2024-07-03 21:42:55 +0800--
 categories: [.NET]
 tags: [NET Framework升级.NET8]  
