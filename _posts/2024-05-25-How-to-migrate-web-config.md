@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ".NET Framework升级.NET8之四: 如何处理Web.config"
+title:  ".NET Framework升级.NET8之四: 如何处理Web.config文件"
 date:   2024-05-25 21:42:55 +0800--
 categories: [.NET]
 tags: [NET Framework升级.NET8]  
