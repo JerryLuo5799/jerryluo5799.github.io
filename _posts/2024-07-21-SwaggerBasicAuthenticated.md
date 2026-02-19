@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ASP.NET Core应用基于Basic认证实现Swagger需要登录才能访问"
-date:   2024-07-03 21:42:55 +0800--
+date:   2024-07-21 21:42:55 +0800--
 categories: [.NET]
 tags: [Swagger]  
 ---
