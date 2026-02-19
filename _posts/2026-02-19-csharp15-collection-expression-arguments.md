@@ -37,6 +37,7 @@ var squares = new List<int> { 1, 4, 9 };
 // 使用 args 指定构造函数参数 capacity
 // 即使使用集合表达式，也能避免底层数组的多次 Resize
 List<int> allItems = [args: capacity: 10, .. numbers, .. squares]; 
+```
 
 #### 2. 定制集合行为 (以 HashSet 为例)
 
