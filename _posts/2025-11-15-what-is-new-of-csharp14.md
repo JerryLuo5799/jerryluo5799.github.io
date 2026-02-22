@@ -150,7 +150,6 @@ public partial class UserViewModel {
 ### 7. `Span` 的隐式转换与过载解析
 
 **性能优化**：编译器现在能更聪明地自动匹配高性能的 `Span` 版本 API，而不需要手动转换。
-与 Benchmark
 
 ```csharp
 // --- 旧写法：需要手动 AsSpan() 才能触发表层性能优化 ---
@@ -161,7 +160,7 @@ int result = int.Parse("12345");
 
 ```
 
-**Benchmark（10,000次解析）**:
+**测试结果（10,000次解析）**:
 
 * `int.Parse(string)`: 185 μs
 * **C# 14 自动解析（Span版）**: **141 μs** (性能提升约 24%)
