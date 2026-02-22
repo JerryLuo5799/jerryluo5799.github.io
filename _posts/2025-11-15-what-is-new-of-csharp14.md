@@ -172,7 +172,7 @@ int result = int.Parse("12345");
 2. **整洁代码**：全面使用 `field` 关键字重构 DTO 和领域模型，减少 30% 以上的样板代码。
 3. **注意避坑**：`Span` 的隐式转换在极少数情况下可能导致旧有的方法重载歧义，升级 .NET 10 后请关注编译器的警告信息。
 
-> **参考链接：**
+**参考链接：**
 > * [What's new in C# 14](https://learn.microsoft.com/en-au/dotnet/csharp/whats-new/csharp-14?wt.mc_id=MVP_324329)
 
 ### 思考小问题
