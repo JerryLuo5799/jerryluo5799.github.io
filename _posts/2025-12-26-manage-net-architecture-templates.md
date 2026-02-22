@@ -6,7 +6,7 @@ categories: [Activities]
 tags: [Template]
 ---
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115784936464243&bvid=BV1PUBeBAE5q&cid=34991443944&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115784936464243&bvid=BV1PUBeBAE5q&cid=34991443944&p=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili"></iframe>
 
 链接地址: [https://www.bilibili.com/video/BV1PUBeBAE5q/](https://www.bilibili.com/video/BV1PUBeBAE5q/)
 
