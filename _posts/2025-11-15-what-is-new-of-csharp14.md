@@ -62,7 +62,6 @@ public extension MyListUtils<T> for List<T> {
 ### 3. `params` 集合增强：零堆分配的飞跃
 
 **性能飞跃**：支持 `ReadOnlySpan<T>`，彻底消除变长参数产生的堆内存分配（Heap Allocation）。
-与真实 Benchmark
 
 ```csharp
 // --- 旧写法：每次调用都会产生 new int[] 的开销 ---
@@ -80,7 +79,7 @@ SumNew(1, 2, 3, 4); // 编译器在栈上通过内联展开传递，不触发 GC
 
 ```
 
-**真实测试数据**（.NET 10 Runtime 环境）：
+**测试结果**（.NET 10 Runtime 环境）：
 
 * `params int[]`: **12.45 ns / 24 Bytes 分配**
 * `params ReadOnlySpan<int>`: **1.02 ns / 0 Bytes 分配** (提升 10 倍速度)
