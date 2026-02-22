@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "C#14 新特性 10 问"
+title:  "C#14 新特性10问"
 date:   2025-11-14 12:30:00 +0800--
 categories: [.NET]
 tags: [C#14]

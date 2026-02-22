@@ -177,3 +177,5 @@ int result = int.Parse("12345");
 ### 思考小问题
 
 在使用 `params ReadOnlySpan<T>` 时，如果该方法内部需要执行一个 `await` 异步操作，编译器会报错吗？为什么？（提示：Span 是 ref struct）
+
+答案请参考: [C#14新特性10问](https://jerryluo.com/2025/11/14/csharp-14-deep-dive-10-architectural-questions/#q2params-readonlyspant-%E5%9C%A8%E5%BC%82%E6%AD%A5%E7%8A%B6%E6%80%81%E6%9C%BA%E4%B8%AD%E7%9A%84%E9%80%83%E9%80%B8%E9%99%90%E5%88%B6%E9%80%BB%E8%BE%91%E6%98%AF%E4%BB%80%E4%B9%88)
