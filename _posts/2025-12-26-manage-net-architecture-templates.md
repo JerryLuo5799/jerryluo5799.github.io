@@ -57,6 +57,7 @@ tags: [Template]
 1. **创建模板项目文件 (.csproj)**：指定项目类型为 `Template` 并设置包标识 。
 2. **打包发布**：执行 `dotnet pack` 将其封装为 NuGet 包，并推送至 NuGet 源 。
 3. **安装测试**：
+   
 ```bash
 # 从本地路径安装测试
 dotnet new install <PATH_TO_NUPKG_FILE>
@@ -82,20 +83,26 @@ dotnet new ssw-ca --name NETConf2025.Demo
 ```csharp
 using System.CommandLine;
 
+// 1. 定义根命令：就像 dotnet 命令本身
 var rootCommand = new RootCommand("团队提效 CLI 工具");
-var nameArgument = new Argument<string>("name", "项目名称");
-var newCommand = new Command("new", "创建并自动配置新项目") { nameArgument };
 
-newCommand.SetHandler(async (name) => {
-    Console.WriteLine($"🚀 正在创建项目: {name}...");
-    // 逻辑：1. 调用 dotnet new 生成基础代码
-    // 2. 自动配置团队内部 NuGet 依赖
-    // 3. 执行 dotnet build 验证环境成功
-}, nameArgument);
+// 2. 定义参数：例如实体名称
+var nameOption = new Option<string>("--name", "业务实体名称（如 Order）") { IsRequired = true };
 
-rootCommand.AddCommand(newCommand);
+// 3. 定义子命令：生成业务模块
+var addCommand = new Command("add-module", "一键生成业务实体及 CRUD 接口") { nameOption };
+
+// 4. 编写处理逻辑：封装复杂性
+addCommand.SetHandler((name) => {
+    Console.WriteLine($"🚀 正在启动自动化引擎...");
+    Console.WriteLine($"1. 创建领域模型 {name}.cs");
+    Console.WriteLine($"2. 自动生成 Repository 层代码");
+    Console.WriteLine($"3. 注册依赖注入并更新 DbContext");
+    Console.WriteLine($"✅ 模块 {name} 生成成功，已符合团队架构规范！");
+}, nameOption);
+
+rootCommand.AddCommand(addCommand);
 await rootCommand.InvokeAsync(args);
-
 ```
 
 ### 四、 深度思考：像管理产品一样管理模板
