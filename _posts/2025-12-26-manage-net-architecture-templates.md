@@ -48,7 +48,7 @@ tags: [Template]
 | 字段名称 | 类型 | 必填 | 作用说明 |
 | --- | --- | --- | --- |
 | `shortName` | string | 是 | 使用 `dotnet new [shortName]` 调用模板的简短命令 。|
-| `sourceName` | string | 否 | <br>**关键占位符**：生成项目时，会自动将此占位字符串替换为用户指定的项目名 。|
+| `sourceName` | string | 否 | **关键占位符**：生成项目时，会自动将此占位字符串替换为用户指定的项目名 。|
 | `identity` | string | 是 | 模板的唯一标识符，用于内部区分不同模板 。|
 | `sources.exclude` | array | 否 | 排除不需要打包的文件，如 `bin/obj`、`.git` 等 。|
 
