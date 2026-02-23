@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "TickerQ - .NET任务调度新选择"
+title:  "TickerQ: .NET任务调度新选择"
 date:   2025-09-11 12:30:00 +0800--
 categories: [.NET]
 tags: [TickerQ]
