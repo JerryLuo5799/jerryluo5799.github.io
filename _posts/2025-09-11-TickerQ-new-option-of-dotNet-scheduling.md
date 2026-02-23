@@ -121,7 +121,7 @@ app.MapPost("/schedule-order", async (ITimeTickerManager manager, string orderId
 });
 
 ```
-
+https://www.youtube.com/watch?v=DpyjAKmNwpI
 ### 技术内功：分布式集群下的“防重”机制
 
 在集群部署（如 Kubernetes 或多实例物理机）场景下，多个服务实例会同时连接同一个数据库。TickerQ 采用了一种**基于数据库状态控制的分布式锁机制**，确保同一个任务在同一时间内只会被一个实例获取并执行。
