@@ -21,8 +21,6 @@ TickerQ 是一个现代化的 .NET 调度库，它从底层架构上就做了很
 
 ### 实战演示：从零构建调度系统
 
-我们将使用最新的 .NET 8/9 和 Minimal API 来展示如何快速集成。
-
 #### 1. 安装必要的 NuGet 包
 
 我们需要安装以下三个核心组件：
@@ -127,6 +125,7 @@ app.MapPost("/schedule-order", async (ITimeTickerManager manager, string orderId
 ### 技术内功：分布式集群下的“防重”机制
 
 在集群部署（如 Kubernetes 或多实例物理机）场景下，多个服务实例会同时连接同一个数据库。TickerQ 采用了一种**基于数据库状态控制的分布式锁机制**，确保同一个任务在同一时间内只会被一个实例获取并执行。
+
 1. **原子抢占**：每个实例在扫描待执行任务时，会尝试通过数据库的原子操作（如 `UPDATE ... WHERE Status = Pending`）来“标记”任务。
 2. **实例绑定**：一旦某个实例成功更新了任务状态，它会将自己的 `InstanceId` 和当前执行的 `Heartbeat`（心跳时间）写入数据库，锁住该任务。
 3. **心跳续约**：执行任务的实例会定期更新数据库中的心跳。如果实例意外宕机，心跳停止。
@@ -135,14 +134,11 @@ app.MapPost("/schedule-order", async (ITimeTickerManager manager, string orderId
 ### 总结
 
 TickerQ 凭借其**编译期安全**、**原生异步**以及**稳健的分布式锁**，成为了 .NET 后台任务领域的一匹黑马。它既有 Hangfire 的易用性，又在性能上更贴合现代云原生应用的需求。
+
 1. **重试间隔策略**：TickerQ 允许自定义 `RetryIntervals`。对于第三方接口调用，**强烈建议使用递增的重试间隔**（如 10s -> 1min -> 5min），避免在对方服务宕机时频繁冲击导致其无法恢复。
 2. **数据库迁移注意点**：由于 TickerQ 会创建独立的 Schema（默认为 `ticker`），在进行 EF Core 迁移时，请确保数据库账号拥有创建 Schema 的权限。
 3. **零反射的红利**：在高并发场景下，TickerQ 几乎不产生额外的 GC 压力。如果你正在开发微服务且对容器启动时间有严格要求，TickerQ 的 Source Generator 特性会让你受益匪浅。
 
-### 总结
-
-TickerQ 凭借其**编译期安全**、**原生异步**以及**稳健的分布式锁**，成为了 .NET 后台任务领域的一匹黑马。它既有 Hangfire 的易用性，又在性能上更贴合现代云原生应用的需求。
-
-#### 参考资料
+### 参考资料
 
 * [TickerQ GitHub 源码仓库](https://github.com/Arcenox-co/TickerQ?wt.mc_id=MVP_324329)
