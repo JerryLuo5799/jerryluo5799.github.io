@@ -121,7 +121,6 @@ app.MapPost("/schedule-order", async (ITimeTickerManager manager, string orderId
 });
 
 ```
-<https://www.youtube.com/watch?v=DpyjAKmNwpI>
 
 ## 技术内功：分布式集群下的“防重”机制
 
