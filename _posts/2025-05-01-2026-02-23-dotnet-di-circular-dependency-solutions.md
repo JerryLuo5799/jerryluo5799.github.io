@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "搞懂.NET依赖注入生命周期：Scoped 不仅仅是为了Web请求"
+title:  "打破.NET依赖注入的“死锁”：循环依赖的4种解决方案"
 date:   2025-05-01 12:30:00 +0800--
 categories: [.NET]
 tags: [DI]
