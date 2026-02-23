@@ -16,14 +16,14 @@ tags: [DI]
 
 在 DI 容器中，`Scoped` 对象的生命周期绑定到了 `IServiceScope` 这个对象上。
 
-* **自动气泡（Web）**：在 ASP.NET Core 中，框架为每个 HTTP 请求自动创建一个 Scope。请求结束，气泡破裂，服务销毁。
-* **手动气泡（非 Web）**：在后台服务等场景，没有自动创建的 Scope。如果你试图在单例中直接注入 Scoped 服务，系统会抛出异常，防止“生命周期提升”导致的内存泄漏。
+* **自动Scope（Web）**：在 ASP.NET Core 中，框架为每个 HTTP 请求自动创建一个 Scope。请求结束，服务销毁。
+* **手动Scope（非 Web）**：在后台服务等场景，没有自动创建的 Scope。如果你试图在单例中直接注入 Scoped 服务，系统会抛出异常，防止“生命周期提升”导致的内存泄漏。
 
 为了更好地理解这个逻辑，我们可以观察下面的生命周期拓扑图：
 
 ![DI Scoped 生命周期](/assets/imgs/DI-Scoped-Lifecycle.jpg)
 
-> **核心逻辑**：同一个“气泡”（Scope）内，无论你通过多少层依赖调用，拿到的都是同一个服务实例；不同气泡之间完全隔离。
+> **核心逻辑**：同一个“气泡”（Scope）内，无论你通过多少层依赖调用，拿到的都是同一个服务实例；不同Scope之间完全隔离。
 
 ## 实战演示：在单例后台服务中使用 Scoped
 
@@ -57,10 +57,10 @@ public class Worker : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            // 关键：手动创建一个作用域“气泡”
+            // 关键：手动创建一个作用域
             using (IServiceScope scope = _scopeFactory.CreateScope())
             {
-                // 从当前气泡中解析 Scoped 服务
+                // 从当前Scope中解析服务
                 var processor = scope.ServiceProvider.GetRequiredService<IOrderProcessor>();
                 await processor.ProcessAsync();
                 
