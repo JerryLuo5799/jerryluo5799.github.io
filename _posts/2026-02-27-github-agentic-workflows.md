@@ -2,7 +2,7 @@
 layout: post
 title:  "再见 YAML！用 Markdown 编写 GitHub Agentic Workflows"
 date:   2026-02-27 09:30:00 +0800--
-categories: [.NET]
+categories: [AI]
 tags: [Github]
 ---
 
