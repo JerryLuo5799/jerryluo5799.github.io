@@ -103,7 +103,6 @@ app.Run();
 2.  **动态端口映射 (Dynamic Port Mapping)**：为了防止端口冲突，Aspire 会分配随机的高位端口（例如 MySQL 容器内的 3306 可能会被映射到宿主机的 54321）。
 3.  **环境变量注入 (Environment Injection)**：在启动 `ApiService` 进程时，自动注入环境变量：`ConnectionStrings__shopdb="server=localhost;port=54321;..."`。这使得业务代码能自动找到数据库。
 4.  **仪表盘启动 (Dashboard)**：启动一个网页服务器，通过 gRPC 实时抓取所有服务的日志和链路追踪数据。
---
 
 ## 5. 生产环境部署：从“魔法”回归“现实”
 
