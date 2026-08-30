@@ -47,7 +47,13 @@ tags: [.NET Aspire]
 ## Layout & template structure
 
 - `_layouts/base.html` is the real shell (head, nav from `site.menu`, sidebar, footer). `post.html` and `page.html` both wrap it; `keynote.html` references a nonexistent `default` layout and is dead.
-- The sidebar is a fixed list of `{% include widgets/... %}` calls at the bottom of `base.html`. `widgets/star_post_list` is entirely commented out (upstream's links), and `widgets/search_box` is superseded by `search_box_new`.
+- The sidebar is a fixed list of Liquid `include` calls on `widgets/*` at the bottom of `base.html`. `widgets/star_post_list` is entirely commented out (upstream's links), and `widgets/search_box` is superseded by `search_box_new`.
 - `assets/data/posts.json` is **a Liquid template**, not data — Jekyll renders it into the search index that `widgets/search_box_new` fetches client-side. Edit the template, never a generated file.
 - Comments (Valine) and the read-count widget (LeanCloud) are configured in `_config.yml` under `valine:` and wired inline in `_layouts/post.html` and `index.html`. Analytics (Google Analytics / GTM) blocks in `base.html` are commented out but the GTM `<noscript>` iframe is still live.
 - `_config.yml` `exclude:` keeps `server/`, `tools/`, `README.md` and `changelog.md` out of the build. Root-level oddities (`BingSiteAuth.xml`, `google*.html`, `baidu_verify_*.html`, `*.txt`) are search-engine verification files — leave them alone.
+
+## Build gotcha: root-level Markdown is rendered by Liquid
+
+GitHub Pages enables `jekyll-optional-front-matter`, so **any `.md` at the repo root is treated as a page even without front matter**, and Liquid runs over it *before* Markdown. A literal `{%` … `%}` or `{{` … `}}` sequence in such a file — backticks and fenced code blocks do **not** protect it — is executed as a real tag and aborts the whole Pages build.
+
+`README.md`, `changelog.md` and this file are in `_config.yml`'s `exclude:` for exactly this reason. If you add another root-level doc that isn't site content, exclude it too; if it must be rendered, wrap Liquid-looking snippets in `{% raw %}` … `{% endraw %}`.

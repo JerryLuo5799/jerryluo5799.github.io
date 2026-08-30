@@ -12,7 +12,7 @@ email: feng5799@outlook.com
 
 # Build settings
 permalink: /:year/:month/:day/:title/
-exclude: ["README.md", "changelog.md", "server", "tools", "Pipfile"]
+exclude: ["README.md", "changelog.md", "CLAUDE.md", "server", "tools", "Pipfile"]
 plugins:
   - jekyll-paginate
   - jemoji
