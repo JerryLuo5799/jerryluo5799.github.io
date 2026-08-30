@@ -8,7 +8,7 @@ tags: [Presidio]
 
 ## 前言
 
-上一篇 [Presidio 入门](/2026/07/03/what-is-presidio/) 里介绍了这个 PII 脱敏工具。但它有一个对我们来说很现实的问题：
+[Presidio](/2026/07/03/what-is-presidio/) 是一套能自动识别并脱敏 PII 的开源工具。但它有一个对我们来说很现实的问题：
 
 **它是纯 Python 的。**
 
@@ -334,7 +334,7 @@ Entities = ["PHONE_NUMBER", "EMAIL_ADDRESS"],
 
 ### 5. 别忘了它是「尽力而为」
 
-再重复一遍上一篇提过的官方警告：**Presidio 不保证找全**。
+再强调一遍官方那句警告：**Presidio 不保证找全**。
 
 所以在日志脱敏这类场景里，它是一层补救，不是免死金牌。**真正该做的还是从源头上别把整个用户对象往日志里塞。**
 
@@ -368,10 +368,10 @@ findings = findings
 * 安全上注意：**这两个容器没有鉴权，只能待在内网**。
 * 用 `entities` 白名单和 `score_threshold` 同时优化性能和准确率。
 
-[下一篇](/2026/07/17/presidio-chinese-pii/)解决一个更棘手的问题：**默认配置对中文基本无效**——`en_core_web_lg` 连中文的词都切不对，更别说认出人名和身份证号了。我们自己动手让它认识中国的 PII。
+还有一个更棘手的问题在等着：**默认配置对中文基本无效**——`en_core_web_lg` 连中文的词都切不对，更别说认出人名和身份证号了。[让 Presidio 认识中文](/2026/07/17/presidio-chinese-pii/)里讲了怎么自己动手解决。
 
 ## 延伸阅读
 
-* [Presidio 安装文档](https://data-privacy-stack.github.io/presidio/installation/)
-* [Presidio REST API 参考](https://data-privacy-stack.github.io/presidio/api-docs/api-docs.html)
-* [Presidio 入门（本系列上篇）](/2026/07/03/what-is-presidio/)
+* [Presidio 安装文档](https://data-privacy-stack.github.io/presidio/installation/?wt.mc_id=MVP_324329)
+* [Presidio REST API 参考](https://data-privacy-stack.github.io/presidio/api-docs/api-docs.html?wt.mc_id=MVP_324329)
+* [Presidio 入门](/2026/07/03/what-is-presidio/)

@@ -14,9 +14,9 @@ tags: [Presidio]
 
 真要动手治理的时候，你会发现事情比想象中麻烦：手机号还好，正则能搞定；但**人名怎么办？地址怎么办？**"张伟"和"张伟路 32 号"，一个是人名一个是地址，正则区分不了。
 
-这就是 [Presidio](https://github.com/data-privacy-stack/presidio) 要解决的问题。它是一套开源的 PII 识别与脱敏工具，10.6k star，MIT 协议。而且它最近发生了一件挺重要的事——**它换东家了**。
+这就是 [Presidio](https://github.com/data-privacy-stack/presidio?wt.mc_id=MVP_324329) 要解决的问题。它是一套开源的 PII 识别与脱敏工具，10.6k star，MIT 协议。而且它最近发生了一件挺重要的事——**它换东家了**。
 
-这是 Presidio 系列的第一篇，先把它是什么、怎么跑起来讲清楚。
+下面先说这个变化，再讲它是什么、怎么跑起来。
 
 ## 一、先说这个重要变化：它从微软搬到社区了
 
@@ -131,7 +131,7 @@ analyzer 提供的接口很少，好记：
 
 anonymizer 对应的是 `POST /anonymize`、`POST /deanonymize`（还原）和 `GET /anonymizers`。
 
-**下一篇会详细讲怎么从 .NET 调这套接口**，这里先不展开。
+怎么从 .NET 调这套接口，[另一篇文章](/2026/07/10/call-presidio-from-dotnet/)里有完整的例子，这里先不展开。
 
 ## 四、它是怎么"认出"PII 的
 
@@ -230,7 +230,7 @@ print(result.text)
 
 **内置识别器里没有任何中国相关的条目**——身份证、手机号、统一社会信用代码，一个都没有。
 
-好消息是这套东西天生就是为扩展设计的，自己加不难。**这是本系列第三篇的主题。**
+好消息是这套东西天生就是为扩展设计的，自己加不难——[让 Presidio 认识中文](/2026/07/17/presidio-chinese-pii/)里有完整的做法。
 
 ### 4. 容器冷启动慢
 
@@ -244,14 +244,14 @@ analyzer 容器启动时要加载 NLP 模型，**第一次请求可能要等十�
 * 处理方式有 7 种，其中 `hash` 能保持可对比性、`encrypt` 能还原，这两个最容易被忽略。
 * **它不保证找全，默认只认英文，内置识别器里没有中国。**
 
-最后一条正是这个系列后面几篇要解决的问题：
+其中几个问题另有专文：
 
-* 下一篇：**[从 .NET 调用 Presidio](/2026/07/10/call-presidio-from-dotnet/)**——它是 Python 项目，仓库里连一个 `.cs` 文件都没有，这条路得自己铺。
-* 第三篇：**[让它认识中国的身份证和手机号](/2026/07/17/presidio-chinese-pii/)**。
-* 第四篇：**[给大模型应用做脱敏闸门](/2026/07/24/presidio-llm-pii-gateway/)**。
+* **[从 .NET 调用 Presidio](/2026/07/10/call-presidio-from-dotnet/)**——它是 Python 项目，仓库里连一个 `.cs` 文件都没有，这条路得自己铺。
+* **[让它认识中国的身份证和手机号](/2026/07/17/presidio-chinese-pii/)**——正则、校验位和中文 NER 模型的组合拳。
+* **[给大模型应用做脱敏闸门](/2026/07/24/presidio-llm-pii-gateway/)**——让客户信息不出机房。
 
 ## 延伸阅读
 
-* [Presidio 仓库（新地址）](https://github.com/data-privacy-stack/presidio)
-* [官方文档](https://data-privacy-stack.github.io/presidio)
+* [Presidio 仓库（新地址）](https://github.com/data-privacy-stack/presidio?wt.mc_id=MVP_324329)
+* [官方文档](https://data-privacy-stack.github.io/presidio?wt.mc_id=MVP_324329)
 * [在线 Demo（Hugging Face）](https://huggingface.co/spaces/presidio/presidio_demo)

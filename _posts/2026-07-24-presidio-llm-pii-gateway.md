@@ -8,7 +8,7 @@ tags: [Presidio]
 
 ## 前言
 
-这是 Presidio 系列的最后一篇。前三篇讲了[它是什么](/2026/07/03/what-is-presidio/)、[怎么从 .NET 调用](/2026/07/10/call-presidio-from-dotnet/)、[怎么让它认识中文](/2026/07/17/presidio-chinese-pii/)。这一篇讲它现在最热的一个用法。
+[Presidio](/2026/07/03/what-is-presidio/) 是一套开源的 PII 识别与脱敏工具。它现在最热的一个用法，是给大模型应用做前置脱敏。
 
 先说场景。你们上线了一个 AI 客服助手，客服人员这样用它：
 
@@ -98,7 +98,7 @@ print(final.text)
 
 ## 四、现成方案：LiteLLM 代理
 
-如果你不想自己写这一层，[LiteLLM](https://github.com/BerriAI/litellm) 已经把 Presidio 做成了内置回调。它是一个 LLM 网关，你的应用调它，它再去调真正的模型。
+如果你不想自己写这一层，[LiteLLM](https://github.com/BerriAI/litellm?wt.mc_id=MVP_324329) 已经把 Presidio 做成了内置回调。它是一个 LLM 网关，你的应用调它，它再去调真正的模型。
 
 ```bash
 export PRESIDIO_ANALYZER_API_BASE="http://localhost:5002"
@@ -130,11 +130,11 @@ litellm --config /path/to/config.yaml
 
 **这个方案最大的好处是对应用无侵入**——你的代码还是按 OpenAI 的接口调，只是把 base URL 指向 LiteLLM。想给多个应用统一加脱敏，这是最省事的路子。
 
-它还支持在请求里带 **ad-hoc 识别器**，也就是上一篇提到的那个机制：不用改镜像，直接在配置里挂一个 JSON 文件补充自定义规则。
+它还支持在请求里带 **ad-hoc 识别器**：不用改镜像，直接在配置里挂一个 JSON 文件补充自定义规则。
 
 ## 五、真正的难点：脱敏会让模型变笨
 
-这一节是这篇文章里最重要的部分，也是各种教程最少提到的部分。
+这是整件事里最容易被低估的地方，也是各种教程最少提到的部分。
 
 **把 PII 换成占位符，是在删除信息。而信息删多了，模型就答不好了。**
 
@@ -153,7 +153,7 @@ litellm --config /path/to/config.yaml
 <PERSON_1> 向 <PERSON_2> 转账 5000 元，<PERSON_2> 确认收到。
 ```
 
-Presidio 的内置 operator 不会自动做这件事，需要你在中间那一步自己处理（还记得上一篇说的「识别结果在中间是可以被你干预的」吗？就是用在这种地方）——按原文值去重，给每个不同的值分配一个编号，同时维护一张编号到原值的映射表用于还原。
+Presidio 的内置 operator 不会自动做这件事，需要你在中间那一步自己处理（识别结果在送去脱敏之前是可以被你干预的，正好用在这种地方）——按原文值去重，给每个不同的值分配一个编号，同时维护一张编号到原值的映射表用于还原。
 
 ### 问题 2：占位符会破坏语气
 
@@ -186,7 +186,7 @@ Presidio 的内置 operator 不会自动做这件事，需要你在中间那一�
 
 ### 1. 别忘了它不保证找全
 
-这句话我在这个系列里说了四遍，因为它在这个场景下后果最严重。
+这一点在这个场景下后果最严重。
 
 Presidio 漏掉一个手机号，意味着**这个手机号真的被发到云端去了**。所以：
 
@@ -217,10 +217,8 @@ Presidio 漏掉一个手机号，意味着**这个手机号真的被发到云端
 * **最大的难点不是脱敏，是脱敏之后模型会变笨**：占位符要编号区分不同的人，用假名替换比用占位符更保语气，流式输出的还原要额外处理，RAG 要提前想清楚在哪一步脱敏。
 * **它依然不保证找全**——这一层是纵深防御的一环，不是免责声明。
 
-至此，Presidio 这个系列的四篇就写完了：[入门与项目迁移](/2026/07/03/what-is-presidio/)、[.NET 集成](/2026/07/10/call-presidio-from-dotnet/)、[中文识别](/2026/07/17/presidio-chinese-pii/)，以及这一篇。
-
 ## 延伸阅读
 
 * [LiteLLM 的 Presidio 集成文档](https://docs.litellm.ai/docs/proxy/guardrails/pii_masking_v2)
-* [Presidio 加解密教程](https://data-privacy-stack.github.io/presidio/tutorial/12_encryption/)
-* [让 Presidio 认识中文（本系列上篇）](/2026/07/17/presidio-chinese-pii/)
+* [Presidio 加解密教程](https://data-privacy-stack.github.io/presidio/tutorial/12_encryption/?wt.mc_id=MVP_324329)
+* [让 Presidio 认识中文](/2026/07/17/presidio-chinese-pii/)

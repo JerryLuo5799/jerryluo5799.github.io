@@ -8,7 +8,7 @@ tags: [Presidio]
 
 ## 前言
 
-前两篇（[入门](/2026/07/03/what-is-presidio/)、[.NET 集成](/2026/07/10/call-presidio-from-dotnet/)）里，我一直在用英文示例。这一篇要面对真正的问题：
+[Presidio](/2026/07/03/what-is-presidio/) 的官方示例几乎清一色是英文文本。但真要在国内的业务里落地，绕不开一个问题：
 
 **Presidio 默认配置对中文基本是无效的。**
 
@@ -269,7 +269,7 @@ print(anonymizer.anonymize(
 
 ## 五、打进 Docker 镜像
 
-上一篇讲过 .NET 团队应该用容器方式。但官方镜像里装的是英文模型，中文配置需要自己构建。
+非 Python 的团队通常用容器方式接入。但官方镜像里装的是英文模型，中文配置需要自己构建。
 
 关键在 `presidio-analyzer/presidio_analyzer/conf/default.yaml`——**这个文件在 `docker build` 阶段会被读取，里面声明的模型会被自动下载进镜像**。把它改成中文配置，再构建自己的镜像即可：
 
@@ -318,7 +318,7 @@ COPY recognizers/ /app/recognizers/
 
 ### 4. 它依然不保证找全
 
-第一篇里官方的那句警告，在中文场景下只会更严重，不会更轻：**中文 NER 的成熟度整体不如英文**。
+官方那句「不保证找全」的警告，在中文场景下只会更严重，不会更轻：**中文 NER 的成熟度整体不如英文**。
 
 **别把 Presidio 当成合规的终点。** 它是纵深防御里的一层——最该做的事情，仍然是从一开始就别把敏感数据写进不该写的地方。
 
@@ -331,10 +331,10 @@ COPY recognizers/ /app/recognizers/
 * 部署时改 `conf/default.yaml` 构建自己的镜像；规则常变就用 **YAML 无代码配置**或 **ad-hoc 识别器**。
 * **一定要拿自己的真实数据测一遍**，示例跑通不代表能上生产。
 
-[下一篇](/2026/07/24/presidio-llm-pii-gateway/)是本系列最后一篇：**给大模型应用加一道脱敏闸门**——用户把客户资料贴进 AI 助手，怎么保证真实姓名和手机号永远不会离开你的机房。
+把这套中文识别能力接到实际场景里，一个典型用法是[给大模型应用加一道脱敏闸门](/2026/07/24/presidio-llm-pii-gateway/)——用户把客户资料贴进 AI 助手时，保证真实姓名和手机号永远不会离开你的机房。
 
 ## 延伸阅读
 
-* [Presidio 多语言支持文档](https://data-privacy-stack.github.io/presidio/analyzer/languages/)
-* [开发自定义识别器](https://data-privacy-stack.github.io/presidio/analyzer/adding_recognizers/)
-* [从 .NET 调用 Presidio（本系列上篇）](/2026/07/10/call-presidio-from-dotnet/)
+* [Presidio 多语言支持文档](https://data-privacy-stack.github.io/presidio/analyzer/languages/?wt.mc_id=MVP_324329)
+* [开发自定义识别器](https://data-privacy-stack.github.io/presidio/analyzer/adding_recognizers/?wt.mc_id=MVP_324329)
+* [从 .NET 调用 Presidio](/2026/07/10/call-presidio-from-dotnet/)
