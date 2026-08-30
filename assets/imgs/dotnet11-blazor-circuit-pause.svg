@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">Interactive Server 电路的自动暂停</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">标签页隐藏够久，且确实没有正在进行的工作，服务器才会把电路挂起</text>
+
+  <rect x="30" y="88" width="180" height="60" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="120" y="114" font-size="13" font-weight="700" fill="#065f46" text-anchor="middle">标签页可见</text>
+  <text x="120" y="134" font-size="11.5" fill="#047857" text-anchor="middle">电路活跃，占着服务器内存</text>
+
+  <line x1="212" y1="118" x2="238" y2="118" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+
+  <rect x="240" y="88" width="160" height="60" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="320" y="123" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">标签页转入隐藏</text>
+
+  <line x1="402" y1="118" x2="428" y2="118" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+
+  <rect x="430" y="88" width="200" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="530" y="114" font-size="13" font-weight="700" fill="#1e40af" text-anchor="middle">等待 HiddenDelay</text>
+  <text x="530" y="134" font-size="11.5" fill="#1d4ed8" text-anchor="middle">默认 2 分钟，可配置</text>
+
+  <line x1="632" y1="118" x2="658" y2="118" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+
+  <rect x="660" y="88" width="210" height="60" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="765" y="114" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">检查是否有推迟条件</text>
+  <text x="765" y="134" font-size="11.5" fill="#b45309" text-anchor="middle">内置一批，见下方</text>
+
+  <path d="M810,150 L810,190" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="820" y="176" font-size="11.5" fill="#b45309">命中</text>
+  <rect x="660" y="194" width="210" height="50" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="765" y="224" font-size="12.5" font-weight="700" fill="#b91c1c" text-anchor="middle">推迟暂停，继续观察</text>
+  <path d="M658,219 L560,219 L560,152" fill="none" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#arw)"/>
+
+  <path d="M700,150 L700,172 L95,172 L95,320 L116,320" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="636" y="166" font-size="11.5" fill="#047857">未命中</text>
+
+  <rect x="120" y="290" width="230" height="60" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="235" y="315" font-size="12.5" font-weight="700" fill="#5b21b6" text-anchor="middle">逐个 await 已注册的</text>
+  <text x="235" y="335" font-size="12" fill="#6d28d9" text-anchor="middle">onCircuitPausing 处理器</text>
+
+  <line x1="352" y1="320" x2="386" y2="320" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+
+  <rect x="388" y="290" width="180" height="60" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="478" y="315" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">电路暂停</text>
+  <text x="478" y="335" font-size="11.5" fill="#475569" text-anchor="middle">服务器端资源释放</text>
+
+  <line x1="570" y1="320" x2="604" y2="320" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+
+  <rect x="606" y="290" width="230" height="60" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="721" y="315" font-size="12.5" font-weight="700" fill="#065f46" text-anchor="middle">标签页重新可见</text>
+  <text x="721" y="335" font-size="11.5" fill="#047857" text-anchor="middle">电路恢复，用户无感</text>
+
+  <rect x="30" y="378" width="840" height="74" rx="10" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="46" y="401" font-size="12" font-weight="700" fill="#92400e">内置的推迟条件：命中任意一条就不暂停</text>
+  <text x="46" y="422" font-size="11.5" fill="#78350f">值被改过的输入框或 contenteditable（含 shadow DOM 与同源 iframe）　正在播放且未静音的 audio / video　打开着的画中画窗口</text>
+  <text x="46" y="442" font-size="11.5" fill="#78350f">持有中的 Web Lock　进行中的电路活动：未完成的 IJSRuntime 调用、流式传输、排队中的渲染</text>
+</svg>

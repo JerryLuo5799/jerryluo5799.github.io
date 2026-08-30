@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="900" height="450" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">union 的 Try-Both 匹配：先试联合本身，再试里面的值</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">同一个模式最多被求值两次，第一次失败才有第二次</text>
+
+  <rect x="30" y="80" width="300" height="118" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="46" y="102" font-size="11.5" font-weight="700" fill="#475569">声明</text>
+  <text x="46" y="124" font-size="11.5" fill="#334155" font-family="'Cascadia Code',Consolas,monospace">public record class Dog(string Name);</text>
+  <text x="46" y="143" font-size="11.5" fill="#334155" font-family="'Cascadia Code',Consolas,monospace">public record class Cat(int Lives);</text>
+  <text x="46" y="162" font-size="11.5" fill="#5b21b6" font-family="'Cascadia Code',Consolas,monospace">public union Pet(Dog, Cat);</text>
+  <text x="46" y="185" font-size="11.5" fill="#334155" font-family="'Cascadia Code',Consolas,monospace">Pet pet = new Cat(9);</text>
+
+  <rect x="30" y="214" width="300" height="76" rx="10" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="46" y="237" font-size="11.5" font-weight="700" fill="#92400e">unions 仍是预览特性</text>
+  <text x="46" y="258" font-size="11.5" fill="#78350f">需要在项目里打开</text>
+  <text x="46" y="278" font-size="11.5" fill="#78350f" font-family="'Cascadia Code',Consolas,monospace">&lt;LangVersion&gt;preview&lt;/LangVersion&gt;</text>
+
+  <rect x="370" y="86" width="300" height="52" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="520" y="118" font-size="13" font-weight="700" fill="#1e40af" text-anchor="middle">① 用模式测试 union 实例 pet</text>
+
+  <line x1="672" y1="112" x2="706" y2="112" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="689" y="102" font-size="11" fill="#047857" text-anchor="middle">命中</text>
+  <rect x="708" y="86" width="162" height="52" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="789" y="118" font-size="13" font-weight="700" fill="#065f46" text-anchor="middle">匹配成功</text>
+
+  <line x1="520" y1="140" x2="520" y2="174" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="534" y="162" font-size="11" fill="#b91c1c">未命中</text>
+
+  <rect x="370" y="176" width="300" height="52" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="520" y="208" font-size="13" font-weight="700" fill="#5b21b6" text-anchor="middle">② 用同一个模式测试 pet.Value</text>
+
+  <line x1="672" y1="202" x2="706" y2="202" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="689" y="192" font-size="11" fill="#047857" text-anchor="middle">命中</text>
+  <rect x="708" y="176" width="162" height="52" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="789" y="208" font-size="13" font-weight="700" fill="#065f46" text-anchor="middle">匹配成功</text>
+
+  <path d="M520,230 L520,264 L708,264" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arw)"/>
+  <text x="534" y="252" font-size="11" fill="#b91c1c">未命中</text>
+  <rect x="708" y="240" width="162" height="48" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="789" y="270" font-size="13" font-weight="700" fill="#b91c1c" text-anchor="middle">匹配失败</text>
+
+  <rect x="30" y="312" width="415" height="118" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="46" y="335" font-size="12" font-weight="700" fill="#334155">例一：匹配联合类型本身</text>
+  <text x="46" y="359" font-size="11.5" fill="#1e40af" font-family="'Cascadia Code',Consolas,monospace">pet is Pet</text>
+  <text x="46" y="384" font-size="11.5" fill="#475569">① 拿 Pet 测 pet 实例，直接命中</text>
+  <text x="46" y="406" font-size="11.5" fill="#065f46">结果为 true，第二步不会执行</text>
+
+  <rect x="455" y="312" width="415" height="118" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="471" y="335" font-size="12" font-weight="700" fill="#334155">例二：匹配内含的具体分支</text>
+  <text x="471" y="359" font-size="11.5" fill="#5b21b6" font-family="'Cascadia Code',Consolas,monospace">pet is Cat { Lives: &gt; 0 } cat</text>
+  <text x="471" y="384" font-size="11.5" fill="#475569">① 拿 Cat 测 pet 实例，未命中</text>
+  <text x="471" y="406" font-size="11.5" fill="#065f46">② 拿 Cat 测 pet.Value，命中，cat 被赋值</text>
+</svg>
