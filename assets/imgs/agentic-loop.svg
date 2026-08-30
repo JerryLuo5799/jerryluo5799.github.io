@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="900" height="530" fill="#ffffff"/>
+  <text x="450" y="36" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">智能体的四步循环：它不是「答一次」，而是转到目标达成为止</text>
+
+  <!-- entry -->
+  <rect x="20" y="66" width="170" height="52" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="88" font-size="13.5" font-weight="700" fill="#334155" text-anchor="middle">人给出目标</text>
+  <text x="105" y="107" font-size="11.5" fill="#64748b" text-anchor="middle">要什么结果 + 什么算做完</text>
+  <path d="M 190 92 Q 300 92 350 128" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+
+  <!-- cycle arrows -->
+  <g stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#a1)">
+    <path d="M 552 152 Q 660 172 700 216"/>
+    <path d="M 700 284 Q 660 356 552 378"/>
+    <path d="M 348 378 Q 240 356 200 284"/>
+    <path d="M 200 216 Q 240 172 348 152"/>
+  </g>
+
+  <!-- center -->
+  <circle cx="450" cy="265" r="72" fill="#1e293b"/>
+  <text x="450" y="258" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Agent</text>
+  <text x="450" y="282" font-size="12.5" fill="#94a3b8" text-anchor="middle">自主循环</text>
+
+  <!-- top: observe -->
+  <rect x="355" y="88" width="190" height="64" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="113" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle">① 观察 Observe</text>
+  <text x="450" y="134" font-size="12" fill="#475569" text-anchor="middle">先看现状：代码、数据、报错</text>
+
+  <!-- right: plan -->
+  <rect x="700" y="218" width="185" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="792" y="243" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="middle">② 规划 Plan</text>
+  <text x="792" y="264" font-size="12" fill="#475569" text-anchor="middle">把大目标拆成下一小步</text>
+
+  <!-- bottom: act -->
+  <rect x="355" y="378" width="190" height="64" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="403" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle">③ 行动 Act</text>
+  <text x="450" y="424" font-size="12" fill="#475569" text-anchor="middle">调用工具，真的改真的跑</text>
+
+  <!-- left: verify -->
+  <rect x="15" y="218" width="185" height="64" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="107" y="243" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">④ 验证 Verify</text>
+  <text x="107" y="264" font-size="12" fill="#475569" text-anchor="middle">跑测试：成了？没成再来</text>
+
+  <!-- human gate -->
+  <rect x="612" y="88" width="273" height="52" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="748" y="110" font-size="13.5" font-weight="700" fill="#b91c1c" text-anchor="middle">人类闸门 Human-in-the-loop</text>
+  <text x="748" y="129" font-size="11.5" fill="#64748b" text-anchor="middle">删库、付款、发线上 → 必须人点头</text>
+  <line x1="748" y1="140" x2="748" y2="214" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- exit -->
+  <rect x="612" y="400" width="273" height="52" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="748" y="422" font-size="13.5" font-weight="700" fill="#047857" text-anchor="middle">验证通过 → 交付成果</text>
+  <text x="748" y="441" font-size="11.5" fill="#64748b" text-anchor="middle">附带证据：测试日志、变更清单</text>
+  <path d="M 545 410 Q 580 420 606 424" stroke="#059669" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+
+  <text x="450" y="492" font-size="13" fill="#64748b" text-anchor="middle">关键差别：传统软件走完一遍就结束；智能体会自己判断「还没达标」，然后再转一圈。</text>
+</svg>

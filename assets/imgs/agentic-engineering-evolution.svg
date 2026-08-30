@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="e1" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">三个阶段：我们对 AI 的用法，从「问答」走到了「托付」</text>
+
+  <g stroke="#94a3b8" stroke-width="2.5" marker-end="url(#e1)">
+    <line x1="292" y1="215" x2="326" y2="215"/>
+    <line x1="574" y1="215" x2="608" y2="215"/>
+  </g>
+
+  <!-- col 1 -->
+  <rect x="20" y="60" width="270" height="310" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="20" y="60" width="270" height="54" rx="14" fill="#e2e8f0"/>
+  <rect x="20" y="100" width="270" height="14" fill="#e2e8f0"/>
+  <text x="155" y="84" font-size="15" font-weight="700" fill="#334155" text-anchor="middle">① 提示词工程</text>
+  <text x="155" y="103" font-size="11.5" fill="#64748b" text-anchor="middle">Prompt Engineering</text>
+  <text x="44" y="146" font-size="13" fill="#334155">核心动作：把问题问好</text>
+  <text x="44" y="176" font-size="12.5" fill="#475569">· 一问一答，单轮对话</text>
+  <text x="44" y="202" font-size="12.5" fill="#475569">· 它只知道你贴给它的东西</text>
+  <text x="44" y="228" font-size="12.5" fill="#475569">· 它给建议，你自己动手</text>
+  <text x="44" y="254" font-size="12.5" fill="#475569">· 出错了你当场就看得见</text>
+  <rect x="44" y="284" width="222" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="56" y="306" font-size="12" font-weight="700" fill="#334155">像什么：</text>
+  <text x="56" y="328" font-size="12" fill="#64748b">一个知识渊博但坐在</text>
+  <text x="56" y="344" font-size="12" fill="#64748b">电话那头的顾问</text>
+
+  <!-- col 2 -->
+  <rect x="328" y="60" width="270" height="310" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <rect x="328" y="60" width="270" height="54" rx="14" fill="#ddd6fe"/>
+  <rect x="328" y="100" width="270" height="14" fill="#ddd6fe"/>
+  <text x="463" y="84" font-size="15" font-weight="700" fill="#5b21b6" text-anchor="middle">② 上下文工程</text>
+  <text x="463" y="103" font-size="11.5" fill="#6d28d9" text-anchor="middle">Context Engineering</text>
+  <text x="352" y="146" font-size="13" fill="#334155">核心动作：把资料喂对</text>
+  <text x="352" y="176" font-size="12.5" fill="#475569">· 接上公司文档、知识库</text>
+  <text x="352" y="202" font-size="12.5" fill="#475569">· 关注「给它看什么、看多少」</text>
+  <text x="352" y="228" font-size="12.5" fill="#475569">· 回答开始贴合你的业务</text>
+  <text x="352" y="254" font-size="12.5" fill="#475569">· 执行落地，依然靠人</text>
+  <rect x="352" y="284" width="222" height="62" rx="8" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="364" y="306" font-size="12" font-weight="700" fill="#5b21b6">像什么：</text>
+  <text x="364" y="328" font-size="12" fill="#64748b">一个读完了你全部内部</text>
+  <text x="364" y="344" font-size="12" fill="#64748b">资料的新同事</text>
+
+  <!-- col 3 -->
+  <rect x="610" y="60" width="270" height="310" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+  <rect x="610" y="60" width="270" height="54" rx="14" fill="#a7f3d0"/>
+  <rect x="610" y="100" width="270" height="14" fill="#a7f3d0"/>
+  <text x="745" y="84" font-size="15" font-weight="700" fill="#065f46" text-anchor="middle">③ 智能体工程</text>
+  <text x="745" y="103" font-size="11.5" fill="#047857" text-anchor="middle">Agentic Engineering</text>
+  <text x="634" y="146" font-size="13" fill="#334155">核心动作：把目标交出去</text>
+  <text x="634" y="176" font-size="12.5" fill="#475569">· 你给目标，不给步骤</text>
+  <text x="634" y="202" font-size="12.5" fill="#475569">· 它自己拆解、调工具、试错</text>
+  <text x="634" y="228" font-size="12.5" fill="#475569">· 它自己验证再交付</text>
+  <text x="634" y="254" font-size="12.5" fill="#475569">· 人的角色变成：定标准 + 验收</text>
+  <rect x="634" y="284" width="222" height="62" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="646" y="306" font-size="12" font-weight="700" fill="#065f46">像什么：</text>
+  <text x="646" y="328" font-size="12" fill="#64748b">一个你可以把整件事</text>
+  <text x="646" y="344" font-size="12" fill="#64748b">派下去的初级员工</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <marker id="ahg" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
+  </defs>
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="450" y="38" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">Harness 的一次「转动」：模型每说一句话，都要落到真实世界里被检验</text>
+
+  <g stroke="#475569" stroke-width="2" marker-end="url(#ah)" fill="none">
+    <line x1="152" y1="150" x2="196" y2="150"/>
+    <line x1="356" y1="150" x2="400" y2="150"/>
+    <line x1="560" y1="150" x2="604" y2="150"/>
+  </g>
+
+  <rect x="20" y="118" width="132" height="64" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="86" y="145" font-size="14" font-weight="700" fill="#334155" text-anchor="middle">① 一个目标</text>
+  <text x="86" y="166" font-size="12" fill="#64748b" text-anchor="middle">「把登录 Bug 修了」</text>
+
+  <rect x="198" y="118" width="158" height="64" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="277" y="145" font-size="14" font-weight="700" fill="#6d28d9" text-anchor="middle">② 组装上下文</text>
+  <text x="277" y="166" font-size="12" fill="#64748b" text-anchor="middle">规范 + 相关代码 + 历史</text>
+
+  <rect x="402" y="118" width="158" height="64" rx="10" fill="#1e293b"/>
+  <text x="481" y="145" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">③ 模型推理</text>
+  <text x="481" y="166" font-size="12" fill="#94a3b8" text-anchor="middle">「我要改这个文件」</text>
+
+  <rect x="606" y="118" width="158" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="685" y="145" font-size="14" font-weight="700" fill="#1d4ed8" text-anchor="middle">④ 调用工具</text>
+  <text x="685" y="166" font-size="12" fill="#64748b" text-anchor="middle">编辑文件 / 跑测试</text>
+
+  <!-- guardrail badge -->
+  <rect x="606" y="60" width="158" height="34" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="685" y="83" font-size="12.5" font-weight="700" fill="#b91c1c" text-anchor="middle">护栏：危险操作先问人</text>
+  <line x1="685" y1="94" x2="685" y2="116" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- environment -->
+  <rect x="606" y="230" width="274" height="80" rx="12" fill="#f8fafc" stroke="#0891b2" stroke-width="2"/>
+  <text x="743" y="260" font-size="14" font-weight="700" fill="#0e7490" text-anchor="middle">⑤ 真实环境</text>
+  <text x="743" y="282" font-size="12" fill="#64748b" text-anchor="middle">代码库、编译器、测试、数据库</text>
+  <text x="743" y="300" font-size="12" fill="#64748b" text-anchor="middle">—— 唯一不会说谎的裁判</text>
+  <line x1="685" y1="182" x2="685" y2="226" stroke="#475569" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- feedback back -->
+  <path d="M 606 270 L 277 270 L 277 186" stroke="#059669" stroke-width="2.5" fill="none" marker-end="url(#ahg)"/>
+  <text x="430" y="292" font-size="13" font-weight="700" fill="#047857" text-anchor="middle">⑥ 反馈：3 个测试挂了 → 带着证据重来一轮</text>
+</svg>

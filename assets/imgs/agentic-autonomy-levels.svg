@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="430" fill="#ffffff"/>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">自主性的五个档位：不是「用不用 AI」，而是「敢把多长的一段路交给它」</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">档位越高，产出越大，但对护栏和验收标准的要求也越高。绝大多数团队今天应该稳在 L2–L3。</text>
+
+  <text x="118" y="88" font-size="12" font-weight="700" fill="#94a3b8">档位</text>
+  <text x="330" y="88" font-size="12" font-weight="700" fill="#94a3b8">AI 做什么</text>
+  <text x="600" y="88" font-size="12" font-weight="700" fill="#94a3b8">人做什么</text>
+  <text x="800" y="88" font-size="12" font-weight="700" fill="#94a3b8">自主性</text>
+  <line x1="30" y1="96" x2="870" y2="96" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- L0 -->
+  <g>
+    <rect x="30" y="106" width="840" height="56" rx="8" fill="#f8fafc"/>
+    <rect x="44" y="120" width="48" height="28" rx="6" fill="#94a3b8"/>
+    <text x="68" y="139" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">L0</text>
+    <text x="104" y="139" font-size="13.5" font-weight="700" fill="#334155">纯手工</text>
+    <text x="330" y="132" font-size="12.5" fill="#475569">不参与</text>
+    <text x="330" y="150" font-size="12" fill="#94a3b8">—</text>
+    <text x="600" y="132" font-size="12.5" fill="#475569">全部自己做</text>
+    <rect x="770" y="126" width="100" height="14" rx="7" fill="#e2e8f0"/>
+  </g>
+  <!-- L1 -->
+  <g>
+    <rect x="30" y="170" width="840" height="56" rx="8" fill="#f1f5f9"/>
+    <rect x="44" y="184" width="48" height="28" rx="6" fill="#7c3aed"/>
+    <text x="68" y="203" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">L1</text>
+    <text x="104" y="203" font-size="13.5" font-weight="700" fill="#334155">建议</text>
+    <text x="330" y="196" font-size="12.5" fill="#475569">给答案、给代码片段</text>
+    <text x="330" y="214" font-size="12" fill="#94a3b8">聊天窗口、代码补全</text>
+    <text x="600" y="196" font-size="12.5" fill="#475569">复制、粘贴、改、执行</text>
+    <rect x="770" y="190" width="100" height="14" rx="7" fill="#e2e8f0"/>
+    <rect x="770" y="190" width="20" height="14" rx="7" fill="#7c3aed"/>
+  </g>
+  <!-- L2 -->
+  <g>
+    <rect x="30" y="234" width="840" height="56" rx="8" fill="#f8fafc"/>
+    <rect x="44" y="248" width="48" height="28" rx="6" fill="#2563eb"/>
+    <text x="68" y="267" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">L2</text>
+    <text x="104" y="267" font-size="13.5" font-weight="700" fill="#334155">单步执行</text>
+    <text x="330" y="260" font-size="12.5" fill="#475569">真的动手，但每一步都停下来问</text>
+    <text x="330" y="278" font-size="12" fill="#94a3b8">「我要改这个文件，可以吗？」</text>
+    <text x="600" y="260" font-size="12.5" fill="#475569">逐步点「同意」</text>
+    <rect x="770" y="254" width="100" height="14" rx="7" fill="#e2e8f0"/>
+    <rect x="770" y="254" width="45" height="14" rx="7" fill="#2563eb"/>
+  </g>
+  <!-- L3 -->
+  <g>
+    <rect x="30" y="298" width="840" height="56" rx="8" fill="#f1f5f9"/>
+    <rect x="44" y="312" width="48" height="28" rx="6" fill="#059669"/>
+    <text x="68" y="331" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">L3</text>
+    <text x="104" y="331" font-size="13.5" font-weight="700" fill="#334155">多步自主</text>
+    <text x="330" y="324" font-size="12.5" fill="#475569">连续跑几十步，自己试错、自己验证</text>
+    <text x="330" y="342" font-size="12" fill="#94a3b8">只在危险动作前停</text>
+    <text x="600" y="324" font-size="12.5" fill="#475569">定目标 + 验收结果</text>
+    <rect x="770" y="318" width="100" height="14" rx="7" fill="#e2e8f0"/>
+    <rect x="770" y="318" width="72" height="14" rx="7" fill="#059669"/>
+  </g>
+  <!-- L4 -->
+  <g>
+    <rect x="30" y="362" width="840" height="56" rx="8" fill="#fef2f2"/>
+    <rect x="44" y="376" width="48" height="28" rx="6" fill="#dc2626"/>
+    <text x="68" y="395" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">L4</text>
+    <text x="104" y="395" font-size="13.5" font-weight="700" fill="#334155">常驻后台</text>
+    <text x="330" y="388" font-size="12.5" fill="#475569">多个智能体并行，长期挂着干活</text>
+    <text x="330" y="406" font-size="12" fill="#94a3b8">你睡觉时它也在跑</text>
+    <text x="600" y="388" font-size="12.5" fill="#475569">设边界 + 抽查 + 兜底</text>
+    <rect x="770" y="382" width="100" height="14" rx="7" fill="#fee2e2"/>
+    <rect x="770" y="382" width="96" height="14" rx="7" fill="#dc2626"/>
+  </g>
+</svg>

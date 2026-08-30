@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="d1" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="900" height="380" fill="#ffffff"/>
+  <rect x="300" y="16" width="300" height="36" rx="18" fill="#1e293b"/>
+  <text x="450" y="40" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">完全相同的一个大模型</text>
+  <line x1="450" y1="52" x2="450" y2="70" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 450 70 L 220 70 L 220 96" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#d1)"/>
+  <path d="M 450 70 L 680 70 L 680 96" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#d1)"/>
+
+  <!-- left -->
+  <rect x="20" y="100" width="400" height="258" rx="14" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="220" y="128" font-size="15" font-weight="700" fill="#b91c1c" text-anchor="middle">A：几乎没有 Harness</text>
+  <text x="220" y="150" font-size="12.5" fill="#64748b" text-anchor="middle">一个聊天框，仅此而已</text>
+  <text x="44" y="184" font-size="12.5" fill="#475569">✗ 看不到你的代码库</text>
+  <text x="44" y="210" font-size="12.5" fill="#475569">✗ 不能编译、不能跑测试</text>
+  <text x="44" y="236" font-size="12.5" fill="#475569">✗ 不知道上次的结论</text>
+  <text x="44" y="262" font-size="12.5" fill="#475569">✗ 没人告诉它「错了」</text>
+  <rect x="44" y="284" width="352" height="56" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="60" y="306" font-size="12.5" font-weight="700" fill="#b91c1c">产出：一段看起来很专业的代码</text>
+  <text x="60" y="326" font-size="12" fill="#64748b">粘进项目里发现：API 不存在，编译不过</text>
+
+  <!-- right -->
+  <rect x="480" y="100" width="400" height="258" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+  <text x="680" y="128" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">B：Harness 搭得好</text>
+  <text x="680" y="150" font-size="12.5" fill="#64748b" text-anchor="middle">同样的模型，装进了一套工装</text>
+  <text x="504" y="184" font-size="12.5" fill="#475569">✓ 能读整个代码库和规范文档</text>
+  <text x="504" y="210" font-size="12.5" fill="#475569">✓ 能自己编译、自己跑测试</text>
+  <text x="504" y="236" font-size="12.5" fill="#475569">✓ 记得团队的约定与历史决策</text>
+  <text x="504" y="262" font-size="12.5" fill="#475569">✓ 报错会回流，让它自己改</text>
+  <rect x="504" y="284" width="352" height="56" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="520" y="306" font-size="12.5" font-weight="700" fill="#047857">产出：一个自测通过的改动</text>
+  <text x="520" y="326" font-size="12" fill="#64748b">附带测试结果，人只需要审阅</text>
+</svg>
