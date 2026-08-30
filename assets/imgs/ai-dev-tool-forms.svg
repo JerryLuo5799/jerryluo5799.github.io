@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">四种工具形态：不是谁取代谁，而是一天里你要在它们之间切换</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">往下走，一次能交出去的任务越大，但对隔离和验证的要求也越高。</text>
+
+  <text x="128" y="88" font-size="12" font-weight="700" fill="#94a3b8">形态</text>
+  <text x="300" y="88" font-size="12" font-weight="700" fill="#94a3b8">它能做什么</text>
+  <text x="556" y="88" font-size="12" font-weight="700" fill="#94a3b8">适合的任务</text>
+  <text x="784" y="88" font-size="12" font-weight="700" fill="#94a3b8">隔离度</text>
+  <line x1="30" y1="96" x2="870" y2="96" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g>
+    <rect x="30" y="106" width="840" height="66" rx="8" fill="#f8fafc"/>
+    <rect x="44" y="126" width="70" height="26" rx="6" fill="#94a3b8"/>
+    <text x="79" y="144" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">内联</text>
+    <text x="126" y="134" font-size="13.5" font-weight="700" fill="#334155">编辑器补全</text>
+    <text x="126" y="156" font-size="11.5" fill="#94a3b8">Copilot 灰字提示</text>
+    <text x="300" y="134" font-size="12.5" fill="#475569">按你光标位置续写几行</text>
+    <text x="300" y="156" font-size="11.5" fill="#94a3b8">不读全仓库，不执行命令</text>
+    <text x="556" y="134" font-size="12.5" fill="#475569">样板代码、重复结构</text>
+    <text x="556" y="156" font-size="11.5" fill="#94a3b8">写测试的 Arrange 段</text>
+    <rect x="784" y="132" width="76" height="12" rx="6" fill="#e2e8f0"/>
+  </g>
+
+  <g>
+    <rect x="30" y="180" width="840" height="66" rx="8" fill="#f5f3ff"/>
+    <rect x="44" y="200" width="70" height="26" rx="6" fill="#7c3aed"/>
+    <text x="79" y="218" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">IDE</text>
+    <text x="126" y="208" font-size="13.5" font-weight="700" fill="#334155">Agent 模式</text>
+    <text x="126" y="230" font-size="11.5" fill="#94a3b8">VS Code / Visual Studio</text>
+    <text x="300" y="208" font-size="12.5" fill="#475569">跨文件改、跑终端、看报错</text>
+    <text x="300" y="230" font-size="11.5" fill="#94a3b8">改动直接落在你的工作区</text>
+    <text x="556" y="208" font-size="12.5" fill="#475569">改一个功能、修一个 bug</text>
+    <text x="556" y="230" font-size="11.5" fill="#94a3b8">你要边看边改的活</text>
+    <rect x="784" y="206" width="76" height="12" rx="6" fill="#ede9fe"/>
+    <rect x="784" y="206" width="20" height="12" rx="6" fill="#7c3aed"/>
+  </g>
+
+  <g>
+    <rect x="30" y="254" width="840" height="66" rx="8" fill="#eff6ff"/>
+    <rect x="44" y="274" width="70" height="26" rx="6" fill="#2563eb"/>
+    <text x="79" y="292" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">CLI</text>
+    <text x="126" y="282" font-size="13.5" font-weight="700" fill="#334155">终端 Agent</text>
+    <text x="126" y="304" font-size="11.5" fill="#94a3b8">Copilot CLI</text>
+    <text x="300" y="282" font-size="12.5" fill="#475569">长时间自主循环，自己试错</text>
+    <text x="300" y="304" font-size="11.5" fill="#94a3b8">可放进容器、可开多份并行</text>
+    <text x="556" y="282" font-size="12.5" fill="#475569">批量重构、跨模块改造</text>
+    <text x="556" y="304" font-size="11.5" fill="#94a3b8">你不想盯着看的活</text>
+    <rect x="784" y="280" width="76" height="12" rx="6" fill="#dbeafe"/>
+    <rect x="784" y="280" width="52" height="12" rx="6" fill="#2563eb"/>
+  </g>
+
+  <g>
+    <rect x="30" y="328" width="840" height="66" rx="8" fill="#ecfdf5"/>
+    <rect x="44" y="348" width="70" height="26" rx="6" fill="#059669"/>
+    <text x="79" y="366" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">云端</text>
+    <text x="126" y="356" font-size="13.5" font-weight="700" fill="#334155">托管 Agent</text>
+    <text x="126" y="378" font-size="11.5" fill="#94a3b8">从 Issue 直接开 PR</text>
+    <text x="300" y="356" font-size="12.5" fill="#475569">在别人的机器上跑完，交 PR</text>
+    <text x="300" y="378" font-size="11.5" fill="#94a3b8">你的电脑关机也不影响</text>
+    <text x="556" y="356" font-size="12.5" fill="#475569">边角需求、依赖升级</text>
+    <text x="556" y="378" font-size="11.5" fill="#94a3b8">定义清楚、验收明确的活</text>
+    <rect x="784" y="354" width="76" height="12" rx="6" fill="#d1fae5"/>
+    <rect x="784" y="354" width="74" height="12" rx="6" fill="#059669"/>
+  </g>
+</svg>
