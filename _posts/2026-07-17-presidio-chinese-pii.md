@@ -2,7 +2,7 @@
 layout: post
 title:  "让 Presidio 认识中文：身份证、手机号与自定义识别器实战"
 date:   2026-07-17 09:30:00 +0800--
-categories: [Tools]
+categories: [AI]
 tags: [Presidio]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "从 .NET 调用 Presidio：给你的 ASP.NET Core 应用加一层 PII 脱敏"
 date:   2026-07-10 09:30:00 +0800--
-categories: [.NET]
+categories: [AI]
 tags: [Presidio]
 ---
 

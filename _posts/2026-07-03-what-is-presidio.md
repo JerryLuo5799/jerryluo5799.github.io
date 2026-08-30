@@ -2,7 +2,7 @@
 layout: post
 title:  "Presidio 入门：微软开源的 PII 脱敏工具，刚刚交给了社区"
 date:   2026-07-03 09:30:00 +0800--
-categories: [Tools]
+categories: [AI]
 tags: [Presidio]
 ---
 
