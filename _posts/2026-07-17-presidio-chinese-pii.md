@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "让 Presidio 认识中文：身份证、手机号与自定义识别器实战"
+title:  "Presidio 实战（三）：中文身份证、手机号与自定义识别器"
 date:   2026-07-17 09:30:00 +0800--
 categories: [AI]
 tags: [Presidio]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "给大模型加一道脱敏闸门：用 Presidio 让客户信息不出机房"
+title:  "Presidio 实战（四）：给大模型加一道 PII 脱敏网关"
 date:   2026-07-24 09:30:00 +0800--
 categories: [AI]
 tags: [Presidio]
