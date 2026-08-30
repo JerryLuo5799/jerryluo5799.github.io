@@ -37,7 +37,11 @@ layout: base
     </header>
 
     <div class="post-content" itemprop="articleBody">
-        {{ content }}
+        {%- comment -%}
+        外链（href 以 http 开头）在新标签页打开；内链一律写相对路径，因此不受影响。
+        规则里不含任何域名，换域名无需改动。
+        {%- endcomment -%}
+        {{ content | replace: '<a href="http', '<a target="_blank" rel="noopener" href="http' }}
     </div>
 
     <!-- <div id="donate" >

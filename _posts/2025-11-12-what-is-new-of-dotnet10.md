@@ -43,7 +43,7 @@ tags: [dotnet10]
 
 ### 3. C# 14：写更少、更安全的代码
 
-C# 14 进一步精简了语法逻辑，重点在于减少模板代码。具体内容请参考博客：[C# 14 新特性深度解析](https://jerryluo.com/2025/11/14/what-is-new-of-csharp14/)
+C# 14 进一步精简了语法逻辑，重点在于减少模板代码。具体内容请参考博客：[C# 14 新特性深度解析](/2025/11/15/what-is-new-of-csharp14/)
 
 
 ### 4. Web 与分布式：ASP.NET Core & Aspire

@@ -73,7 +73,7 @@ public partial class ExampleModel
 **注意2: 实体类中包含的是一个私有属性**
 
 #### 2. Source Generators类：
-Source Generators的使用方式，请参照：[Source Generators 探索](https://jerryluo.com/2021/10/30/SourceGeneratorsExplore/)
+Source Generators的使用方式，请参照：[Source Generators 探索](/2021/10/30/SourceGeneratorsExplore/)
 ```CSharp
 namespace SourceGeneratorSamples
 {

@@ -38,6 +38,6 @@ tags: [Rules, 资源命名规范]
 
 因为人会犯错误，所以有时通过手动的方式创建资源时, 可能会无法保证会根据命名规范来命名资源, 所以最好使用ARM、Bicep、terrraform和Pulumi等工具，通过基础设施即代码(IaC)以编程方式, 部署Azure资源。使用IaC，你可以在代码中加入命名约定，同时，你可以跟踪你的标准的任何变化，因为你的代码是有版本管理的。
 
-更多关于自动化部署的内容, 请参照: [如何创建Azure资源](https://jerryluo.com/2022/12/17/HowToCreateAzureResource/)
+更多关于自动化部署的内容, 请参照: [如何创建Azure资源](/2022/12/17/HowToCreateAzureResource/)
 
 
