@@ -219,8 +219,3 @@ tags: [Agentic Engineering]
 * **两条守住不能破的底线**：不可逆的动作必须有人点头；责任永远在批准的那个人身上。
 
 **这两篇的核心其实是同一句话：AI 好不好用，越来越不取决于模型有多强，而取决于你在它周围建了什么。**
-
-## 延伸阅读
-
-* [Anthropic：Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
-* [什么是 Harness Engineering（本系列上篇）](/2026/04/12/what-is-harness-engineering/)
