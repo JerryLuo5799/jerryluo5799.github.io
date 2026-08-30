@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="la" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450" y="32" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">给大模型加一道脱敏闸门：云端永远看不到真实的客户信息</text>
+
+  <!-- boundary -->
+  <rect x="600" y="60" width="285" height="330" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="742" y="86" font-size="13.5" font-weight="700" fill="#b91c1c" text-anchor="middle">公司边界之外</text>
+  <text x="742" y="106" font-size="11.5" fill="#94a3b8" text-anchor="middle">OpenAI / Azure OpenAI / Claude …</text>
+
+  <rect x="25" y="60" width="555" height="330" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="45" y="86" font-size="13.5" font-weight="700" fill="#475569">你自己的机房 / VPC 内</text>
+
+  <!-- step 1 user input -->
+  <rect x="45" y="102" width="515" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="60" y="122" font-size="11.5" font-weight="700" fill="#64748b">① 用户原始输入</text>
+  <text x="60" y="142" font-size="12.5" fill="#334155">「客户张伟（手机 13800138000）投诉订单迟迟未发货，帮我起草回复」</text>
+
+  <line x1="300" y1="152" x2="300" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#la)"/>
+
+  <!-- gateway -->
+  <rect x="45" y="172" width="515" height="86" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="194" font-size="12.5" font-weight="700" fill="#5b21b6">② 脱敏闸门（analyzer + anonymizer）</text>
+  <rect x="60" y="204" width="235" height="42" rx="6" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="177" y="220" font-size="11.5" font-weight="700" fill="#5b21b6" text-anchor="middle">不可逆：replace / hash</text>
+  <text x="177" y="238" font-size="11" fill="#64748b" text-anchor="middle">只做分析，不需要还原</text>
+  <rect x="310" y="204" width="235" height="42" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="427" y="220" font-size="11.5" font-weight="700" fill="#047857" text-anchor="middle">可逆：encrypt / 映射表</text>
+  <text x="427" y="238" font-size="11" fill="#64748b" text-anchor="middle">回复要发给客户，得还原</text>
+
+  <line x1="300" y1="258" x2="300" y2="276" stroke="#475569" stroke-width="2" marker-end="url(#la)"/>
+
+  <!-- masked text -->
+  <rect x="45" y="278" width="515" height="50" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="298" font-size="11.5" font-weight="700" fill="#5b21b6">③ 送出去的其实是这个</text>
+  <text x="60" y="318" font-size="12.5" fill="#334155">「客户&lt;PERSON&gt;（手机&lt;PHONE_NUMBER&gt;）投诉订单迟迟未发货，帮我起草回复」</text>
+
+  <path d="M 560 303 L 620 303" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#la)"/>
+
+  <!-- llm -->
+  <rect x="622" y="140" width="240" height="120" rx="10" fill="#1e293b"/>
+  <text x="742" y="176" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">大模型</text>
+  <text x="742" y="204" font-size="11.5" fill="#94a3b8" text-anchor="middle">它看到的自始至终</text>
+  <text x="742" y="224" font-size="11.5" fill="#94a3b8" text-anchor="middle">都是占位符</text>
+  <text x="742" y="246" font-size="11.5" fill="#fca5a5" text-anchor="middle">真实姓名手机号从未离境</text>
+  <path d="M 622 303 L 600 303 L 600 270 L 742 270 L 742 264" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#la)"/>
+
+  <!-- response -->
+  <rect x="622" y="290" width="240" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="637" y="310" font-size="11.5" font-weight="700" fill="#64748b">④ 模型返回</text>
+  <text x="637" y="330" font-size="11.5" fill="#334155">「尊敬的&lt;PERSON&gt;您好，</text>
+  <text x="637" y="348" font-size="11.5" fill="#334155">我们已加急处理…」</text>
+
+  <!-- back -->
+  <path d="M 620 376 L 300 376 L 300 396" stroke="#059669" stroke-width="2.5" fill="none" marker-end="url(#la)"/>
+  <rect x="45" y="398" width="515" height="52" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="60" y="418" font-size="11.5" font-weight="700" fill="#047857">⑤ 在自己这边还原后再给用户看</text>
+  <text x="60" y="438" font-size="12.5" fill="#334155">「尊敬的张伟您好，我们已加急处理…」</text>
+</svg>
