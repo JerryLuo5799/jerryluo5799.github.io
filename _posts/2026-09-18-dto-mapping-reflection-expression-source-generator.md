@@ -437,13 +437,19 @@ public class MapBenchmarks
 }
 ```
 
-性能比较的前提是结果正确。`Program.cs` 在启动基准之前，先把另外五种实现的输出与手写版本逐个属性比对，任何一处不一致就直接退出：
+性能比较的前提是结果正确。`Program.cs` 在启动基准之前，先把其余实现的输出与手写版本做递归比对，任何一处不一致就直接退出。这里同时覆盖了平铺的用户映射和带嵌套对象的订单映射：
 
 ```csharp
-// 跑基准之前先确认 6 种实现的输出完全一致，否则比较没有意义
+using System.Collections;
+using BenchmarkDotNet.Running;
+using MapperBench;
+using MapperBench.Mappers;
+using MapperBench.Mappers.Deep;
+
+// 跑基准之前先确认各实现的输出与手写版本完全一致，否则比较没有意义
 var dto = SampleData.Dto;
-var expected = HandWrittenMapper.Map(dto);
-var candidates = new Dictionary<string, User>
+var expectedUser = HandWrittenMapper.Map(dto);
+var users = new Dictionary<string, User>
 {
     ["ReflectionNoCache"] = ReflectionMapper.MapNoCache<CreateUserDto, User>(dto),
     ["ReflectionCached"] = ReflectionMapper.MapCached<CreateUserDto, User>(dto),
@@ -452,29 +458,59 @@ var candidates = new Dictionary<string, User>
     ["SourceGenerated"] = UserMapper.Map(dto),
 };
 
-foreach (var (name, actual) in candidates)
+var orderDto = SampleData.CreateOrder(10);
+var expectedOrder = HandWrittenOrderMapper.Map(orderDto);
+var orders = new Dictionary<string, Order>
 {
-    foreach (var prop in typeof(User).GetProperties())
+    ["DeepReflection"] = DeepReflectionMapper.Map<CreateOrderDto, Order>(orderDto),
+    ["DeepExpression"] = DeepExpressionMapper.Map<CreateOrderDto, Order>(orderDto),
+    ["DeepSourceGenerated"] = OrderMapper.Map(orderDto),
+};
+
+if (expectedOrder.Lines.Count != 10 || expectedOrder.ShippingAddress is null || expectedOrder.BillingAddress is not null)
+{
+    Console.Error.WriteLine("手写订单映射结果不符合预期");
+    return 1;
+}
+
+foreach (var (name, actual) in users.Select(p => (p.Key, (object)p.Value))
+             .Concat(orders.Select(p => (p.Key, (object)p.Value))))
+{
+    var expected = actual is User ? (object)expectedUser : expectedOrder;
+    if (!DeepEquals(expected, actual))
     {
-        if (!Equals(prop.GetValue(expected), prop.GetValue(actual)))
-        {
-            Console.Error.WriteLine($"{name}.{prop.Name} 不一致");
-            return 1;
-        }
+        Console.Error.WriteLine($"{name} 与手写版本不一致");
+        return 1;
     }
 }
-Console.WriteLine("6 种实现输出一致");
+Console.WriteLine("所有实现输出一致");
 
 if (args.Contains("--verify-only")) return 0;
 
-BenchmarkRunner.Run<MapBenchmarks>(args: args);
+BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
 return 0;
+
+// 递归比较：值类型和 string 比值，List 逐项比，其它对象逐属性比
+static bool DeepEquals(object? a, object? b)
+{
+    if (a is null || b is null) return a is null && b is null;
+    if (a.GetType() != b.GetType()) return false;
+    if (a is string || a.GetType().IsValueType) return a.Equals(b);
+    if (a is IList la && b is IList lb)
+        return la.Count == lb.Count && Enumerable.Range(0, la.Count).All(i => DeepEquals(la[i], lb[i]));
+
+    return a.GetType().GetProperties().All(p => DeepEquals(p.GetValue(a), p.GetValue(b)));
+}
 ```
 
 运行命令：
 
 ```bash
+# 两组基准全部运行
 dotnet run -c Release -- --filter '*'
+
+# 只运行订单映射
+dotnet run -c Release -- --filter '*OrderMapBenchmarks*'
 ```
 
 > 在 Windows 上，如果项目放在很深的目录里，BenchmarkDotNet 会在 `bin/Release/net10.0/` 下再生成一个子项目来构建，中间文件路径很容易超过 260 个字符，报错表现为 `MSB3030: Could not copy the file ...\apphost.exe because it was not found`。把解决方案挪到一个短路径下即可。
@@ -535,13 +571,340 @@ Job=.NET 10.0  Runtime=.NET 10.0
 
 除了最后一种，前三种在一次涉及数据库往返的请求里都只是零头。反射的代价不在单次延迟，而在高吞吐场景下累积的 CPU 和 GC 压力。
 
-### 6. 怎么选
+### 6. 更复杂的映射：嵌套对象与集合
+
+`User` 只有平铺的字段，映射逻辑就是十次赋值。真实的请求往往更复杂，比如下单请求里带着收货地址对象和一个明细列表。这时映射不再是一条直线，而是要递归创建子对象、循环映射列表元素。理论上，逻辑越复杂，表达式树和源生成器之间越可能拉开差距：动态方法不参与分层编译，享受不到动态 PGO；委托也不能被调用方内联。下面用实测来检验。
+
+#### 6.1 订单模型
+
+```csharp
+/// <summary>前端提交的下单请求：含嵌套对象和集合</summary>
+public sealed class CreateOrderDto
+{
+    public string CustomerName { get; set; } = "";
+    public string Email { get; set; } = "";
+    public DateTime OrderDate { get; set; }
+    public decimal Discount { get; set; }
+    public string? Remark { get; set; }
+    public AddressDto ShippingAddress { get; set; } = new();
+    public AddressDto? BillingAddress { get; set; }
+    public List<OrderLineDto> Lines { get; set; } = [];
+}
+
+public sealed class AddressDto
+{
+    public string Country { get; set; } = "";
+    public string City { get; set; } = "";
+    public string Street { get; set; } = "";
+    public string PostalCode { get; set; } = "";
+}
+
+public sealed class OrderLineDto
+{
+    public Guid ProductId { get; set; }
+    public string ProductName { get; set; } = "";
+    public int Quantity { get; set; }
+    public decimal UnitPrice { get; set; }
+}
+```
+
+实体一侧的 `Order`、`Address`、`OrderLine` 属性同名，`Order` 和 `OrderLine` 各多一个 `Id`，`Order` 还多一个 `CreatedAt`。测试数据里 `BillingAddress` 为 `null`，用来覆盖嵌套对象为空的分支。
+
+映射规则在平铺版「同名同类型才赋值」的基础上扩充为四条：
+
+- 类型相同，直接赋值；
+- 两边都是 `List<T>`，新建目标列表并逐个映射元素；
+- 两边都是有无参构造函数的类，递归映射；
+- 源值为 `null` 时，目标也为 `null`。
+
+三种实现都按这四条规则写成通用代码，而不是只针对订单类型。简单版的类保持不变，新逻辑放在单独的类和单独的生成器里。
+
+#### 6.2 反射：运行时按类型对查缓存
+
+平铺版可以用泛型静态类缓存属性对，嵌套之后就不行了：子对象的类型只能在运行时从 `PropertyType` 取得，没法作为泛型参数，只能用 `(源类型, 目标类型)` 作为键，到 `ConcurrentDictionary` 里查映射计划。
+
+```csharp
+private static object? MapObject(object? source, Type sourceType, Type targetType)
+{
+    if (source is null) return null;
+
+    var target = Activator.CreateInstance(targetType)!;
+    foreach (var step in Plans.GetOrAdd((sourceType, targetType), BuildPlan))
+    {
+        var value = step.Source.GetValue(source);
+        value = step.Kind switch
+        {
+            Kind.Object => MapObject(value, step.Source.PropertyType, step.Target.PropertyType),
+            Kind.List => MapList((IList?)value, step.SourceElement!, step.TargetElement!, step.Target.PropertyType),
+            _ => value,
+        };
+        step.Target.SetValue(target, value);
+    }
+    return target;
+}
+
+private static IList? MapList(IList? source, Type sourceElement, Type targetElement, Type targetListType)
+{
+    if (source is null) return null;
+
+    var result = (IList)Activator.CreateInstance(targetListType, source.Count)!;
+    foreach (var item in source)
+    {
+        result.Add(sourceElement == targetElement ? item : MapObject(item, sourceElement, targetElement));
+    }
+    return result;
+}
+```
+
+`BuildPlan` 在第一次遇到某个类型对时，按四条规则把每个属性归类为 `Copy`、`Object` 或 `List`，结构与平铺版的 `PropertyPairs.Build` 相同。每个对象都要多付一次字典查找、一次 `Activator.CreateInstance`，列表还要通过非泛型的 `IList` 操作，枚举器会被装箱。
+
+#### 6.3 表达式树：把循环也写进树里
+
+表达式树可以表达完整的控制流，包括局部变量、条件和循环。嵌套对象生成一段带空值判断的 `MemberInit`，列表则直接在树里生成一个 `for` 循环，最终编译出的委托里没有任何反射：
+
+```csharp
+private static Expression? BuildValue(Expression value, Type targetType)
+{
+    if (value.Type == targetType)
+        return value;
+
+    if (MappingRules.IsList(value.Type, out var se) && MappingRules.IsList(targetType, out var te))
+        return NullSafe(value, targetType, v => BuildList(v, se, te, targetType));
+
+    if (MappingRules.IsMappableClass(value.Type) && MappingRules.IsMappableClass(targetType))
+        return NullSafe(value, targetType, v => BuildNew(v, targetType));
+
+    return null;
+}
+
+/// <summary>var v = value; v == null ? null : build(v)</summary>
+private static Expression NullSafe(Expression value, Type targetType, Func<Expression, Expression> build)
+{
+    var v = Expression.Variable(value.Type);
+    return Expression.Block(targetType, [v],
+        Expression.Assign(v, value),
+        Expression.Condition(
+            Expression.Equal(v, Expression.Constant(null, value.Type)),
+            Expression.Constant(null, targetType),
+            build(v),
+            targetType));
+}
+
+/// <summary>
+/// 等价于：
+/// var result = new List&lt;TT&gt;(source.Count);
+/// for (var i = 0; i &lt; count; i++) result.Add(map(source[i]));
+/// </summary>
+private static Expression BuildList(Expression source, Type sourceElement, Type targetElement, Type targetListType)
+{
+    var result = Expression.Variable(targetListType, "result");
+    var count = Expression.Variable(typeof(int), "count");
+    var i = Expression.Variable(typeof(int), "i");
+    var item = Expression.Variable(sourceElement, "item");
+    var end = Expression.Label("end");
+
+    var element = BuildValue(item, targetElement)
+        ?? throw new NotSupportedException($"{sourceElement} -> {targetElement}");
+
+    return Expression.Block(targetListType, [result, count, i],
+        Expression.Assign(count, Expression.Property(source, "Count")),
+        Expression.Assign(result, Expression.New(targetListType.GetConstructor([typeof(int)])!, count)),
+        Expression.Assign(i, Expression.Constant(0)),
+        Expression.Loop(
+            Expression.IfThenElse(
+                Expression.LessThan(i, count),
+                Expression.Block([item],
+                    Expression.Assign(item, Expression.Property(source, "Item", i)),
+                    Expression.Call(result, targetListType.GetMethod("Add")!, element),
+                    Expression.PostIncrementAssign(i)),
+                Expression.Break(end)),
+            end),
+        result);
+}
+```
+
+`BuildNew` 与平铺版的 `BuildLambda` 主体相同，只是对每个属性改为调用 `BuildValue`。`NullSafe` 先把源值存进局部变量，保证属性只读取一次。代码量明显上来了，这也是表达式树方案真实的维护成本：树里写错一个类型，要到运行时 `Compile` 才会抛出异常。
+
+#### 6.4 源生成器：为每个类型对生成一个私有方法
+
+生成器新增一个 `[GenerateDeepMapper]` 特性。处理属性时，遇到嵌套类型对就放进队列，稍后为它生成一个私有的 `__Map` 重载：
+
+```csharp
+/// <summary>同类型直接赋值；List 和可映射的类调用 __Map，并保留 null</summary>
+private static string? Value(string access, ITypeSymbol source, ITypeSymbol target,
+    Queue<(ITypeSymbol, ITypeSymbol)> pending)
+{
+    if (SymbolEqualityComparer.Default.Equals(source, target))
+        return access;
+
+    if ((IsList(source, out _) && IsList(target, out _))
+        || (IsMappableClass(source) && IsMappableClass(target)))
+    {
+        pending.Enqueue((source, target));
+        return $"{access} is null ? null : __Map({access})";
+    }
+
+    return null;
+}
+```
+
+声明方式与平铺版相同：
+
+```csharp
+[GenerateDeepMapper]
+public static partial class OrderMapper
+{
+    public static partial Order Map(CreateOrderDto source);
+}
+```
+
+生成结果原样如下：
+
+```csharp
+// <auto-generated />
+#nullable disable
+namespace MapperBench.Mappers.Deep;
+
+static partial class OrderMapper
+{
+    public static partial MapperBench.Order Map(MapperBench.CreateOrderDto source)
+    {
+        return new MapperBench.Order
+        {
+            CustomerName = source.CustomerName,
+            Email = source.Email,
+            OrderDate = source.OrderDate,
+            Discount = source.Discount,
+            Remark = source.Remark,
+            ShippingAddress = source.ShippingAddress is null ? null : __Map(source.ShippingAddress),
+            BillingAddress = source.BillingAddress is null ? null : __Map(source.BillingAddress),
+            Lines = source.Lines is null ? null : __Map(source.Lines),
+        };
+    }
+
+    private static MapperBench.Address __Map(MapperBench.AddressDto source)
+    {
+        return new MapperBench.Address
+        {
+            Country = source.Country,
+            City = source.City,
+            Street = source.Street,
+            PostalCode = source.PostalCode,
+        };
+    }
+
+    private static System.Collections.Generic.List<MapperBench.OrderLine> __Map(System.Collections.Generic.List<MapperBench.OrderLineDto> source)
+    {
+        var result = new System.Collections.Generic.List<MapperBench.OrderLine>(source.Count);
+        foreach (var item in source)
+        {
+            result.Add(item is null ? null : __Map(item));
+        }
+        return result;
+    }
+
+    private static MapperBench.OrderLine __Map(MapperBench.OrderLineDto source)
+    {
+        return new MapperBench.OrderLine
+        {
+            ProductId = source.ProductId,
+            ProductName = source.ProductName,
+            Quantity = source.Quantity,
+            UnitPrice = source.UnitPrice,
+        };
+    }
+}
+```
+
+手写基线 `HandWrittenOrderMapper` 与这份生成代码结构一致，同样是三个私有 `Map` 重载加一个 `foreach` 循环。这个生成器有一个已知边界：同一个源类型如果要映射到两个不同的目标类型，两个 `__Map` 重载的参数相同，会编译失败，实际使用时需要按目标类型区分方法名。
+
+#### 6.5 基准测试与结果
+
+明细行数用 `[Params]` 分为 1、10、100 三档。平铺场景已经说明了不缓存的写法没有意义，这里只比较四种稳态方案：
+
+```csharp
+[MemoryDiagnoser]
+[SimpleJob(RuntimeMoniker.Net10_0)]
+public class OrderMapBenchmarks
+{
+    [Params(1, 10, 100)]
+    public int LineCount;
+
+    private CreateOrderDto _dto = null!;
+
+    [GlobalSetup]
+    public void Setup() => _dto = SampleData.CreateOrder(LineCount);
+
+    [Benchmark(Baseline = true)]
+    public Order HandWritten() => HandWrittenOrderMapper.Map(_dto);
+
+    [Benchmark]
+    public Order ReflectionCached() => DeepReflectionMapper.Map<CreateOrderDto, Order>(_dto);
+
+    [Benchmark]
+    public Order ExpressionCached() => DeepExpressionMapper.Map<CreateOrderDto, Order>(_dto);
+
+    [Benchmark]
+    public Order SourceGenerated() => OrderMapper.Map(_dto);
+}
+```
+
+测试环境与平铺场景相同，结果原样如下：
+
+| Method           | LineCount | Mean         | Error        | StdDev       | Median       | Ratio | RatioSD | Gen0   | Gen1   | Allocated | Alloc Ratio |
+|----------------- |---------- |-------------:|-------------:|-------------:|-------------:|------:|--------:|-------:|-------:|----------:|------------:|
+| **HandWritten**      | **1**         |     **41.57 ns** |     **1.995 ns** |     **5.851 ns** |     **39.60 ns** |  **1.02** |    **0.19** | **0.0229** |      **-** |     **288 B** |        **1.00** |
+| ReflectionCached | 1         |    633.34 ns |    12.497 ns |    32.703 ns |    629.31 ns | 15.51 |    2.13 | 0.0725 |      - |     920 B |        3.19 |
+| ExpressionCached | 1         |     39.64 ns |     0.889 ns |     2.535 ns |     39.12 ns |  0.97 |    0.14 | 0.0229 |      - |     288 B |        1.00 |
+| SourceGenerated  | 1         |     38.04 ns |     0.810 ns |     2.284 ns |     37.54 ns |  0.93 |    0.13 | 0.0229 |      - |     288 B |        1.00 |
+|                  |           |              |              |              |              |       |         |        |        |           |             |
+| **HandWritten**      | **10**        |    **114.24 ns** |     **3.771 ns** |    **10.820 ns** |    **111.96 ns** |  **1.01** |    **0.13** | **0.0802** | **0.0002** |    **1008 B** |        **1.00** |
+| ReflectionCached | 10        |  1,557.31 ns |    36.894 ns |   105.856 ns |  1,519.93 ns | 13.75 |    1.53 | 0.1926 |      - |    2432 B |        2.41 |
+| ExpressionCached | 10        |    114.93 ns |     3.310 ns |     9.337 ns |    112.41 ns |  1.01 |    0.12 | 0.0801 | 0.0002 |    1008 B |        1.00 |
+| SourceGenerated  | 10        |    147.36 ns |    10.816 ns |    31.379 ns |    145.33 ns |  1.30 |    0.30 | 0.0802 | 0.0002 |    1008 B |        1.00 |
+|                  |           |              |              |              |              |       |         |        |        |           |             |
+| **HandWritten**      | **100**       |    **878.84 ns** |    **48.463 ns** |   **140.600 ns** |    **847.48 ns** |  **1.02** |    **0.22** | **0.6542** | **0.0191** |    **8208 B** |        **1.00** |
+| ReflectionCached | 100       | 15,490.46 ns | 1,131.170 ns | 3,190.485 ns | 14,895.82 ns | 18.04 |    4.55 | 1.3885 | 0.0305 |   17552 B |        2.14 |
+| ExpressionCached | 100       |    852.48 ns |    45.926 ns |   124.946 ns |    814.85 ns |  0.99 |    0.20 | 0.6542 | 0.0191 |    8208 B |        1.00 |
+| SourceGenerated  | 100       |    880.61 ns |    22.371 ns |    63.826 ns |    872.38 ns |  1.03 |    0.17 | 0.6542 | 0.0191 |    8208 B |        1.00 |
+
+10 行那一档里，源生成器比手写慢了 30%，标准差也明显偏大，BenchmarkDotNet 还对它给出了「分布呈多峰」的警告。两者的代码结构完全相同，这个差距不合常理，于是单独把这两组重跑了一遍：
+
+| Method          | LineCount | Mean      | Error     | StdDev    | Median    | Ratio | RatioSD | Allocated |
+|---------------- |---------- |----------:|----------:|----------:|----------:|------:|--------:|----------:|
+| HandWritten     | 1         |  49.29 ns |  3.182 ns |  9.334 ns |  46.24 ns |  1.03 |    0.26 |     288 B |
+| SourceGenerated | 1         |  40.31 ns |  0.929 ns |  2.447 ns |  39.79 ns |  0.84 |    0.15 |     288 B |
+| HandWritten     | 10        | 129.63 ns |  2.538 ns |  6.906 ns | 128.66 ns |  1.00 |    0.07 |    1008 B |
+| SourceGenerated | 10        | 107.31 ns |  2.159 ns |  4.506 ns | 106.47 ns |  0.83 |    0.06 |    1008 B |
+| HandWritten     | 100       | 753.62 ns | 15.051 ns | 19.570 ns | 755.76 ns |  1.00 |    0.04 |    8208 B |
+| SourceGenerated | 100       | 745.39 ns | 14.860 ns | 32.930 ns | 740.13 ns |  0.99 |    0.05 |    8208 B |
+
+重跑后差距的方向反了过来，源生成器反而快 17%。同一份代码两次运行能差出这么多，说明在这台笔记本上，十几纳秒到二三十纳秒的差异都不能当真，只有成倍的差距才有意义。这也是读基准结果时值得记住的一点：单次运行里的「赢家」未必可信，可疑的数字要重跑确认。
+
+#### 6.6 结果解读
+
+**表达式树仍然和手写持平，前面的理论推测没有被实测证实。** 1 行、10 行、100 行三档，缓存委托的表达式树都落在手写基线的误差范围内。原因在于映射的主要成本是分配对象和复制字段：每多一行明细就要创建一个 `OrderLine`，这部分开销对所有实现都一样。表达式树版本把循环直接写进了树里，整个订单只在入口处调用一次委托，循环体内没有额外的间接调用，动态 PGO 能优化的空间也很小。如果改用「每个元素调用一次缓存的子委托」的写法，每行会多一次委托调用，这种写法没有测，不能套用这里的结论。
+
+**源生成器与手写相同。** 两轮结果互相抵消，结论与平铺场景一致。
+
+**反射的差距随数据量拉大。** 三档分别是基线的 15.5 倍、13.8 倍和 18.0 倍。按 100 行折算，手写每行明细约 8.5 ns，反射约 150 ns。分配同样能对上账：
+
+| 实现 | 每多一行明细 | 构成 |
+|---|---:|---|
+| 手写 / 表达式树 / 源生成器 | 80 B | 一个 `OrderLine` 对象 72 B，加上列表底层数组的一个槽位 8 B |
+| 反射 | 168 B | 再加上 `Guid`、`int`、`decimal` 三个值类型各装箱一次，共 88 B |
+
+1 行时反射比手写多出 632 B，除去这一行的 88 B 装箱，其余来自 `Order` 上两个值类型的装箱、带参数的 `Activator.CreateInstance` 以及装箱后的列表枚举器。对象图越大，反射在装箱和动态创建实例上付出的代价就越多。
+
+**结论没有变：** 稳态下表达式树和源生成器都能达到手写的性能，反射是唯一明显落后的方案。复杂映射拉开的不是这两者的运行时性能，而是开发体验。两者的代码量都明显增加：表达式树映射器写到了近百行，生成器也从 92 行增加到 161 行。区别在于出错的方式：表达式树里写错一个类型，要到运行时 `Compile` 才会抛出异常，而且生成的委托无法单步调试；源生成器拼错代码，会在编译期直接报错，生成的结果也是可以阅读、可以打断点的 C# 代码。
+
+### 7. 怎么选
 
 性能之外，三种方式在工程上的差别同样重要：
 
 | 维度 | 反射 | 表达式树 | 源生成器 |
 |---|---|---|---|
-| 稳态性能 | 慢 13 倍以上，有装箱分配 | 缓存后与手写相当 | 与手写相同 |
+| 稳态性能 | 慢 13 到 18 倍，有装箱分配 | 缓存后与手写相当，嵌套与集合下同样如此 | 与手写相同 |
 | 冷启动 | 首次查元数据 | 每个类型对首次约 180 μs | 无额外开销 |
 | NativeAOT / 裁剪 | 需要保留元数据 | `Compile` 退化为解释执行 | 完全兼容 |
 | 可调试性 | 只能调试通用循环 | 委托体无法单步进入 | F12 跳进生成代码直接打断点 |
