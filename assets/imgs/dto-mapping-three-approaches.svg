@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">三种映射方式：「哪个属性赋给哪个属性」在什么时候确定</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">确定得越早，运行时每次调用要做的事就越少</text>
+
+  <!-- 行标题 -->
+  <text x="80" y="104" font-size="12" fill="#64748b" text-anchor="middle">方式</text>
+  <text x="80" y="170" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">编译期</text>
+  <text x="80" y="260" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">首次调用</text>
+  <text x="80" y="350" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">之后每次调用</text>
+  <line x1="30" y1="125" x2="880" y2="125" stroke="#e2e8f0"/>
+  <line x1="30" y1="215" x2="880" y2="215" stroke="#e2e8f0"/>
+  <line x1="30" y1="305" x2="880" y2="305" stroke="#e2e8f0"/>
+
+  <!-- 反射 -->
+  <rect x="145" y="80" width="235" height="36" rx="8" fill="#ddd6fe"/>
+  <text x="262" y="104" font-size="14" font-weight="700" fill="#5b21b6" text-anchor="middle">反射 PropertyInfo</text>
+  <text x="262" y="174" font-size="12" fill="#94a3b8" text-anchor="middle">无</text>
+  <rect x="155" y="228" width="215" height="66" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="262" y="254" font-size="12" fill="#475569" text-anchor="middle">GetProperties 查元数据</text>
+  <text x="262" y="276" font-size="12" fill="#475569" text-anchor="middle">缓存版在此存下属性对</text>
+  <rect x="155" y="318" width="215" height="76" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="262" y="342" font-size="12" fill="#475569" text-anchor="middle">逐个 GetValue / SetValue</text>
+  <text x="262" y="362" font-size="12" fill="#475569" text-anchor="middle">值类型要装箱</text>
+  <text x="262" y="382" font-size="12" fill="#475569" text-anchor="middle">未缓存版每次还要重查元数据</text>
+
+  <!-- 表达式树 -->
+  <rect x="395" y="80" width="235" height="36" rx="8" fill="#dbeafe"/>
+  <text x="512" y="104" font-size="14" font-weight="700" fill="#1e40af" text-anchor="middle">表达式树 Expression</text>
+  <text x="512" y="174" font-size="12" fill="#94a3b8" text-anchor="middle">无</text>
+  <rect x="405" y="228" width="215" height="66" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="512" y="254" font-size="12" fill="#475569" text-anchor="middle">反射查元数据、拼表达式树</text>
+  <text x="512" y="276" font-size="12" fill="#475569" text-anchor="middle">Compile 成 IL 并 JIT</text>
+  <rect x="405" y="318" width="215" height="76" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="512" y="342" font-size="12" fill="#475569" text-anchor="middle">调用缓存的委托</text>
+  <text x="512" y="362" font-size="12" fill="#475569" text-anchor="middle">委托体就是直接赋值</text>
+  <text x="512" y="382" font-size="12" fill="#475569" text-anchor="middle">多一次委托调用的间接跳转</text>
+
+  <!-- 源生成器 -->
+  <rect x="645" y="80" width="235" height="36" rx="8" fill="#d1fae5"/>
+  <text x="762" y="104" font-size="14" font-weight="700" fill="#065f46" text-anchor="middle">源生成器</text>
+  <rect x="655" y="138" width="215" height="66" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="762" y="164" font-size="12" fill="#475569" text-anchor="middle">Roslyn 读符号信息</text>
+  <text x="762" y="186" font-size="12" fill="#475569" text-anchor="middle">生成普通 C# 并一起编译</text>
+  <text x="762" y="264" font-size="12" fill="#94a3b8" text-anchor="middle">无额外工作</text>
+  <rect x="655" y="318" width="215" height="76" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="762" y="346" font-size="12" fill="#475569" text-anchor="middle">和手写代码完全相同</text>
+  <text x="762" y="368" font-size="12" fill="#475569" text-anchor="middle">JIT 可以内联</text>
+
+  <!-- 底部特性 -->
+  <text x="80" y="428" font-size="12" fill="#64748b" text-anchor="middle">NativeAOT</text>
+  <text x="262" y="428" font-size="12" fill="#475569" text-anchor="middle">可用，需保留元数据</text>
+  <text x="512" y="428" font-size="12" fill="#475569" text-anchor="middle">Compile 退化为解释执行</text>
+  <text x="762" y="428" font-size="12" fill="#475569" text-anchor="middle">完全兼容</text>
+  <text x="80" y="454" font-size="12" fill="#64748b" text-anchor="middle">类型何时已知</text>
+  <text x="262" y="454" font-size="12" fill="#475569" text-anchor="middle">运行时即可</text>
+  <text x="512" y="454" font-size="12" fill="#475569" text-anchor="middle">运行时即可</text>
+  <text x="762" y="454" font-size="12" fill="#475569" text-anchor="middle">编译期必须已知</text>
+</svg>
