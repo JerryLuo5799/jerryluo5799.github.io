@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="580" viewBox="0 0 900 580" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="580" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">订单映射单次耗时：嵌套地址 + 明细列表</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">每组按本组最大值线性缩放 · 柱旁为平均耗时与每次分配 · .NET 10.0.8 · Intel Core Ultra 7 155H</text>
+
+  <!-- ========== 1 行明细 ========== -->
+  <text x="30" y="96" font-size="13.5" font-weight="700" fill="#334155">1 行明细</text>
+  <line x1="230" y1="104" x2="230" y2="220" stroke="#94a3b8"/>
+  <g font-size="13" fill="#334155" text-anchor="end">
+    <text x="216" y="123">手写赋值（基线）</text>
+    <text x="216" y="153">源生成器</text>
+    <text x="216" y="183">表达式树（缓存委托）</text>
+    <text x="216" y="213">反射（缓存）</text>
+  </g>
+  <rect x="230" y="108" width="31.5" height="20" rx="4" fill="#94a3b8"/>
+  <rect x="230" y="138" width="28.8" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="168" width="30.0" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="198" width="480" height="20" rx="4" fill="#2563eb"/>
+  <g font-size="12" fill="#334155">
+    <text x="270" y="123"><tspan font-weight="700">41.57 ns</tspan><tspan fill="#64748b">  · 288 B</tspan></text>
+    <text x="267" y="153"><tspan font-weight="700">38.04 ns</tspan><tspan fill="#64748b">  · 288 B</tspan></text>
+    <text x="268" y="183"><tspan font-weight="700">39.64 ns</tspan><tspan fill="#64748b">  · 288 B</tspan></text>
+    <text x="718" y="213"><tspan font-weight="700">633.34 ns</tspan><tspan fill="#64748b">  · 920 B</tspan></text>
+  </g>
+  <text x="718" y="194" font-size="11.5" fill="#b91c1c">15.5 倍</text>
+  <line x1="30" y1="236" x2="870" y2="236" stroke="#e2e8f0"/>
+
+  <!-- ========== 10 行明细 ========== -->
+  <text x="30" y="262" font-size="13.5" font-weight="700" fill="#334155">10 行明细</text>
+  <line x1="230" y1="270" x2="230" y2="386" stroke="#94a3b8"/>
+  <g font-size="13" fill="#334155" text-anchor="end">
+    <text x="216" y="289">手写赋值（基线）</text>
+    <text x="216" y="319">源生成器</text>
+    <text x="216" y="349">表达式树（缓存委托）</text>
+    <text x="216" y="379">反射（缓存）</text>
+  </g>
+  <rect x="230" y="274" width="35.2" height="20" rx="4" fill="#94a3b8"/>
+  <rect x="230" y="304" width="45.4" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="334" width="35.4" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="364" width="480" height="20" rx="4" fill="#2563eb"/>
+  <g font-size="12" fill="#334155">
+    <text x="274" y="289"><tspan font-weight="700">114.24 ns</tspan><tspan fill="#64748b">  · 1008 B</tspan></text>
+    <text x="284" y="319"><tspan font-weight="700">147.36 ns</tspan><tspan fill="#64748b">  · 1008 B · 重跑为 107.31 ns，属于测量噪声</tspan></text>
+    <text x="274" y="349"><tspan font-weight="700">114.93 ns</tspan><tspan fill="#64748b">  · 1008 B</tspan></text>
+    <text x="718" y="379"><tspan font-weight="700">1,557.31 ns</tspan><tspan fill="#64748b">  · 2432 B</tspan></text>
+  </g>
+  <text x="718" y="360" font-size="11.5" fill="#b91c1c">13.8 倍</text>
+  <line x1="30" y1="402" x2="870" y2="402" stroke="#e2e8f0"/>
+
+  <!-- ========== 100 行明细 ========== -->
+  <text x="30" y="428" font-size="13.5" font-weight="700" fill="#334155">100 行明细</text>
+  <line x1="230" y1="436" x2="230" y2="552" stroke="#94a3b8"/>
+  <g font-size="13" fill="#334155" text-anchor="end">
+    <text x="216" y="455">手写赋值（基线）</text>
+    <text x="216" y="485">源生成器</text>
+    <text x="216" y="515">表达式树（缓存委托）</text>
+    <text x="216" y="545">反射（缓存）</text>
+  </g>
+  <rect x="230" y="440" width="27.2" height="20" rx="4" fill="#94a3b8"/>
+  <rect x="230" y="470" width="27.3" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="500" width="26.4" height="20" rx="4" fill="#2563eb"/>
+  <rect x="230" y="530" width="480" height="20" rx="4" fill="#2563eb"/>
+  <g font-size="12" fill="#334155">
+    <text x="266" y="455"><tspan font-weight="700">878.84 ns</tspan><tspan fill="#64748b">  · 8208 B</tspan></text>
+    <text x="266" y="485"><tspan font-weight="700">880.61 ns</tspan><tspan fill="#64748b">  · 8208 B</tspan></text>
+    <text x="265" y="515"><tspan font-weight="700">852.48 ns</tspan><tspan fill="#64748b">  · 8208 B</tspan></text>
+    <text x="718" y="545"><tspan font-weight="700">15,490.46 ns</tspan><tspan fill="#64748b">  · 17552 B</tspan></text>
+  </g>
+  <text x="718" y="526" font-size="11.5" fill="#b91c1c">18.0 倍</text>
+</svg>
