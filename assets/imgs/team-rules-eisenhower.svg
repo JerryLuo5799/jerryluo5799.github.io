@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">重要与紧急四象限：时间该往左上角挪</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">右下角的事会自己找上门；左上角的事没人催，需要主动留出时间。</text>
+
+  <text x="325" y="88" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="middle">不紧急</text>
+  <text x="661" y="88" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="middle">紧急</text>
+  <text x="120" y="182" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="middle">重要</text>
+  <text x="120" y="352" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="middle">不重要</text>
+
+  <g>
+    <rect x="164" y="100" width="322" height="160" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <rect x="184" y="118" width="110" height="26" rx="13" fill="#059669"/>
+    <text x="239" y="136" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">安排时间去做</text>
+    <text x="184" y="170" font-size="12.5" fill="#475569">重要 + 不紧急</text>
+    <text x="184" y="194" font-size="11.5" fill="#64748b">委托审批功能、补测试、架构调整、</text>
+    <text x="184" y="214" font-size="11.5" fill="#64748b">写文档、偿还技术债</text>
+    <text x="184" y="242" font-size="11.5" fill="#059669">一直拖下去，迟早变成右边的故障</text>
+  </g>
+  <g>
+    <rect x="500" y="100" width="322" height="160" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+    <rect x="520" y="118" width="96" height="26" rx="13" fill="#dc2626"/>
+    <text x="568" y="136" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">立刻处理</text>
+    <text x="520" y="170" font-size="12.5" fill="#475569">重要 + 紧急</text>
+    <text x="520" y="194" font-size="11.5" fill="#64748b">线上故障、关账日审批卡住、</text>
+    <text x="520" y="214" font-size="11.5" fill="#64748b">明天要演示的功能有缺陷</text>
+    <text x="520" y="242" font-size="11.5" fill="#dc2626">这里的事越多，说明左边欠得越多</text>
+  </g>
+  <g>
+    <rect x="164" y="270" width="322" height="160" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="184" y="288" width="96" height="26" rx="13" fill="#94a3b8"/>
+    <text x="232" y="306" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">尽量不做</text>
+    <text x="184" y="340" font-size="12.5" fill="#475569">不重要 + 不紧急</text>
+    <text x="184" y="364" font-size="11.5" fill="#64748b">与己无关的群聊、反复调整格式、</text>
+    <text x="184" y="384" font-size="11.5" fill="#64748b">没有目的的刷资讯</text>
+    <text x="184" y="412" font-size="11.5" fill="#64748b">累了时的去处，不必归零，别让它扩张</text>
+  </g>
+  <g>
+    <rect x="500" y="270" width="322" height="160" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="520" y="288" width="150" height="26" rx="13" fill="#7c3aed"/>
+    <text x="595" y="306" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">合并、推后或转交</text>
+    <text x="520" y="340" font-size="12.5" fill="#475569">不重要 + 紧急</text>
+    <text x="520" y="364" font-size="11.5" fill="#64748b">"在吗"、问账号、临时拉的会、</text>
+    <text x="520" y="384" font-size="11.5" fill="#64748b">"很快的"小修改</text>
+    <text x="520" y="412" font-size="11.5" fill="#7c3aed">小陈的周三几乎全花在了这里</text>
+  </g>
+
+</svg>

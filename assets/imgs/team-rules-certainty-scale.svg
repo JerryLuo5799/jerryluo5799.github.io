@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="cs" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="0.36" stop-color="#2563eb"/>
+      <stop offset="0.68" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">把握程度的四档说法</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">"应该没问题"可能落在后三档的任何一档，听的人却常常当成第一档。</text>
+
+  <rect x="30" y="78" width="840" height="10" rx="5" fill="url(#cs)"/>
+  <text x="30" y="108" font-size="11.5" fill="#64748b">把握高</text>
+  <text x="870" y="108" font-size="11.5" fill="#64748b" text-anchor="end">把握低</text>
+
+  <g>
+    <rect x="30" y="122" width="198" height="200" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+    <rect x="46" y="136" width="84" height="24" rx="12" fill="#059669"/>
+    <text x="88" y="153" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">验证过</text>
+    <text x="46" y="184" font-size="12" font-weight="700" fill="#334155">怎么说</text>
+    <text x="46" y="206" font-size="12" fill="#475569">"查过了，不是数据库：</text>
+    <text x="46" y="226" font-size="12" fill="#475569">连接数 12，上限 100。"</text>
+    <text x="46" y="258" font-size="12" font-weight="700" fill="#334155">听的人可以</text>
+    <text x="46" y="280" font-size="12" fill="#475569">把这个方向排除</text>
+    <text x="46" y="306" font-size="11" fill="#059669">结论 + 依据</text>
+  </g>
+  <g>
+    <rect x="244" y="122" width="198" height="200" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="260" y="136" width="126" height="24" rx="12" fill="#2563eb"/>
+    <text x="323" y="153" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">有把握，没验证</text>
+    <text x="260" y="184" font-size="12" font-weight="700" fill="#334155">怎么说</text>
+    <text x="260" y="206" font-size="12" fill="#475569">"我认为不是，报错是接口</text>
+    <text x="260" y="226" font-size="12" fill="#475569">超时。但数据库还没看。"</text>
+    <text x="260" y="258" font-size="12" font-weight="700" fill="#334155">听的人可以</text>
+    <text x="260" y="280" font-size="12" fill="#475569">先查别处，保留这个方向</text>
+    <text x="260" y="306" font-size="11" fill="#2563eb">判断 + 没验证的部分</text>
+  </g>
+  <g>
+    <rect x="458" y="122" width="198" height="200" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="474" y="136" width="72" height="24" rx="12" fill="#7c3aed"/>
+    <text x="510" y="153" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">推测</text>
+    <text x="474" y="184" font-size="12" font-weight="700" fill="#334155">怎么说</text>
+    <text x="474" y="206" font-size="12" fill="#475569">"只是猜测：可能和上午</text>
+    <text x="474" y="226" font-size="12" fill="#475569">的发布有关，没有证据。"</text>
+    <text x="474" y="258" font-size="12" font-weight="700" fill="#334155">听的人可以</text>
+    <text x="474" y="280" font-size="12" fill="#475569">当成线索，不当成结论</text>
+    <text x="474" y="306" font-size="11" fill="#7c3aed">明说"这是猜的"</text>
+  </g>
+  <g>
+    <rect x="672" y="122" width="198" height="200" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="688" y="136" width="72" height="24" rx="12" fill="#64748b"/>
+    <text x="724" y="153" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">不知道</text>
+    <text x="688" y="184" font-size="12" font-weight="700" fill="#334155">怎么说</text>
+    <text x="688" y="206" font-size="12" fill="#475569">"不清楚。我去查一下，</text>
+    <text x="688" y="226" font-size="12" fill="#475569">半小时内回你。"</text>
+    <text x="688" y="258" font-size="12" font-weight="700" fill="#334155">听的人可以</text>
+    <text x="688" y="280" font-size="12" fill="#475569">知道什么时候有答案</text>
+    <text x="688" y="306" font-size="11" fill="#64748b">不知道 + 何时给答复</text>
+  </g>
+
+  <rect x="30" y="340" width="840" height="40" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="46" y="365" font-size="12.5" fill="#b91c1c">最危险的组合：实际是"推测"，说出口是一句不带任何限定的"不是"。所有人随之把这个方向划掉。</text>
+</svg>

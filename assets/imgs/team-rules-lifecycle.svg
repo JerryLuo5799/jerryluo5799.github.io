@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="430" fill="#ffffff"/>
+  <defs>
+    <marker id="lc" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">规则的生命周期：五个环节首尾相接</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">多数团队只做了前两步，规则写完就停在了那里。</text>
+
+  <g>
+    <rect x="30" y="86" width="152" height="104" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+    <rect x="46" y="100" width="72" height="24" rx="12" fill="#dc2626"/>
+    <text x="82" y="117" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">① 踩坑</text>
+    <text x="46" y="148" font-size="12" fill="#475569">线上出过事故</text>
+    <text x="46" y="170" font-size="12" fill="#475569">或同一件事反复返工</text>
+  </g>
+  <g>
+    <rect x="202" y="86" width="152" height="104" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="218" y="100" width="72" height="24" rx="12" fill="#64748b"/>
+    <text x="254" y="117" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">② 成文</text>
+    <text x="218" y="148" font-size="12" fill="#475569">写进仓库 docs/</text>
+    <text x="218" y="170" font-size="12" fill="#475569">附一正一反两个例子</text>
+  </g>
+  <g>
+    <rect x="374" y="86" width="152" height="104" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="390" y="100" width="84" height="24" rx="12" fill="#7c3aed"/>
+    <text x="432" y="117" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">③ 讲原因</text>
+    <text x="390" y="148" font-size="12" fill="#475569">执行时说清楚</text>
+    <text x="390" y="170" font-size="12" fill="#475569">这条规则在防什么</text>
+  </g>
+  <g>
+    <rect x="546" y="86" width="152" height="104" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="562" y="100" width="84" height="24" rx="12" fill="#2563eb"/>
+    <text x="604" y="117" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">④ 收意见</text>
+    <text x="562" y="148" font-size="12" fill="#475569">定期问团队</text>
+    <text x="562" y="170" font-size="12" fill="#475569">打 1–5 星，写原因</text>
+  </g>
+  <g>
+    <rect x="718" y="86" width="152" height="104" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+    <rect x="734" y="100" width="72" height="24" rx="12" fill="#059669"/>
+    <text x="770" y="117" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">⑤ 修订</text>
+    <text x="734" y="148" font-size="12" fill="#475569">谁发现谁提 PR</text>
+    <text x="734" y="170" font-size="12" fill="#475569">改动与理由都留痕</text>
+  </g>
+
+  <line x1="184" y1="138" x2="199" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#lc)"/>
+  <line x1="356" y1="138" x2="371" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#lc)"/>
+  <line x1="528" y1="138" x2="543" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#lc)"/>
+  <line x1="700" y1="138" x2="715" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#lc)"/>
+  <path d="M794,192 L794,226 L106,226 L106,194" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#lc)"/>
+  <rect x="368" y="214" width="164" height="24" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="450" y="231" font-size="12" fill="#64748b" text-anchor="middle">修订后的规则进入下一轮</text>
+
+  <text x="30" y="282" font-size="14" font-weight="700" fill="#334155">断在哪一环，规则就死在哪一环</text>
+
+  <g>
+    <rect x="30" y="298" width="270" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="48" y="324" font-size="12.5" font-weight="700" fill="#7c3aed">缺 ③ 讲原因</text>
+    <text x="48" y="350" font-size="12" fill="#475569">大家记住的是"有人会查"</text>
+    <text x="48" y="372" font-size="12" fill="#475569">没人查的时候就不做</text>
+    <text x="48" y="394" font-size="12" fill="#dc2626">结果：应付检查</text>
+  </g>
+  <g>
+    <rect x="315" y="298" width="270" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="333" y="324" font-size="12.5" font-weight="700" fill="#2563eb">缺 ④ 收意见</text>
+    <text x="333" y="350" font-size="12" fill="#475569">规则不合用却没处说</text>
+    <text x="333" y="372" font-size="12" fill="#475569">各人私下找到绕开的办法</text>
+    <text x="333" y="394" font-size="12" fill="#dc2626">结果：上有政策，下有对策</text>
+  </g>
+  <g>
+    <rect x="600" y="298" width="270" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="618" y="324" font-size="12.5" font-weight="700" fill="#059669">缺 ⑤ 修订</text>
+    <text x="618" y="350" font-size="12" fill="#475569">过时的条目没人敢删</text>
+    <text x="618" y="372" font-size="12" fill="#475569">有用的条目被一起忽略</text>
+    <text x="618" y="394" font-size="12" fill="#dc2626">结果：制度挂在墙上</text>
+  </g>
+</svg>

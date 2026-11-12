@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <defs>
+    <marker id="ho" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">两种交接：长时间不在的清单，每天下班的接力棒</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">共同点是写下来，并且由接手的人确认。</text>
+
+  <!-- left: checklist -->
+  <rect x="30" y="76" width="400" height="344" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="50" y="104" font-size="14" font-weight="700" fill="#334155">休假前的交接清单</text>
+
+  <g font-size="12">
+    <rect x="50" y="118" width="360" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="64" y="140" font-size="12.5" font-weight="700" fill="#2563eb">① 会议与角色</text>
+    <text x="64" y="162" fill="#475569">站会、周会谁来主持；对外联系人由谁接</text>
+
+    <rect x="50" y="182" width="360" height="56" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="64" y="204" font-size="12.5" font-weight="700" fill="#dc2626">② 只有你能批准的东西</text>
+    <text x="64" y="226" fill="#475569">代码负责人、发布权限、管理员账号至少两人</text>
+
+    <rect x="50" y="246" width="360" height="56" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="64" y="268" font-size="12.5" font-weight="700" fill="#7c3aed">③ 只有你知道的信息</text>
+    <text x="64" y="290" fill="#475569">配置和密码的位置、进行到一半的工作状态</text>
+
+    <rect x="50" y="310" width="360" height="56" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+    <text x="64" y="332" font-size="12.5" font-weight="700" fill="#059669">④ 其他日常职责</text>
+    <text x="64" y="354" fill="#475569">备份检查、依赖更新、新人引导等周期性的活</text>
+  </g>
+  <text x="50" y="394" font-size="12" fill="#64748b">写成一封邮件 → 接手的人读完提问 → 补齐后确认</text>
+
+  <!-- right: baton -->
+  <rect x="450" y="76" width="420" height="344" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="470" y="104" font-size="14" font-weight="700" fill="#334155">每日接力：下班前的一封交接邮件</text>
+
+  <g font-size="12">
+    <rect x="470" y="118" width="110" height="34" rx="8" fill="#2563eb"/>
+    <text x="525" y="140" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">小陈 · 白天</text>
+    <line x1="584" y1="135" x2="734" y2="135" stroke="#94a3b8" stroke-width="2" marker-end="url(#ho)"/>
+    <text x="660" y="128" font-size="11.5" fill="#64748b" text-anchor="middle">交接邮件</text>
+    <rect x="740" y="118" width="110" height="34" rx="8" fill="#7c3aed"/>
+    <text x="795" y="140" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">小赵 · 夜间</text>
+
+    <rect x="470" y="170" width="380" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="484" y="192" font-size="12.5" font-weight="700" fill="#334155">今天的主要进展和决定</text>
+    <text x="484" y="214" fill="#475569">对方不必翻聊天记录；口头达成的决定必须写上</text>
+
+    <rect x="470" y="242" width="380" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="484" y="264" font-size="12.5" font-weight="700" fill="#334155">留给你的事</text>
+    <text x="484" y="286" fill="#475569">编号列出，写明从哪里开始、相关链接在哪</text>
+
+    <rect x="470" y="314" width="380" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="484" y="336" font-size="12.5" font-weight="700" fill="#334155">你昨天留给我的事</text>
+    <text x="484" y="358" fill="#475569">逐条回复"已完成"或"未完成 + 原因"</text>
+  </g>
+  <text x="470" y="402" font-size="12" fill="#64748b">第三段让接力棒变成双向的，没有一件事会悄悄消失</text>
+</svg>

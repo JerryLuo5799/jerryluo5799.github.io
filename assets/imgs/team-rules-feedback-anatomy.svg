@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">一条可执行的反馈：四个部分缺一不可</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">模糊的批评没有指向具体的事，听的人只能理解成对自己的否定。</text>
+
+  <!-- vague -->
+  <rect x="30" y="78" width="840" height="56" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <rect x="46" y="94" width="60" height="24" rx="12" fill="#dc2626"/>
+  <text x="76" y="111" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">模糊</text>
+  <text x="122" y="111" font-size="13" fill="#475569">"这个写得不行，重新弄一下。"</text>
+  <text x="854" y="111" font-size="12" fill="#b91c1c" text-anchor="end">哪里？为什么？改成什么样？全靠猜</text>
+
+  <!-- specific -->
+  <rect x="30" y="150" width="840" height="250" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <rect x="46" y="166" width="60" height="24" rx="12" fill="#059669"/>
+  <text x="76" y="183" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">具体</text>
+
+  <g font-size="12.5">
+    <rect x="46" y="204" width="130" height="38" rx="8" fill="#2563eb"/>
+    <text x="111" y="228" font-weight="700" fill="#ffffff" text-anchor="middle">① 位置</text>
+    <rect x="186" y="204" width="668" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="202" y="228" fill="#475569" font-family="'Cascadia Code',Consolas,monospace">ExpenseDetail.tsx</text>
+    <text x="352" y="228" fill="#475569">第 40 到 95 行</text>
+
+    <rect x="46" y="250" width="130" height="38" rx="8" fill="#7c3aed"/>
+    <text x="111" y="274" font-weight="700" fill="#ffffff" text-anchor="middle">② 问题</text>
+    <rect x="186" y="250" width="668" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="202" y="274" fill="#475569">取数、权限判断和渲染写在了同一个组件里</text>
+
+    <rect x="46" y="296" width="130" height="38" rx="8" fill="#dc2626"/>
+    <text x="111" y="320" font-weight="700" fill="#ffffff" text-anchor="middle">③ 影响</text>
+    <rect x="186" y="296" width="668" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="202" y="320" fill="#475569">列表页已经有一套取数写法，两处不一致，后面加缓存要改两个地方</text>
+
+    <rect x="46" y="342" width="130" height="38" rx="8" fill="#059669"/>
+    <text x="111" y="366" font-weight="700" fill="#ffffff" text-anchor="middle">④ 建议</text>
+    <rect x="186" y="342" width="668" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="202" y="366" fill="#475569">把取数抽成</text>
+    <text x="276" y="366" fill="#475569" font-family="'Cascadia Code',Consolas,monospace">useExpense</text>
+    <text x="364" y="366" fill="#475569">，和列表页保持一致；权限判断留在组件里即可</text>
+  </g>
+
+  <text x="122" y="183" font-size="12" fill="#047857">对方读完就能动手，不需要追问，也不需要揣摩语气</text>
+</svg>

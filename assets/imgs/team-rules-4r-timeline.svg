@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <defs>
+    <marker id="r4" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">事故沟通的 4R：技术在修，沟通不能停</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">以关账日审批卡住为例。严重程度按受影响的人的感受定，不按修复难度定。</text>
+
+  <line x1="40" y1="108" x2="860" y2="108" stroke="#94a3b8" stroke-width="2" marker-end="url(#r4)"/>
+  <g font-size="11.5" fill="#64748b" text-anchor="middle">
+    <circle cx="130" cy="108" r="6" fill="#dc2626"/>
+    <text x="130" y="92">16:00 收到消息</text>
+    <circle cx="336" cy="108" r="6" fill="#7c3aed"/>
+    <text x="336" y="92">16:05 拉第二个人</text>
+    <circle cx="542" cy="108" r="6" fill="#2563eb"/>
+    <text x="542" y="92">16:15 起每 15–30 分钟</text>
+    <circle cx="748" cy="108" r="6" fill="#059669"/>
+    <text x="748" y="92">恢复后 · 次日</text>
+  </g>
+
+  <g font-size="12">
+    <!-- Respond -->
+    <rect x="30" y="130" width="200" height="216" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+    <rect x="46" y="144" width="130" height="24" rx="12" fill="#dc2626"/>
+    <text x="111" y="161" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">Respond 响应</text>
+    <text x="46" y="192" fill="#475569">· 先回一句"看到了，</text>
+    <text x="46" y="210" fill="#475569">  现在给您打电话"</text>
+    <text x="46" y="232" fill="#475569">· 打电话问清现象</text>
+    <text x="46" y="254" fill="#475569">· 处理不了就指明谁能</text>
+    <text x="46" y="272" fill="#475569">  处理，并帮忙去找</text>
+    <rect x="46" y="288" width="168" height="44" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="56" y="306" font-size="11.5" font-weight="700" fill="#b91c1c">开场用 3A</text>
+    <text x="56" y="324" font-size="11.5" fill="#64748b">承认 → 道歉 → 行动</text>
+
+    <!-- Reinforce -->
+    <rect x="244" y="130" width="200" height="216" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="260" y="144" width="130" height="24" rx="12" fill="#7c3aed"/>
+    <text x="325" y="161" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">Reinforce 增援</text>
+    <text x="260" y="192" fill="#475569">· 两个人分工：</text>
+    <text x="260" y="210" fill="#475569">  小陈只管排查</text>
+    <text x="260" y="228" fill="#475569">  老周只管对外沟通</text>
+    <text x="260" y="254" fill="#475569">· 没有进展就升级，</text>
+    <text x="260" y="272" fill="#475569">  找更有经验的人</text>
+    <text x="260" y="298" fill="#475569">· 升级这件事本身</text>
+    <text x="260" y="316" fill="#475569">  也告诉业务方</text>
+
+    <!-- Report -->
+    <rect x="458" y="130" width="200" height="216" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="474" y="144" width="130" height="24" rx="12" fill="#2563eb"/>
+    <text x="539" y="161" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">Report 通报</text>
+    <text x="474" y="192" fill="#475569">· 定时发进展，</text>
+    <text x="474" y="210" fill="#475569">  没有进展也要发</text>
+    <text x="474" y="236" fill="#475569">· 每条都带上</text>
+    <text x="474" y="254" fill="#475569">  下次更新的时间</text>
+    <text x="474" y="280" fill="#475569">· 有阻碍大声说</text>
+    <text x="474" y="306" fill="#475569">· 不替对方降低</text>
+    <text x="474" y="324" fill="#475569">  紧迫程度</text>
+
+    <!-- Resolve -->
+    <rect x="672" y="130" width="198" height="216" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+    <rect x="688" y="144" width="130" height="24" rx="12" fill="#059669"/>
+    <text x="753" y="161" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">Resolve 收尾</text>
+    <text x="688" y="192" fill="#475569">· 次日作为团队的</text>
+    <text x="688" y="210" fill="#475569">  第一优先级</text>
+    <text x="688" y="236" fill="#475569">· 向不在场的人</text>
+    <text x="688" y="254" fill="#475569">  同步经过</text>
+    <text x="688" y="280" fill="#475569">· 查清原因，把结论</text>
+    <text x="688" y="298" fill="#475569">  和改进措施书面</text>
+    <text x="688" y="316" fill="#475569">  交给业务方</text>
+  </g>
+
+  <rect x="30" y="364" width="840" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="46" y="387" font-size="12.5" font-weight="700" fill="#334155">一条合格的进展通报</text>
+  <text x="46" y="408" font-size="12" fill="#475569">"还在排查。已排除数据库和网络，正在看财务系统的回调日志。六点前未恢复则切到手动同步。下次更新 16:45。"</text>
+</svg>

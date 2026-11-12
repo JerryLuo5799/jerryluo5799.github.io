@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="el" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">点破问题的五步：说得出口，对方也接得住</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">左列是每一步的要点，右列是 ExpenseFlow 二期延期时的实际说法。</text>
+
+  <text x="30" y="88" font-size="12.5" font-weight="700" fill="#64748b">步骤与要点</text>
+  <text x="400" y="88" font-size="12.5" font-weight="700" fill="#64748b">可以照着说的话</text>
+
+  <g font-size="12">
+    <!-- 1 -->
+    <rect x="30" y="100" width="340" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="58" cy="130" r="14" fill="#2563eb"/>
+    <text x="58" y="135" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="84" y="124" font-size="13" font-weight="700" fill="#334155">说事实</text>
+    <text x="84" y="146" fill="#64748b">简短、中性、具体；主语是事，不是人</text>
+    <rect x="400" y="100" width="470" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="418" y="135" fill="#475569">"按现在的进度，我们比计划晚了大约两周。"</text>
+
+    <!-- 2 -->
+    <rect x="30" y="170" width="340" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="58" cy="200" r="14" fill="#2563eb"/>
+    <text x="58" y="205" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="84" y="194" font-size="13" font-weight="700" fill="#334155">说影响</text>
+    <text x="84" y="216" fill="#64748b">波及哪个目标、哪些人、哪个对外承诺</text>
+    <rect x="400" y="170" width="470" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="418" y="194" fill="#475569">"11 月 15 日上线有风险，</text>
+    <text x="418" y="216" fill="#475569">财务部已经通知各部门那天切换新流程。"</text>
+
+    <!-- 3 -->
+    <rect x="30" y="240" width="340" height="60" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <circle cx="58" cy="270" r="14" fill="#7c3aed"/>
+    <text x="58" y="275" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="84" y="264" font-size="13" font-weight="700" fill="#334155">请补充</text>
+    <text x="84" y="286" fill="#64748b">默认自己可能漏了信息，给所有人留余地</text>
+    <rect x="400" y="240" width="470" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="418" y="275" fill="#475569">"有没有我不了解的进展，或者我算错的地方？"</text>
+
+    <!-- 4 -->
+    <rect x="30" y="310" width="340" height="60" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+    <circle cx="58" cy="340" r="14" fill="#059669"/>
+    <text x="58" y="345" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="84" y="334" font-size="13" font-weight="700" fill="#334155">提下一步</text>
+    <text x="84" y="356" fill="#64748b">给选项；有负责人、有动作、有日期</text>
+    <rect x="400" y="310" width="470" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="418" y="334" fill="#475569">"三个选择：砍掉单点登录 / 加一人支援十天 / 推迟到 29 日。</text>
+    <text x="418" y="356" fill="#475569">岚姐，周四之前能定一个吗？"</text>
+
+    <!-- 5 -->
+    <rect x="30" y="380" width="340" height="60" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="58" cy="410" r="14" fill="#64748b"/>
+    <text x="58" y="415" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="84" y="404" font-size="13" font-weight="700" fill="#334155">写下来</text>
+    <text x="84" y="426" fill="#64748b">纪要、邮件或任务项，三天后还查得到</text>
+    <rect x="400" y="380" width="470" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="418" y="404" fill="#475569">会后发到群里：现状、三个选项、</text>
+    <text x="418" y="426" fill="#475569">由岚姐在周四前决定。</text>
+  </g>
+
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="372" y1="130" x2="396" y2="130" marker-end="url(#el)"/>
+    <line x1="372" y1="200" x2="396" y2="200" marker-end="url(#el)"/>
+    <line x1="372" y1="270" x2="396" y2="270" marker-end="url(#el)"/>
+    <line x1="372" y1="340" x2="396" y2="340" marker-end="url(#el)"/>
+    <line x1="372" y1="410" x2="396" y2="410" marker-end="url(#el)"/>
+  </g>
+</svg>
