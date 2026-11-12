@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">union、closed 层次与开放层次的取舍</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">三者都能写 switch，差别在“案例从哪来”和“JSON 里有没有判别字段”</text>
+
+  <!-- 表头 -->
+  <rect x="200" y="76" width="220" height="56" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="310" y="100" font-size="14" font-weight="700" fill="#5b21b6" text-anchor="middle">union</text>
+  <text x="310" y="120" font-family="'Cascadia Code',Consolas,monospace" font-size="11.5" fill="#6d28d9" text-anchor="middle">union Pet(Cat, Dog)</text>
+
+  <rect x="440" y="76" width="220" height="56" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="550" y="100" font-size="14" font-weight="700" fill="#065f46" text-anchor="middle">closed 层次</text>
+  <text x="550" y="120" font-family="'Cascadia Code',Consolas,monospace" font-size="11.5" fill="#047857" text-anchor="middle">closed record Event</text>
+
+  <rect x="680" y="76" width="196" height="56" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="778" y="100" font-size="14" font-weight="700" fill="#475569" text-anchor="middle">开放层次</text>
+  <text x="778" y="120" font-family="'Cascadia Code',Consolas,monospace" font-size="11.5" fill="#64748b" text-anchor="middle">abstract record Event</text>
+
+  <!-- 行 -->
+  <g font-size="12.5" fill="#334155">
+    <text x="24" y="168" font-weight="700">案例之间的关系</text>
+    <text x="310" y="168" text-anchor="middle" fill="#475569">无需公共基类</text>
+    <text x="550" y="168" text-anchor="middle" fill="#475569">同一基类的派生类</text>
+    <text x="778" y="168" text-anchor="middle" fill="#475569">同一基类的派生类</text>
+    <line x1="24" y1="184" x2="876" y2="184" stroke="#e2e8f0"/>
+
+    <text x="24" y="212" font-weight="700">能否包含 int / string / 第三方类型</text>
+    <text x="310" y="212" text-anchor="middle" fill="#047857">可以</text>
+    <text x="550" y="212" text-anchor="middle" fill="#b91c1c">不行</text>
+    <text x="778" y="212" text-anchor="middle" fill="#b91c1c">不行</text>
+    <line x1="24" y1="228" x2="876" y2="228" stroke="#e2e8f0"/>
+
+    <text x="24" y="256" font-weight="700">switch 不写默认分支</text>
+    <text x="310" y="256" text-anchor="middle" fill="#047857">可以，漏案例报 CS8509</text>
+    <text x="550" y="256" text-anchor="middle" fill="#047857">可以，漏案例报 CS8509</text>
+    <text x="778" y="256" text-anchor="middle" fill="#b91c1c">必须有兜底分支</text>
+    <line x1="24" y1="272" x2="876" y2="272" stroke="#e2e8f0"/>
+
+    <text x="24" y="300" font-weight="700">JSON 判别字段</text>
+    <text x="310" y="300" text-anchor="middle" fill="#475569">无，按形状推断</text>
+    <text x="550" y="300" text-anchor="middle" fill="#475569">可推断出 "$type"</text>
+    <text x="778" y="300" text-anchor="middle" fill="#475569">需逐个 [JsonDerivedType]</text>
+    <line x1="24" y1="316" x2="876" y2="316" stroke="#e2e8f0"/>
+
+    <text x="24" y="344" font-weight="700">适合</text>
+    <text x="310" y="344" text-anchor="middle" fill="#475569">已有的无判别契约、</text>
+    <text x="310" y="362" text-anchor="middle" fill="#475569">原始类型、外部类型</text>
+    <text x="550" y="344" text-anchor="middle" fill="#475569">新设计的 API，</text>
+    <text x="550" y="362" text-anchor="middle" fill="#475569">类型都由自己掌控</text>
+    <text x="778" y="344" text-anchor="middle" fill="#475569">确实需要</text>
+    <text x="778" y="362" text-anchor="middle" fill="#475569">让外部程序集扩展</text>
+  </g>
+  <text x="450" y="402" font-size="11.5" fill="#94a3b8" text-anchor="middle">依据：ASP.NET Core 团队关于 unions 与 closed hierarchies 的选型建议</text>
+</svg>

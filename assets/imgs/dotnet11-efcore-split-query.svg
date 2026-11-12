@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">Split query 的第二条 SQL：加载 Posts</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">Include(BlogType).Include(Posts).AsSplitQuery()；BlogType 已在第一条 SQL 里加载过</text>
+
+  <!-- EF 10 -->
+  <text x="24" y="104" font-size="14" font-weight="700" fill="#334155">EF Core 10</text>
+  <rect x="140" y="82" width="150" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="215" y="109" font-size="13" fill="#1e40af" text-anchor="middle">Blogs</text>
+  <line x1="290" y1="104" x2="358" y2="104" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="360" y="82" width="150" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="435" y="103" font-size="13" fill="#b91c1c" text-anchor="middle">BlogType</text>
+  <text x="435" y="119" font-size="10.5" fill="#b91c1c" text-anchor="middle">INNER JOIN，结果用不上</text>
+  <line x1="510" y1="104" x2="578" y2="104" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="580" y="82" width="150" height="44" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="655" y="109" font-size="13" fill="#065f46" text-anchor="middle">Post</text>
+  <text x="140" y="156" font-family="'Cascadia Code',Consolas,monospace" font-size="12" fill="#475569">ORDER BY "b"."Id", <tspan fill="#b91c1c">"b0"."Id"</tspan></text>
+
+  <line x1="24" y1="186" x2="876" y2="186" stroke="#e2e8f0"/>
+
+  <!-- EF 11 -->
+  <text x="24" y="234" font-size="14" font-weight="700" fill="#334155">EF Core 11</text>
+  <rect x="140" y="212" width="150" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="215" y="239" font-size="13" fill="#1e40af" text-anchor="middle">Blogs</text>
+  <line x1="290" y1="234" x2="578" y2="234" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arw)"/>
+  <text x="435" y="226" font-size="11" fill="#64748b" text-anchor="middle">直接连 Post</text>
+  <rect x="580" y="212" width="150" height="44" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="655" y="239" font-size="13" fill="#065f46" text-anchor="middle">Post</text>
+  <text x="140" y="286" font-family="'Cascadia Code',Consolas,monospace" font-size="12" fill="#475569">ORDER BY "b"."Id"</text>
+
+  <text x="450" y="336" font-size="12.5" fill="#475569" text-anchor="middle">引用导航的键由外键决定，排序和连接都可以省掉；单查询模式下 ORDER BY 里的引用键同样被去掉</text>
+  <text x="450" y="358" font-size="11.5" fill="#94a3b8" text-anchor="middle">SQL 取自同一模型分别引用 Microsoft.EntityFrameworkCore.Sqlite 10.0.15 与 11.0.0 的实际日志</text>
+</svg>

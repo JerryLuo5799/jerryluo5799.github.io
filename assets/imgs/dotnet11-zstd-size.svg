@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="450" y="34" font-size="17" font-weight="700" fill="#334155" text-anchor="middle">同一份 JSON Lines 数据的压缩后体积</text>
+  <text x="450" y="56" font-size="12.5" fill="#64748b" text-anchor="middle">原始 877,823 字节，三种流都用 CompressionLevel.Optimal；条形越短越好</text>
+
+  <text x="150" y="112" font-size="13" font-weight="700" fill="#475569" text-anchor="end">GZipStream</text>
+  <rect x="166" y="94" width="600" height="28" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="778" y="113" font-size="12.5" fill="#475569">74,364 B（8.5%）</text>
+
+  <text x="150" y="168" font-size="13" font-weight="700" fill="#1e40af" text-anchor="end">BrotliStream</text>
+  <rect x="166" y="150" width="259" height="28" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="437" y="169" font-size="12.5" fill="#1e40af">32,091 B（3.7%）</text>
+
+  <text x="150" y="224" font-size="13" font-weight="700" fill="#5b21b6" text-anchor="end">ZstandardStream</text>
+  <rect x="166" y="206" width="229" height="28" rx="5" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="407" y="225" font-size="12.5" fill="#5b21b6">28,354 B（3.2%）</text>
+
+  <text x="450" y="276" font-size="11.5" fill="#94a3b8" text-anchor="middle">样本是 2 万行结构重复的 JSON，重复度高，比例不代表一般数据；只比较体积，没有做吞吐基准</text>
+</svg>
