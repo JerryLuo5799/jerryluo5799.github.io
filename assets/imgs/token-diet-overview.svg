@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',system-ui,sans-serif">
+  <rect width="900" height="530" fill="#ffffff"/>
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#334155">五个场景：时间普遍省了，成本没有</text>
+  <text x="30" y="56" font-size="12.5" fill="#64748b">相对裸跑（base = 100%），每组 5 次取中位数。条越短越好；模型耗时只算等待模型的时间，不含编译和跑测试。</text>
+  <rect x="30" y="68" width="14" height="14" rx="3" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="50" y="80" font-size="12.5" fill="#475569">base</text>
+  <rect x="110" y="68" width="14" height="14" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="80" font-size="12.5" fill="#475569">rtk</text>
+  <rect x="190" y="68" width="14" height="14" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="210" y="80" font-size="12.5" fill="#475569">rtk + Caveman</text>
+  <rect x="320" y="68" width="14" height="14" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="340" y="80" font-size="12.5" fill="#475569">三件套</text>
+  <rect x="30" y="96" width="410" height="420" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="46" y="122" font-size="14" font-weight="700" fill="#334155">成本（美元）</text>
+  <line x1="291" y1="136" x2="291" y2="502" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="291" y="512" font-size="10.5" fill="#64748b" text-anchor="middle">100%</text>
+  <text x="46" y="172" font-size="12.5" font-weight="700" fill="#334155">修 bug</text>
+  <rect x="116" y="142" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="296.0" y="151.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="116" y="156" width="194.3" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="315.3" y="165.5" font-size="10.5" fill="#1d4ed8">111%</text>
+  <rect x="116" y="170" width="173.3" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="294.3" y="179.5" font-size="10.5" fill="#047857">99%</text>
+  <rect x="116" y="184" width="243.3" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="364.3" y="193.5" font-size="10.5" fill="#6d28d9">139%</text>
+  <text x="46" y="242" font-size="12.5" font-weight="700" fill="#334155">读代码</text>
+  <rect x="116" y="212" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="296.0" y="221.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="116" y="226" width="192.5" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="313.5" y="235.5" font-size="10.5" fill="#1d4ed8">110%</text>
+  <rect x="116" y="240" width="148.8" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="269.8" y="249.5" font-size="10.5" fill="#047857">85%</text>
+  <rect x="116" y="254" width="150.5" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="271.5" y="263.5" font-size="10.5" fill="#6d28d9">86%</text>
+  <text x="46" y="312" font-size="12.5" font-weight="700" fill="#334155">修编译</text>
+  <rect x="116" y="282" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="296.0" y="291.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="116" y="296" width="180.3" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="301.3" y="305.5" font-size="10.5" fill="#1d4ed8">103%</text>
+  <rect x="116" y="310" width="192.5" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="313.5" y="319.5" font-size="10.5" fill="#047857">110%</text>
+  <rect x="116" y="324" width="175.0" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="296.0" y="333.5" font-size="10.5" fill="#6d28d9">100%</text>
+  <text x="46" y="382" font-size="12.5" font-weight="700" fill="#334155">加功能</text>
+  <rect x="116" y="352" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="296.0" y="361.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="116" y="366" width="161.0" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="282.0" y="375.5" font-size="10.5" fill="#1d4ed8">92%</text>
+  <rect x="116" y="380" width="140.0" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="261.0" y="389.5" font-size="10.5" fill="#047857">80%</text>
+  <rect x="116" y="394" width="182.0" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="303.0" y="403.5" font-size="10.5" fill="#6d28d9">104%</text>
+  <text x="46" y="452" font-size="12.5" font-weight="700" fill="#334155">长会话</text>
+  <rect x="116" y="422" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="296.0" y="431.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="116" y="436" width="176.8" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="297.8" y="445.5" font-size="10.5" fill="#1d4ed8">101%</text>
+  <rect x="116" y="450" width="176.8" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="297.8" y="459.5" font-size="10.5" fill="#047857">101%</text>
+  <rect x="116" y="464" width="238.0" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="359.0" y="473.5" font-size="10.5" fill="#6d28d9">136%</text>
+  <rect x="460" y="96" width="410" height="420" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="476" y="122" font-size="14" font-weight="700" fill="#334155">模型耗时</text>
+  <line x1="721" y1="136" x2="721" y2="502" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="721" y="512" font-size="10.5" fill="#64748b" text-anchor="middle">100%</text>
+  <text x="476" y="172" font-size="12.5" font-weight="700" fill="#334155">修 bug</text>
+  <rect x="546" y="142" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="726.0" y="151.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="546" y="156" width="196.0" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="747.0" y="165.5" font-size="10.5" fill="#1d4ed8">112%</text>
+  <rect x="546" y="170" width="133.0" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="684.0" y="179.5" font-size="10.5" fill="#047857">76%</text>
+  <rect x="546" y="184" width="96.3" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="647.3" y="193.5" font-size="10.5" fill="#6d28d9">55%</text>
+  <text x="476" y="242" font-size="12.5" font-weight="700" fill="#334155">读代码</text>
+  <rect x="546" y="212" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="726.0" y="221.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="546" y="226" width="190.8" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="741.8" y="235.5" font-size="10.5" fill="#1d4ed8">109%</text>
+  <rect x="546" y="240" width="127.8" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="678.8" y="249.5" font-size="10.5" fill="#047857">73%</text>
+  <rect x="546" y="254" width="87.5" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="638.5" y="263.5" font-size="10.5" fill="#6d28d9">50%</text>
+  <text x="476" y="312" font-size="12.5" font-weight="700" fill="#334155">修编译</text>
+  <rect x="546" y="282" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="726.0" y="291.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="546" y="296" width="183.8" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="734.8" y="305.5" font-size="10.5" fill="#1d4ed8">105%</text>
+  <rect x="546" y="310" width="178.5" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="729.5" y="319.5" font-size="10.5" fill="#047857">102%</text>
+  <rect x="546" y="324" width="140.0" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="691.0" y="333.5" font-size="10.5" fill="#6d28d9">80%</text>
+  <text x="476" y="382" font-size="12.5" font-weight="700" fill="#334155">加功能</text>
+  <rect x="546" y="352" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="726.0" y="361.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="546" y="366" width="176.8" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="727.8" y="375.5" font-size="10.5" fill="#1d4ed8">101%</text>
+  <rect x="546" y="380" width="155.8" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="706.8" y="389.5" font-size="10.5" fill="#047857">89%</text>
+  <rect x="546" y="394" width="148.8" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="699.8" y="403.5" font-size="10.5" fill="#6d28d9">85%</text>
+  <text x="476" y="452" font-size="12.5" font-weight="700" fill="#334155">长会话</text>
+  <rect x="546" y="422" width="175.0" height="11" rx="2.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1.1"/>
+  <text x="726.0" y="431.5" font-size="10.5" fill="#475569">100%</text>
+  <rect x="546" y="436" width="169.8" height="11" rx="2.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.1"/>
+  <text x="720.8" y="445.5" font-size="10.5" fill="#1d4ed8">97%</text>
+  <rect x="546" y="450" width="147.0" height="11" rx="2.5" fill="#d1fae5" stroke="#059669" stroke-width="1.1"/>
+  <text x="698.0" y="459.5" font-size="10.5" fill="#047857">84%</text>
+  <rect x="546" y="464" width="124.3" height="11" rx="2.5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.1"/>
+  <text x="675.3" y="473.5" font-size="10.5" fill="#6d28d9">71%</text>
+</svg>
