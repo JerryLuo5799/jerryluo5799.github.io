@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "rtk + Caveman + CodeGraph 实测：省 token 的工具，省了时间没省钱"
+title:  "省 token 的插件真的省钱吗？rtk、Caveman、CodeGraph 实测"
 date:   2026-11-26 09:30:00 +0800--
 categories: [AI]
 tags: [Claude Code, Token, rtk, Caveman, CodeGraph]
